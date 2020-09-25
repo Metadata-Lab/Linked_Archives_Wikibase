@@ -10,13 +10,18 @@
 
 ### How to Run Conversion Script with Pywikibot
 
-Open a terminal in the project folder. Execute the following commands to run [ontology_to_json.py](ontology_to_json.py).
+Note: Python 3.8 is required to run Pywikibot.
+
+This script be run via an IDE (such as Pycharm) or the command line.
+
+#### Command Line Instructions
+Open a terminal in the project folder. 
+Execute the following commands to run [ontology_to_json.py](ontology_to_json.py).
 
 ```
-git clone https://gerrit.wikimedia.org/r/pywikibot/core.git
-cd core
-git submodule update --init
-python pwb.py ..ontology_to_json.py
+pip install setuptools
+pip install pywikibot
+python ontology_to_json.py
 ```
 See [the pywikibot documentation](https://pypi.org/project/pywikibot/) for more information on using pywikibot.
 
