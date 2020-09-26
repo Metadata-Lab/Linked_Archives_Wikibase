@@ -128,8 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# pywikibot library
+# pywikibot
 core/
+user-config.py
+pywikibot.lwp
 
 # Idea files
 .idea/
+

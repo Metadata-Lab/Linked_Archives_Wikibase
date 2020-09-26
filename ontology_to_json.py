@@ -26,6 +26,12 @@ def import_data():
 
         #look at iri to determine category
         entity = entry[0]
+
+        #so here's this really weird case
+        if "/person/Eisenmann Charles" in entity:
+            cfg.subjects.append(entry)
+            continue
+
         for key in cfg.iri_keys:
             if key in entity:
                 cfg.iri_keys[key].append(entry)
@@ -36,7 +42,7 @@ strip extra quotation marks around strings
 @returns string without quotation marks
 '''
 def strip_quotes(str):
-    new = str.strip("\"").strip("\'")
+    new = str.strip("\"").strip("\'").strip("*")
     return new
 
 '''
@@ -52,29 +58,40 @@ def parse_values(str):
         list[idx] = strip_quotes(value)
     return list
 
+'''
+create the proper label for the entity (edited for people)
+@param dict: the item dictionary
+@returns the label string
+'''
 def get_label(dict):
 
     #if it is a person (has name), reformat label to first, middle, last
     if "firstname" in dict.keys():
-        label = dict["firstname"]
-        if len(dict["firstname"]) == 1:
+        label = dict["firstname"][0]
+        if len(dict["firstname"][0]) == 1:
             label += "."
         if "middleinitial" in dict.keys():
-            label += " " + dict["middleinitial"]
-            if len(dict["middleinitial"]) == 1:
+            label += " " + dict["middleinitial"][0]
+            if len(dict["middleinitial"][0]) == 1:
                 label += "."
         if "lastname" in dict.keys():
-            label += " " + dict["lastname"]
+            label += " " + dict["lastname"][0]
         label = label.replace("  ", " ").replace("Unknown", "").strip()
 
         if len(label) == 0:
             label = "Unknown"
+
     #keep the orginal label for non-person entities
     else:
         label = dict["label"]
 
     return label
 
+'''
+find the wikidata q identifier if a page with the label exists
+@param label: the label of the page to search for
+@returns label string if page exists, None if it doesn't
+'''
 def search_wikidata(label):
     site = pywikibot.Site("en", "wikipedia")
 
@@ -94,6 +111,12 @@ def search_wikidata(label):
     except Exception as e:
         return None
 
+'''
+parse each entity into a python dictionary to save as json
+@param dict: master dictionary of all items
+@param list: list of all items to be parsed
+@returns dictionary populated with all entity dictionaries
+'''
 def parse_entities(dict, list):
     for item in list:
         i_dict = {}
@@ -118,45 +141,31 @@ def parse_entities(dict, list):
 
         #put together multiple entries with same label
         if label in dict.keys():
-
-            if i_dict["IRI"][0] not in dict[label]["IRI"]:
-                for iri in dict[label]["IRI"]:
-                    i_dict["IRI"].append(iri)
-
-            for rel in dict[label]["is_related_to"]:
-                if rel not in i_dict["is_related_to"]:
-                    i_dict["is_related_to"].append(rel)
-
-            if i_dict["role"][0] not in dict[label]["role"]:
-                for role in dict[label]["role"]:
-                    i_dict["role"].append(role)
-
-            if i_dict["label"][0] not in dict[label]["label"]:
-                print(label)
-                for lab in dict[label]["label"]:
-                    i_dict["label"].append(lab)
-
+            for idx, prop in enumerate(cfg.property_keys):
+                if prop not in dict[label].keys(): continue
+                if idx in cfg.multi_val_prop:
+                    for val in dict[label][prop]:
+                        if val not in i_dict[prop]:
+                            i_dict[prop].append(val)
+                else:
+                    if i_dict[prop][0] not in dict[label][prop]:
+                        for val in dict[label][prop]:
+                            i_dict[prop].append(val)
 
         #add new entry to dictionary
         dict[label] = i_dict
 
-    #return updated dictionary
     return dict
-
 
 def parse_people():
     people_dict = {}
-
     people_dict = parse_entities(people_dict, cfg.people)
-
-    # with open('../people.json', 'w') as outfile:
-    #     json.dump(people_dict, outfile)
-
+    with open('people.json', 'w') as outfile:
+        json.dump(people_dict, outfile)
 
 def main():
     import_data()
     parse_people()
-
 
 if __name__ == '__main__':
     main()
