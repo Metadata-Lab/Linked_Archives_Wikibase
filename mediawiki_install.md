@@ -1,6 +1,4 @@
-# Installation Procedure for MediaWiki and Wikibase: Ubuntu 18.04
-
-## Installing MediaWiki
+# Installing MediaWiki on Ubuntu 18.04
 
 Login to the server where MediaWiki will be hosted. 
 
