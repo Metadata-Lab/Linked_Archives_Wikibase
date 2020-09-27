@@ -47,4 +47,5 @@ Please note that due to the number of entities and the time it takes to look eac
 
 ## Other Documentation
 
-- MediaWiki and Wikibase Installation: [mediawiki-install.md](mediawiki_install.md)
+- MediaWiki Installation: [mediawiki-install.md](mediawiki_install.md)
+- Wikibase Installation: [wikibase-install.md](wikibase_install.md)
