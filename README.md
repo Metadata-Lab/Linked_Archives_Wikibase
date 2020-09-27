@@ -45,6 +45,6 @@ Please note that due to the number of entities and the time it takes to look eac
 - [json_import.py](json_import.py): extracts Q values for import, (to come) imports items and properties
 - [qs.csv](qs.csv): the Q numbers for existing wikidata entries that we want to import into our instance of wikibase
 
-##Other Documentation
+## Other Documentation
 
 - MediaWiki and Wikibase Installation: [wikibase-install.md](wikibase_install.md)
