@@ -92,3 +92,5 @@ scp LocalSettings.php <user>@linkeddata.ischool.syr.edu:/var/www/html/mediawiki
 ```
 
 Other files can be imported to mediawiki with the same process and put into the proper folders. For example, if you want a new logo for your wiki, upload the image to `mediawiki/resources/assets` and change `LocalSettings.php` as necessary. 
+
+To install Wikibase on this instance of MediaWiki, see [wikibase_install.md](wikibase_install.md).
