@@ -1,4 +1,4 @@
-#Installing Wikibase on Ubuntu 18.04
+# Installing Wikibase on Ubuntu 18.04
 
 The following outlines the installation of Wikibase for an already existing instance of MediaWiki. See [mediawiki_install.md](mediawiki_install.md) to install mediawiki.
 

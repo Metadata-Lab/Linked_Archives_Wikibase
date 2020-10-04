@@ -7,9 +7,9 @@ take data exported from Protege and convert to JSON
 each JSON object will correspond to one entity to import to Wikibase
 '''
 
-import pywikibot
 import json
 import config as cfg
+from get_wiki_data import search_for_q, get_statements
 
 '''
 import ontology export, sort each line into appropriate category
@@ -87,29 +87,7 @@ def get_label(dict):
 
     return label
 
-'''
-find the wikidata q identifier if a page with the label exists
-@param label: the label of the page to search for
-@returns label string if page exists, None if it doesn't
-'''
-def search_wikidata(label):
-    site = pywikibot.Site("en", "wikipedia")
 
-    try:
-        #search wikibase for item with label
-        page = pywikibot.Page(site, label)
-        item = pywikibot.ItemPage.fromPage(page)
-
-        #if found, do some magic to turn item into proper string
-        magic = {}
-        magic["Q"] = str(item)
-        q = magic["Q"]
-        #make sure we only get the Q### part
-        magic["Q"] = q[11:-2]
-        return magic["Q"]
-
-    except Exception as e:
-        return None
 
 '''
 parse each entity into a python dictionary to save as json
@@ -135,9 +113,11 @@ def parse_entities(dict, list):
         label = get_label(i_dict)
 
         #SEARCH WIKIDATA, ADD Q NUM TO DICT IF EXISTS
-        q = search_wikidata(label)
+        q = search_for_q(label)
         if q is not None:
             i_dict["Q"] = q
+            #ADD WIKIDATA PROPERTIES TO DICTIONARY
+            i_dict["wiki"] = get_statements(i_dict["Q"])
 
         #put together multiple entries with same label
         if label in dict.keys():
@@ -160,7 +140,7 @@ def parse_entities(dict, list):
 def parse_people():
     people_dict = {}
     people_dict = parse_entities(people_dict, cfg.people)
-    with open('people.json', 'w') as outfile:
+    with open('people_expanded.json', 'w') as outfile:
         json.dump(people_dict, outfile)
 
 def main():
