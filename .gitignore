@@ -136,3 +136,6 @@ pywikibot.lwp
 # Idea files
 .idea/
 
+apicache-py3/
+throttle.ctrl
+
