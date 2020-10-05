@@ -35,13 +35,13 @@ Puts all values together into a csv file.
 - Input: [`data/entities/<category>.json`](data/entities)
 - Output: [`data/q_nums.csv`](data/q_nums.csv)
 
-`get_new_props()` - takes in a list of files containing entity objects and
+`get_new_props(infiles)` - takes in a list of files containing entity objects and
 generates a list of all properties that were retrieved from Wikidata.
 Output contains property label, P identifier, and category of entity it describes.
 - Input: [`data/entities/<category>.json`](data/entities)
 - Output: [`data/properties.csv`](data/properties.csv)
 
-
+### [`wikibase_import.py`](wikibase_import.py)
 
 
 ## Data Files
