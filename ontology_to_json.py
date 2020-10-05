@@ -1,7 +1,7 @@
 '''
 ontology_to_json.py
 Author: Kate Polley
-Last Modified: 09/25/2020
+Last Modified: 10-04-2020
 
 take data exported from Protege and convert to JSON
 each JSON object will correspond to one entity to import to Wikibase
@@ -16,7 +16,7 @@ import ontology export, sort each line into appropriate category
 category identifiers based on config.py
 '''
 def import_data():
-    data = open("all_owl.txt", "r")
+    data = open("data/all_owl.txt", "r")
 
     # sort entries in file using configuration settings
     for line in data:
@@ -83,11 +83,13 @@ def get_label(dict):
 
     #keep the orginal label for non-person entities
     else:
-        label = dict["label"]
+        if "label" in dict.keys():
+            label = dict["label"][0]
+        else:
+            iri = dict.get("IRI")[0]
+            label = iri[ iri.rfind('/')+1: ]
 
     return label
-
-
 
 '''
 parse each entity into a python dictionary to save as json
@@ -111,6 +113,7 @@ def parse_entities(dict, list):
                 i_dict[cfg.property_keys[idx]] = [strip_quotes(val)]
 
         label = get_label(i_dict)
+        print(label)
 
         #SEARCH WIKIDATA, ADD Q NUM TO DICT IF EXISTS
         q = search_for_q(label)
@@ -132,6 +135,8 @@ def parse_entities(dict, list):
                         for val in dict[label][prop]:
                             i_dict[prop].append(val)
 
+        print(i_dict)
+
         #add new entry to dictionary
         dict[label] = i_dict
 
@@ -140,12 +145,17 @@ def parse_entities(dict, list):
 def parse_people():
     people_dict = {}
     people_dict = parse_entities(people_dict, cfg.people)
-    with open('people_expanded.json', 'w') as outfile:
+    with open('data/entities/people.json', 'w') as outfile:
         json.dump(people_dict, outfile)
 
-def main():
-    import_data()
-    parse_people()
+def parse_subjects():
+    subject_dict = {}
+    subject_dict = parse_entities(subject_dict, cfg.subjects)
+    with open('data/entities/subjects.json', 'w') as outfile:
+        json.dump(subject_dict, outfile)
 
-if __name__ == '__main__':
-    main()
+def parse_all():
+    import_data()
+    #parse_people()
+    parse_subjects()
+
