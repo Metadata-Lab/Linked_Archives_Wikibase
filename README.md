@@ -1,48 +1,50 @@
 # Linked Archives Wikibase Code Repository
 
-## Translating the Ontology Data into JSON
+## Source Code
 
-### Relevant Files
-- [LinkedArchives.owl](data/LinkedArchives.owl): ontology file with items from the three special collections
-- [all_owl.txt](data/all_owl.txt): all elements and properties exported from LinkedArchives.owl in Protege
-- [config.py](config.py): setting global variables for how to read the ontology import 
-- [ontology_to_json.py](ontology_to_json.py): reads in all_owl.txt and converts the data into JSON
-- [get_wiki_data.py](get_wiki_data.py): looks up entities in Wikidata, retrieves all statements for entity
-- [people.json](data/entities/people.json): the JSON output for the "person" entities with only original statements
-- [people_expanded.json](data/entities/people.json): "person" output with both original and Wikidata statements
+### [`main.py`](main.py)
 
-### How to Run Conversion Script with Pywikibot
+Contains the main method. Run functions of choice from here.
 
-** Currently, the conversion only runs on "Person" objects **
+### [`config.py`](config.py)
 
-Python 3.8 is required to run Pywikibot.
-It will also require a file called `user-config.py` (git ignored) to run. A basic version of this file is as follows:
+Stores variables necessary for reading and sorting the ontology input. 
+The lists of categories of entities, properties, and other necessary data exist here.
 
-```
-mylang = 'wikidata'
-family = 'wikidata'
-usernames['wikidata']['wikidata'] = 'YourUsername'
 
-console_encoding = 'utf-8'
-```
+### [`ontology_to_json.py`](ontology_to_json.py)
 
-This script be run via an IDE (such as Pycharm) or the command line. Make sure to install the necessary packages imported at the top of each file, particularly `pywikibot` and `SPARQLWrapper`. 
+Used to translate the ontology text into a series of json files containing. 
+There will be a json output for each of the categories listed in the first block of [`config.py`](config.py).
+Each entity and its properties will be a json object.
 
-See [the pywikibot documentation](https://pypi.org/project/pywikibot/) for more information on using pywikibot.
-See [the SPARQL Wrapper GitHub](https://github.com/RDFLib/sparqlwrapper) for more information on the wrapper.
+#### Methods to Use
 
-Please note that due to the number of entities and the time it takes to look each up in Wikidata, this script may take several hours to run.  
+`parse_all()` - generates output for all categories
+- Input: [`data/all_owl.txt`](data/all_owl.txt)
+- Output: [`data/entities/<category>.json`](data/entities)
 
-## Reading Information from JSON Files
+### [`json_read.py`](json_read.py)
 
-### Relevant Files
-- [json_import.py](json_read.py): extracts Q values, extracts Wikidata properties
-- [q_nums.csv](data/q_nums.csv): the Q numbers for existing Wikidata entries corresponding to our entities
-- [properties.csv](data/properties.csv): the properties used by Wikidata to describe entities from q_nums
+A collection of methods to read in the json files produced from the ontology and extract useful information.
 
-See the code files themselves and their comments to see the purpose of each relevant function. 
+#### Methods to Use
 
-## Importing Data to Wikibase
+`get_q_nums(infiles)` - extracts the Q identifiers for the entities in the given list of files, where those Q numbers exist. 
+Puts all values together into a csv file.
+- Input: [`data/entities/<category>.json`](data/entities)
+- Output: [`data/q_nums.csv`](data/q_nums.csv)
+
+`get_new_props()` - takes in a list of files containing entity objects and
+generates a list of all properties that were retrieved from Wikidata.
+Output contains property label, P identifier, and category of entity it describes.
+- Input: [`data/entities/<category>.json`](data/entities)
+- Output: [`data/properties.csv`](data/properties.csv)
+
+
+
+
+## Data Files
 
 ## Other Documentation
 
