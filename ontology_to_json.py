@@ -142,20 +142,23 @@ def parse_entities(dict, list):
 
     return dict
 
-def parse_people():
-    people_dict = {}
-    people_dict = parse_entities(people_dict, cfg.people)
-    with open('data/entities/people.json', 'w') as outfile:
-        json.dump(people_dict, outfile)
-
-def parse_subjects():
-    subject_dict = {}
-    subject_dict = parse_entities(subject_dict, cfg.subjects)
-    with open('data/entities/subjects.json', 'w') as outfile:
-        json.dump(subject_dict, outfile)
+def parse_category(config_var, outfile):
+    dict = {}
+    dict = parse_entities(dict, config_var)
+    with open(outfile, 'w') as outfile:
+        json.dump(dict, outfile)
 
 def parse_all():
     import_data()
-    #parse_people()
-    parse_subjects()
-
+    parse_category(cfg.people, 'data/entities/people.json')
+    parse_category(cfg.subjects, 'data/entities/subjects.json')
+    parse_category(cfg.names, 'data/entities/names.json')
+    parse_category(cfg.countries, 'data/entities/countries.json')
+    parse_category(cfg.events, 'data/entities/events.json')
+    parse_category(cfg.series, 'data/entities/series.json')
+    parse_category(cfg.objects, 'data/entities/objects.json')
+    parse_category(cfg.collections, 'data/entities/collections.json')
+    parse_category(cfg.bib_series, 'data/entities/bib_series.json')
+    parse_category(cfg.belfer, 'data/entities/belfer.json')
+    parse_category(cfg.becker, 'data/entities/becker.json')
+    parse_category(cfg.koppel, 'data/entities/koppel.json')
