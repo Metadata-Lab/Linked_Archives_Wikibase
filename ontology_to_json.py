@@ -35,6 +35,7 @@ def import_data():
         for key in cfg.iri_keys:
             if key in entity:
                 cfg.iri_keys[key].append(entry)
+                break
 
 '''
 strip extra quotation marks around strings

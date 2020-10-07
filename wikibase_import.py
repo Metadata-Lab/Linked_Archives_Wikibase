@@ -7,9 +7,10 @@ last updated: 10-04-2020
 
 from wikidataintegrator import wdi_core, wdi_login
 import os, pprint, json
+import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/w/api.php"
-logincreds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
+login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 def json_to_dict(file):
     data = json.load(file)
@@ -18,11 +19,40 @@ def json_to_dict(file):
 def get_local_q(label):
     return None
 
+def wiki_prop_statements(wiki_dict):
+    statements = []
+    for prop in wiki_dict.keys():
+        if prop in cfg.wiki_props_used:
+            statements.append(prop) #ACTUALLY EXTRACT PROPERTY HERE
+    return statements
+
+def get_item_statements(i_dict):
+    statements = []
+    for prop in i_dict.keys():
+        pid = cfg.property_ids.get(prop)
+        object = cfg.property_keys.index(prop) in cfg.multi_val_prop
+        if prop == "Q":
+            continue
+        elif prop == "wiki":
+            states = wiki_prop_statements(i_dict.get(prop))
+            for s in states:
+                statements.append(s)
+        else:
+            for value in i_dict.get(prop):
+                if object:
+                    qid = get_local_q(value)
+                    state = wdi_core.WDItemID(qid, prop_nr=pid)
+                else:
+                    state = wdi_core.WDString(value, prop_nr=pid)
+                statements.append(state)
+
+    return statements
+
 def import_items(dict):
 
     for item in dict.keys():
-        # statements format - need to get actual p values for properties, q values for object items
-        item_statements = [wdi_core.WDString(dict.get(item).get("iri"), prop_nr="P1"), wdi_core.WDItemID("Q11", prop_nr="P13")]
+        # turn the item dictionary into statements
+        item_statements = get_item_statements(dict.get(item))
 
         # create the item
         wbPage = wdi_core.WDItemEngine(data=item_statements, mediawiki_api_url=mw_api_url)
@@ -35,10 +65,11 @@ def import_items(dict):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        wbPage.write(logincreds)
+        wbPage.write(login_creds)
 
 def import_people():
     pass
 
 def import_all():
+
     pass
