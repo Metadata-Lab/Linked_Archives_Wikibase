@@ -1,6 +1,6 @@
 # Linked Archives Wikibase Code Repository
 
-## Source Code
+## Code Files
 
 ### [`main.py`](main.py)
 
