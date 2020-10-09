@@ -1,292 +1,836 @@
-sex or gender,P21,subjects
-place of birth,P19,people
-country of citizenship,P27,people
+country,P17,subjects
 instance of,P31,subjects
-place of death,P20,people
 image,P18,subjects
-place of burial,P119,people
-occupation,P106,subjects
+located in the administrative territorial entity,P131,subjects
 Commons category,P373,subjects
+pronunciation audio,P443,subjects
+coordinate location,P625,subjects
+TOID,P3120,subjects
+historic county,P7959,people
+shares border with,P47,subjects
+twinned administrative body,P190,subjects
+named after,P138,subjects
+VIAF ID,P214,subjects
+Library of Congress authority ID,P244,subjects
+GND ID,P227,subjects
+OpenStreetMap relation ID,P402,subjects
+located in or next to body of water,P206,subjects
+postal code,P281,people
+OS grid reference,P613,people
+local dialing code,P473,people
+official website,P856,subjects
+inception,P571,subjects
+topic's main category,P910,subjects
+Freebase ID,P646,subjects
+NKCR AUT ID,P691,subjects
+GSS code (2011),P836,subjects
+Commons gallery,P935,subjects
+MusicBrainz area ID,P982,subjects
+page banner,P948,subjects
+WOEID,P1281,objects
+capital of,P1376,people
+Encyclopædia Britannica Online ID,P1417,subjects
+official name,P1448,subjects
+DMOZ ID,P998,subjects
+population,P1082,subjects
+category for people born here,P1464,subjects
+category for people who died here,P1465,subjects
+Gran Enciclopèdia Catalana ID,P1296,subjects
+described by source,P1343,subjects
+category of associated people,P1792,subjects
+GeoNames ID,P1566,subjects
+native label,P1705,subjects
+Quora topic ID,P3417,subjects
+Vision of Britain unit ID,P3615,objects
+Vision of Britain place ID,P3616,subjects
+EMLO location ID,P4672,subjects
+De Agostini ID,P6706,subjects
+Who's on First ID,P6766,subjects
+NE.se ID,P3222,subjects
+WorldCat Identities ID,P7859,subjects
+category for maps,P7867,subjects
+subclass of,P279,subjects
+said to be the same as,P460,subjects
+OmegaWiki Defined Meaning,P1245,subjects
+YSO ID,P2347,subjects
+BabelNet ID,P2581,subjects
+Library of Congress Genre/Form Terms ID,P4953,subjects
+Gran Enciclopèdia de la Música ID,P6412,subjects
+Australian Educational Vocabulary ID,P7033,subjects
+Österreichisches Musiklexikon Online ID,P8432,subjects
+different from,P1889,subjects
+composer,P86,people
+country of origin,P495,subjects
+director,P57,people
+screenwriter,P58,people
+original language of film or TV show,P364,people
+color,P462,subjects
+publication date,P577,people
+distributed by,P750,people
+title,P1476,people
+IMDb ID,P345,series
+genre,P136,series
+AllMovie movie ID,P1562,people
+Kinopoisk film ID,P2603,people
+elFilm film ID,P3143,people
+copyright status,P6216,people
+on focus list of Wikimedia project,P5008,subjects
+MusicBrainz genre ID,P8052,subjects
+performer,P175,subjects
+language of work or name,P407,series
+MusicBrainz work ID,P435,objects
+lyrics by,P676,objects
+catalog,P972,people
+AllMusic composition ID,P1994,objects
+SecondHandSongs song ID,P2908,objects
+Carnegie Hall work ID,P5229,objects
+ISWC,P1827,objects
+coat of arms image,P94,subjects
+U.S. National Archives Identifier,P1225,subjects
+Bibliothèque nationale de France ID,P268,subjects
+time of earliest written record,P1249,subjects
+located in time zone,P421,subjects
+Jewish Encyclopedia ID (Russian),P1438,subjects
+Pleiades ID,P1584,objects
+Digital Atlas of the Roman Empire ID,P1936,objects
+Facebook Places ID,P1997,objects
+elevation above sea level,P2044,subjects
+area,P2046,subjects
+Great Russian Encyclopedia Online ID,P2924,subjects
+Catholic Encyclopedia ID,P3241,subjects
+nighttime view,P3451,objects
+Israeli CBS municipal ID,P3466,objects
+vocalized name,P4239,objects
+ILI ID,P5063,subjects
+Grove Art Online ID,P8406,subjects
+RIA Novosti reference,P6081,subjects
+Treccani's Dizionario di Storia ID,P6404,subjects
+French Vikidia ID,P7818,subjects
+aspect ratio,P2061,people
+Cinema Context ID,P8296,objects
+Letterboxd film ID,P6127,people
+PSH ID,P1051,subjects
+has list,P2354,subjects
+Microsoft Academic ID,P6366,subjects
+KBpedia ID,P8408,subjects
+follows,P155,subjects
+followed by,P156,subjects
+record label,P264,people
+part of,P361,subjects
+YouTube video ID,P1651,people
+Discogs master ID,P1954,objects
+MetroLyrics ID,P2624,people
+has part,P527,subjects
+vertical depth,P4511,objects
+flag,P163,subjects
+executive body,P208,subjects
+locator map image,P242,subjects
+highest point,P610,subjects
+patron saint,P417,subjects
+ISO 3166-2 code,P300,subjects
+capital,P36,subjects
+flag image,P41,subjects
+end time,P582,people
+FIPS 10-4 (countries and regions),P901,subjects
+HDS ID,P902,subjects
+NUTS code,P605,subjects
+topic's main Wikimedia portal,P1151,subjects
+coat of arms,P237,subjects
+Dewey Decimal Classification,P1036,subjects
+Encyclopædia Universalis ID,P3219,subjects
+Cultureel Woordenboek ID,P3569,subjects
+category of people buried here,P1791,subjects
+Songkick venue ID,P3977,objects
+Store norske leksikon ID,P4342,subjects
+GACS ID,P4427,subjects
+Comic Vine ID,P5905,subjects
+location map,P1943,subjects
+replaced by,P1366,objects
+language used,P2936,subjects
+INSEE region code,P2585,objects
+geography of topic,P2633,subjects
+spoken text audio,P989,subjects
+Art & Architecture Thesaurus ID,P1014,subjects
+topic's main template,P1424,subjects
+Universal Decimal Classification,P1190,objects
+National Diet Library ID,P349,subjects
+has quality,P1552,subjects
+equivalent property,P1628,objects
+MeSH descriptor ID,P486,subjects
+studied by,P2579,subjects
+TED topic ID,P2612,subjects
+equivalent class,P1709,subjects
+BNCF Thesaurus ID,P508,subjects
+New York Times topic ID,P3221,subjects
+exact match,P2888,subjects
+icon,P2910,subjects
+PACTOLS thesaurus ID,P4212,subjects
+Brockhaus Enzyklopädie online ID,P5019,subjects
+Yahoo Answers category,P5084,objects
+Directory of Open Access Journals ID,P5115,objects
+ASC Leiden Thesaurus ID,P5198,subjects
+Google News topics ID,P5337,people
+IPTC NewsCode,P5429,subjects
+Larousse ID,P6058,subjects
+maintained by WikiProject,P6104,subjects
+Homosaurus ID,P6417,objects
+Klexikon article ID,P6573,subjects
+Wolfram Language entity type,P7497,objects
+JSTOR topic ID,P3827,subjects
+UNESCO Thesaurus ID,P3916,subjects
+RKD thesaurus ID,P8519,subjects
+use,P366,objects
+Arabic Ontology ID,P6771,subjects
+Joconde domain ID,P7712,objects
+Cambridge Encyclopedia of Anthropology ID,P7889,subjects
+librettist,P87,objects
+date of first performance,P1191,series
+number of parts of this work,P2635,objects
+place of birth,P19,people
+place of death,P20,people
+sex or gender,P21,subjects
+IdRef ID,P269,subjects
+cause of death,P509,people
 date of birth,P569,people
-field of work,P101,subjects
+occupation,P106,subjects
+country of citizenship,P27,people
+military rank,P410,people
+date of death,P570,people
 family name,P734,people
 given name,P735,people
-Find A Grave memorial ID,P535,people
-date of death,P570,people
-WikiTree person ID,P2949,people
-Internet Broadway Database person ID,P1220,people
-U.S. National Archives Identifier,P1225,subjects
-Internet Speculative Fiction Database author ID,P1233,people
+spouse,P26,subjects
 NNDB people ID,P1263,people
-Encyclopædia Britannica Online ID,P1417,subjects
-AlloCiné person ID,P1266,people
+CONOR ID,P1280,people
+e-archiv.li ID,P860,people
+National Library of Israel ID,P949,subjects
+Biblioteca Nacional de España ID,P950,subjects
+SELIBR ID,P906,subjects
+languages spoken; written or signed,P1412,people
+ISNI,P213,subjects
+name in native language,P1559,people
+CERL Thesaurus ID,P1871,people
 FAST ID,P2163,subjects
-Swedish Film Database person ID,P2168,people
+LBT person ID,P2977,people
+Nationale Thesaurus voor Auteurs ID,P1006,people
+manner of death,P1196,people
+British Museum person or institution ID,P1711,subjects
+Treccani ID,P3365,subjects
+SNAC Ark ID,P3430,subjects
+Deutsche Biographie ID,P7902,people
+VcBA ID,P8034,people
+RISM ID,P5504,people
+Libris-URI,P5587,people
+writing language,P6886,people
+NUKAT ID,P1207,people
+writing system,P282,people
+Soundex,P3878,people
+Cologne phonetics,P3879,people
+Caverphone,P3880,people
+attested in,P5323,people
+Iconclass notation,P1256,subjects
+family name identical to this given name,P1533,people
+genealogics.org person ID,P1819,people
+National Portrait Gallery (London) person ID,P1816,people
+Six Degrees of Francis Bacon ID,P2401,people
+Geni.com profile ID,P2600,people
+mother,P25,people
+WeRelate person ID,P4159,people
+Collective Biographies of Women ID,P4539,people
+date of burial or cremation,P4602,people
+American National Biography ID,P4823,people
+Encyclopedia Virginia ID,P5981,people
+FemBio ID,P6722,people
+FamilySearch person ID,P2889,people
+WikiTree person ID,P2949,people
+Kindred Britain ID,P3051,people
+child,P40,subjects
+father,P22,people
+place of burial,P119,people
+ethnic group,P172,subjects
+religion,P140,people
+Find A Grave memorial ID,P535,people
+Oxford Dictionary of National Biography ID,P1415,people
+Internet Broadway Database person ID,P1220,people
+material used,P186,subjects
+Nomenclature for Museum Cataloging,P7749,objects
+opposite of,P461,subjects
+facet of,P1269,subjects
+taxon rank,P105,objects
+parent taxon,P171,objects
+IRMNG ID,P5055,objects
+taxon name,P225,objects
+Global Biodiversity Information Facility ID,P846,objects
+LepIndex ID,P3064,objects
+audio,P51,subjects
+tonality,P826,objects
+duration,P2047,people
+commissioned by,P88,objects
+based on,P144,subjects
+catalog code,P528,people
+IMSLP ID,P839,people
+creator,P170,series
+MusicBrainz artist ID,P434,people
+hair color,P1884,people
+Wolfram Language entity code,P4839,subjects
+Goodreads character ID,P6327,people
+sibling,P3373,people
+NicoNicoPedia ID,P6900,subjects
+Encyclopedia of Cleveland History ID,P7644,people
+Encyclopedia of the Great Plains ID,P7686,subjects
+Mississippi Encyclopedia ID,P7688,people
+e-WV: The West Virginia Encyclopedia ID,P7695,subjects
+The Encyclopedia of Oklahoma History and Culture ID,P7723,subjects
+Joconde object type ID,P7844,objects
+Hrvatska enciklopedija ID,P7982,subjects
+Proleksis enciklopedija ID,P8349,people
+time of discovery or invention,P575,objects
+Library of Congress Classification,P1149,people
+International Standard Industrial Classification code Rev.4,P1796,objects
+Great Aragonese Encyclopedia ID,P1807,subjects
+Canadian Encyclopedia article ID,P5395,subjects
+Omni topic ID,P3479,people
+Zhihu topic ID,P3553,subjects
+NALT ID,P2004,subjects
+history of topic,P2184,subjects
+practiced by,P3095,subjects
+permanent duplicated item,P2959,subjects
+STW Thesaurus for Economics ID,P3911,subjects
+EuroVoc ID,P5437,subjects
+Basisklassifikation,P5748,subjects
+contains administrative territorial entity,P150,subjects
+head of government,P6,subjects
+anthem,P85,subjects
+maximum temperature record,P6591,subjects
+seal description,P418,subjects
+DR topic ID,P6849,subjects
+minimum temperature record,P7422,subjects
+foundational text,P457,subjects
+located on terrain feature,P706,subjects
+Italian Vikidia ID,P7822,subjects
+English Vikidia ID,P7829,subjects
+Legal Entity Identifier,P1278,people
+AGROVOC ID,P8061,subjects
+HASC,P8119,subjects
+Open Data portal,P8402,subjects
+GNIS ID,P590,subjects
+official language,P37,subjects
+coordinates of easternmost point,P1334,subjects
+coordinates of westernmost point,P1335,subjects
+coordinates of southernmost point,P1333,subjects
+motto,P1546,subjects
+demonym,P1549,subjects
+office held by head of government,P1313,subjects
+coordinates of northernmost point,P1332,subjects
+Getty Thesaurus of Geographic Names ID,P1667,subjects
+motto text,P1451,subjects
+short name,P1813,subjects
+official symbol,P2238,subjects
+BBC Things ID,P1617,subjects
+detail map,P1621,objects
+replaces,P1365,subjects
+category for films shot at this location,P1740,subjects
+nickname,P1449,subjects
+Ballotpedia ID,P2390,people
+lowest point,P1589,subjects
+PermID,P3347,objects
+Guardian topic ID,P3106,subjects
+subreddit,P3984,subjects
+C-SPAN organization ID,P4725,subjects
+highest judicial authority,P209,subjects
+legislative body,P194,subjects
+Dagens Nyheter topic ID,P3509,subjects
+geoshape,P3896,subjects
+water as percent of area,P2927,subjects
+FIPS 5-2 numeric code (US states),P5087,subjects
+Wikimedia outline,P5125,subjects
+coordinates of geographic center,P5140,subjects
+Giant Bomb ID,P5247,subjects
+seal image,P158,subjects
+archINFORM location ID,P5573,subjects
+LoC and MARC vocabularies ID,P4801,subjects
+FIPS 5-2 alpha code (US states),P5086,subjects
+AFI Catalog of Feature Films ID,P3593,people
+Swedish Film Database film ID,P2334,people
+ČSFD film ID,P2529,people
+MovieMeter film ID,P1970,people
+production designer,P2554,objects
+Sratim ID,P3145,people
+TCM Movie Database film ID,P2631,people
+LdiF ID,P3107,people
+cine.gr film ID,P3129,people
+OFDb ID,P3138,people
+Deutsche Synchronkartei film ID,P3844,people
+Academy Awards Database film ID,P6145,people
+Movie Review Query Engine ID,P8033,people
+cast member,P161,series
+producer,P162,people
+award received,P166,series
+director of photography,P344,people
+FilmAffinity ID,P480,people
+nominated for,P1411,people
+PORT film ID,P905,people
+Box Office Mojo film ID,P1237,people
+Rotten Tomatoes ID,P1258,people
+AlloCiné film ID,P1265,people
+Netflix ID,P1874,people
+ISTAT ID,P635,objects
+Italian cadastre code,P806,objects
+licence plate code,P395,subjects
+Wiki Loves Monuments ID,P2186,objects
+Nomisma ID,P2950,people
+IndicePA ID,P6832,objects
+ToposText place ID,P8068,objects
+UN/LOCODE,P1937,people
+OCLC control number,P243,objects
+author,P50,people
+publisher,P123,objects
+main subject,P921,people
+narrative location,P840,people
+Project Gutenberg ebook ID,P2034,objects
+Roud Folk Song Index number,P1829,people
+significant event,P793,subjects
+continent,P30,subjects
+Jewish Encyclopedia ID,P8590,objects
+WordLift URL,P6363,subjects
+Australian War Memorial ID,P6713,subjects
+National Library of Iceland ID,P7039,subjects
+Joconde author ID,P7711,people
+member of,P463,subjects
+BTI Governance Index,P8476,subjects
+BTI Status Index,P8477,subjects
+PM20 geo code,P8483,subjects
+participant in,P1344,subjects
+head of state,P35,subjects
+maritime identification digits,P2979,subjects
+age of majority,P2997,subjects
+currency,P38,subjects
+CiNii author ID (books),P271,subjects
+GS1 country code,P3067,subjects
+WIPO ST.3,P3068,subjects
+Statoids ID,P3175,subjects
+Unicode character,P487,subjects
+ISO 3166-1 numeric code,P299,subjects
+top-level Internet domain,P78,subjects
+marriageable age,P3000,subjects
+ITU letter code,P3024,subjects
+compulsory education (minimum age),P3270,subjects
+compulsory education (maximum age),P3271,subjects
+ISO 3166-1 alpha-2 code,P297,subjects
+ISO 3166-1 alpha-3 code,P298,subjects
+trunk prefix,P3238,subjects
+INSEE countries and foreign territories code,P3422,subjects
+Le Monde diplomatique subject ID,P3612,subjects
+ITU/ISO/IEC object identifier,P3743,subjects
+diplomatic relation,P530,subjects
+BNMM authority ID,P3788,people
+suicide rate,P3864,objects
+basic form of government,P122,subjects
+GDP (PPP),P4010,subjects
+UK Parliament thesaurus ID,P4527,people
+Encyclopedia of Modern Ukraine ID,P4613,subjects
+main regulatory text,P92,subjects
+railway traffic side,P5658,subjects
+Gynopedia ID,P5843,subjects
+Swedish Anbytarforum,P6303,people
+CIVICUS Monitor country entry,P5180,subjects
+IAB code,P5250,subjects
+country calling code,P474,subjects
+Online Books Page author ID,P4629,people
+total fertility rate,P4841,subjects
+Orthodox Encyclopedia ID,P5002,people
+The Encyclopedia of Science Fiction ID,P5357,subjects
+GeoNLP ID,P5400,subjects
+World Encyclopedia of Puppetry Arts ID,P7012,subjects
+TDV İslam Ansiklopedisi ID,P7314,subjects
+Marine Regions Geographic IDentifier (MRGID),P7322,subjects
+Spanish Vikidia ID,P7827,subjects
+Basque Vikidia ID,P7832,subjects
+literacy rate,P6897,objects
+driving side,P1622,subjects
+Analysis & Policy Observatory term ID,P7870,subjects
+Global Anabaptist Mennonite Encyclopedia Online ID,P1842,subjects
+office held by head of state,P1906,subjects
+IPA transcription,P898,subjects
+number of out-of-school children,P2573,subjects
+culture,P2596,subjects
+real gross domestic product growth rate,P2219,subjects
+life expectancy,P2250,subjects
+electrical plug type,P2853,subjects
+nominal GDP,P2131,subjects
+VAT-rate,P2855,subjects
+mains voltage,P2884,subjects
+mobile country code,P2258,subjects
+PPP GDP per capita,P2299,subjects
+nominal GDP per capita,P2132,subjects
+total reserves,P2134,subjects
+IOC country code,P984,subjects
+emergency phone number,P2852,subjects
+Human Development Index,P1081,subjects
+unemployment rate,P1198,subjects
+central bank,P1304,subjects
+Ringgold ID,P3500,subjects
+LittleSis organization ID,P3393,subjects
+Fandom wiki ID,P4073,subjects
+BHL creator ID,P4081,people
+Fandom article ID,P6262,subjects
+UIC alphabetical country code,P2981,subjects
+UIC numerical country code,P2982,subjects
+Portuguese National Library ID,P1005,people
+The Top Tens ID,P7157,subjects
+territory claimed by,P1336,objects
+place name sign,P1766,people
+National Library of Brazil ID,P4619,people
+Invasive Species Compendium Datasheet ID,P5698,subjects
+Twitter username,P2002,subjects
+Golden ID,P7502,countries
+Crossref funder ID,P3153,countries
+Libraries Australia ID,P409,subjects
+M.49 code,P2082,subjects
+Theatricalia theatre ID,P2468,countries
+public holiday,P832,subjects
+has works in the collection,P6379,people
+Wikitribune category,P4973,countries
+Gini coefficient,P1125,objects
+National Library of Greece ID,P3348,subjects
+JORFSearch organization ID,P6413,objects
+The Independent topic ID,P7284,people
+Gregorian calendar start date,P7295,subjects
+iNaturalist place ID,P7471,subjects
+Australian National Maritime Museum person ID,P7769,people
+inflation rate,P1279,subjects
+median income,P3529,subjects
+CANTIC ID,P1273,subjects
+Pinterest username,P3836,people
+aircraft registration prefix,P2986,countries
+age of consent,P2999,subjects
+Bashkir encyclopedia (Russian version) ID,P4211,subjects
+Stack Exchange tag,P1482,people
+NSK ID,P1375,people
+BIBSYS ID,P1015,subjects
+Project Gutenberg author ID,P1938,people
+Discogs artist ID,P1953,people
+Library of Congress JukeBox ID,P2089,people
+Songkick artist ID,P3478,people
+Billboard artist ID,P4208,people
+DAHR artist ID,P4457,people
+logo image,P154,people
+point in time,P585,objects
+model year code,P5461,objects
+RegiowikiAT ID,P6228,people
+Colon Classification,P8248,subjects
+sport,P641,people
+event interval,P2257,objects
+MusicBrainz release group ID,P436,objects
+educated at,P69,people
+convicted of,P1399,people
+birth name,P1477,people
+penalty,P1596,people
+taxonomic type,P427,objects
+MeSH tree code,P672,subjects
+WoRMS-ID for taxa,P850,objects
+taxon common name,P1843,objects
+NCBI taxonomy ID,P685,objects
+ITIS TSN,P815,objects
+Encyclopedia of Life ID,P830,objects
+Elhuyar ZTH ID,P4746,subjects
+LPSN URL,P1991,objects
+Gram staining,P2597,objects
+New Zealand Organisms Register ID,P2752,objects
+WikiSkripta ID,P3471,subjects
+EPPO Code,P3031,objects
+iNaturalist taxon ID,P3151,objects
+Vatican Library ID,P1017,people
+Digitale Bibliotheek voor de Nederlandse Letteren author ID,P723,people
+AlloCiné person ID,P1266,people
+Swedish Royal Theater Archive,P7574,people
+Internet Speculative Fiction Database author ID,P1233,people
+LiederNet author ID,P8234,people
+Archivio Storico Ricordi person ID,P8290,people
+Archive Site Trinity College Cambridge ID,P8496,people
+employer,P108,people
+signature,P109,people
+Munzinger person ID,P1284,people
+Kritisches Lexikon zur fremdsprachigen Gegenwartsliteratur ID,P1289,people
+University of Barcelona authority ID,P1580,people
+EGAXA ID,P1309,people
+NLA Trove ID,P1315,subjects
+Les Archives du Spectacle Person ID,P1977,people
+Le Delarge ID,P1988,people
+Cooper-Hewitt Person ID,P2011,people
+AllMovie person ID,P2019,people
+OpenPlaques subject ID,P1430,people
+position held,P39,people
+Canadiana Authorities ID,P1670,subjects
+GTAA ID,P1741,subjects
+sexual orientation,P91,people
+Filmportal ID,P2639,people
+Unz Review author ID,P2734,people
+BVMC person ID,P2799,people
+Vegetti Catalog of Fantastic Literature NILF ID,P2191,people
 Elonet person ID,P2387,people
 PORT person ID,P2435,people
-Scope.dk person ID,P2519,people
-Geni.com profile ID,P2600,people
-birth name,P1477,people
-genre,P136,people
-work period (end),P2032,people
-ethnic group,P172,subjects
-award received,P166,people
-AllMusic artist ID,P1728,people
-Discogs artist ID,P1953,people
-instrument,P1303,people
-described by source,P1343,subjects
-ISNI,P213,subjects
-Kinopoisk person ID,P2604,people
-ČSFD person ID,P2605,people
-iTunes artist ID (American version),P2850,people
-Last.fm ID,P3192,people
-NE.se ID,P3222,subjects
-number of children,P1971,people
-Myspace ID,P3265,people
-SNAC Ark ID,P3430,subjects
-Comic Vine ID,P5905,subjects
-Allcinema person ID,P7214,people
-WorldCat Identities ID,P7859,subjects
-AllMovie person ID,P2019,people
+BAnQ author ID,P3280,people
+Nobel Prize People Nomination ID,P3360,people
+National Library of Wales Authority ID,P2966,people
 work period (start),P2031,people
-NKCR AUT ID,P691,subjects
-Library of Congress authority ID,P244,subjects
-nominated for,P1411,people
-VIAF ID,P214,subjects
-GND ID,P227,subjects
-Bibliothèque nationale de France ID,P268,subjects
-Carnegie Hall agent ID,P4104,people
-Internet Off-Broadway Database creditable entity ID,P4456,people
-Filmweb.pl person ID,P5033,people
-ILI ID,P5063,subjects
-Open Media Database person ID,P5534,people
-Television Academy Foundation interviewee ID,P5773,people
-languages spoken; written or signed,P1412,people
-official website,P856,subjects
-IdRef ID,P269,subjects
-conflict,P607,people
-topic's main category,P910,subjects
-IMDb ID,P345,people
-Freebase ID,P646,subjects
-Commons gallery,P935,subjects
-MusicBrainz artist ID,P434,people
-cause of death,P509,people
-Nationale Thesaurus voor Auteurs ID,P1006,people
-Biblioteca Nacional de España ID,P950,subjects
-position held,P39,people
-educated at,P69,people
-work location,P937,people
-US Congress Bio ID,P1157,people
-name in native language,P1559,people
-political party,P102,people
-C-SPAN person ID,P2190,people
-manner of death,P1196,people
-openMLOL author ID,P3762,subjects
 residence,P551,subjects
-spouse,P26,subjects
-PolitiFact people and groups ID,P2267,people
-TV.com ID,P2638,people
-Facebook ID,P2013,people
-Twitter username,P2002,subjects
-Muck Rack journalist ID,P6005,people
-sibling,P3373,people
-KBpedia ID,P8408,subjects
-Baseball Almanac ID,P4409,people
-Canadian Baseball Hall of Fame inductee ID,P4462,people
-South Dakota Sports Hall of Fame ID,P4605,people
-The Baseball Cube player ID,P4731,people
-American National Biography ID,P4823,people
-Retrosheet person ID,P6976,people
+field of work,P101,subjects
+SHARE Catalogue author ID,P3987,people
+Carnegie Hall agent ID,P4104,people
+Theatricalia person ID,P2469,people
+Kinopoisk person ID,P2604,people
+Open Library ID,P648,people
+Swedish Film Database person ID,P2168,people
+Museum of Modern Art artist ID,P2174,people
+archives at,P485,people
+Runeberg author ID,P3154,people
+NYRB contributor ID,P5419,people
+BD Gest' author ID,P5491,people
+Open Media Database person ID,P5534,people
+LOA ID,P5618,people
+ArhivX LOD,P5821,people
+Itaú Cultural ID,P4399,people
+Internet Off-Broadway Database creditable entity ID,P4456,people
+The Numbers person ID,P4657,people
+influenced by,P737,people
+ČSFD person ID,P2605,people
+Danish National Filmography person ID,P2626,people
+TV.com ID,P2638,series
+Babelio author ID,P3630,people
+Artnet artist ID,P3782,people
+notable work,P800,people
+National Library of Korea ID,P5034,people
+Flanders Arts Institute person ID,P5068,people
+Poetry Foundation ID,P5341,people
+Poets.org poet ID,P5343,people
+BNB person ID,P5361,people
+The Paris Review interviewee ID,P5414,people
+Academy Awards Database nominee ID,P6150,people
+Alexander Turnbull Library ID,P6683,people
+student of,P1066,people
+noble title,P97,people
+family,P53,people
+amateur radio callsign,P5143,people
+commemorates,P547,subjects
+month of the year,P2922,subjects
+day in year for periodic occurrence,P837,subjects
+Historical Gazetteer (GOV) ID,P2503,objects
+located in present-day administrative territorial entity,P3842,objects
+ISO 3166-3,P773,objects
+dissolved; abolished or demolished,P576,objects
+location of formation,P740,people
+owner of,P1830,subjects
+Le Monde ID,P5558,people
+visitors per year,P1174,objects
+TripAdvisor ID,P3134,subjects
+Le Figaro tag ID,P6621,people
+Japan Search name ID,P6698,people
+foreign direct investment net outflow,P2140,objects
+foreign direct investment net inflow,P2141,objects
+RationalWiki ID,P7775,subjects
+MinDat Locality ID,P6265,objects
+Democracy Index,P8328,objects
+Iranica ID,P3021,subjects
+location,P276,objects
+operator,P137,people
+manufacturer,P176,objects
+collection,P195,objects
+NRHP reference number,P649,objects
+heritage designation,P1435,people
+country of registry,P8047,people
+located in protected area,P3018,objects
+length,P2043,people
+event distance,P3157,objects
+organizer,P664,objects
+number of participants,P1132,objects
+winner,P1346,objects
+start time,P580,series
+review score,P444,objects
+category for recipients of this award,P2517,objects
+hashtag,P2572,subjects
+conferred by,P1027,people
 member of sports team,P54,people
-National Diet Library ID,P349,subjects
-sport,P641,people
 position played on team / speciality,P413,people
-medical condition,P1050,people
+mass,P2067,people
 country for sport,P1532,people
+work period (end),P2032,people
+height,P2048,people
 Baseball-Reference.com major league player ID,P1825,people
 Baseball-Reference.com minor & foreign league player ID,P1826,people
 MLB.com player ID,P3541,people
-ESPN.com MLB player ID,P3571,people
 FanGraphs player ID,P3574,people
 National Baseball Hall of Fame and Museum ID,P4164,people
+The Baseball Cube player ID,P4731,people
+Retrosheet person ID,P6976,people
+political party,P102,people
+medical condition,P1050,people
+C-SPAN person ID,P2190,people
+PolitiFact people and groups ID,P2267,people
+significant person,P3342,people
+Montreux Jazz Festival person ID,P8301,people
+openMLOL author ID,P3762,subjects
+PM20 folder ID,P4293,people
+BlackPast.org ID,P6723,people
+South Carolina Encyclopedia ID,P7690,people
+presenter,P371,objects
+participant,P710,objects
+basin country,P205,objects
+name,P2561,people
+Marine Regions Geographic ID,P3006,subjects
+tributary,P974,objects
+TV Guide person ID,P3845,people
+DBC author ID,P3846,people
+Cinema.de ID,P3933,people
+Unifrance person ID,P3980,people
+Treccani's Enciclopedia Italiana ID,P4223,people
+BFI Filmography person ID,P4326,people
+Deutsche Synchronkartei actor ID,P4332,people
+BFI Films; TV and people ID,P4438,people
+Prisma ID,P4515,people
+The Peerage person ID,P4638,people
+Filmweb.pl person ID,P5033,people
+FilmTv.it person ID,P5254,people
+Douban movie celebrity ID,P5284,people
+British Council writer ID,P5364,people
+SBN author ID,P396,people
+Movieplayer person ID,P4782,people
+Who's Who UK ID,P4789,people
+Amazon author ID,P4862,people
+TMDb person ID,P4985,people
+CineMagia person ID,P4666,people
+Eldoblaje original actor ID,P4682,people
+cinematografo.it name or company ID,P4768,people
+MYmovies actor ID,P4779,people
+Fantastic Fiction author ID,P5408,people
+LRB contributor ID,P5502,people
+NooSFere author ID,P5570,people
+RSL author ID,P5643,people
+Los Angeles Review of Books author ID,P5705,people
+Cineuropa person ID,P6083,people
+Letterboxd actor ID,P6119,people
+Douban author ID,P6441,people
+Crew United person ID,P6521,people
+abART person ID,P6844,people
+Hoopla artist ID,P6868,people
+National Library of Russia ID,P7029,people
+Penguin India author ID,P7031,people
+Eiga.com person ID,P7215,people
+Regensburg Classification,P1150,people
+LibraryThing author ID,P7400,people
+FantLab author ID,P7433,people
+Europeana entity,P7704,people
+Perlentaucher ID,P866,people
+CoBiS author ID,P7865,people
+IDU person ID,P8385,people
+Dialnet author ID,P1607,people
+Metacritic ID,P1712,people
+LNB ID,P1368,people
+Smithsonian American Art Museum person/institution ID,P1795,people
+Scope.dk person ID,P2519,people
+Facebook ID,P2013,series
+BiblioNet author ID,P2188,people
+Goodreads author ID,P2963,people
+UK National Archives ID,P3029,people
+TCM Movie Database person ID,P3056,people
+ISzDb person ID,P3114,people
+Ciné-Ressources person ID,P3204,people
+AllMusic artist ID,P1728,people
+MovieMeter director ID,P1969,people
+gravsted.dk ID,P4359,people
+Songfacts artist ID,P5287,people
+Muziekweb performer ID,P5882,people
+ComiXology creator ID,P5951,people
+Disney A to Z ID,P6181,people
+WhoSampled artist ID,P6517,people
+related category,P7084,people
+work location,P937,people
+Biographical Directory of Federal Judges ID,P2736,people
+The First Amendment Encyclopedia ID,P7952,people
+part of the series,P179,objects
+HURDAT identifier,P502,objects
+maximum sustained winds,P2895,objects
+IBTrACS cyclone ID,P4540,objects
+lowest atmospheric pressure,P2532,objects
+ISBN-13,P212,objects
+Goodreads book ID,P2969,objects
+ISBN-10,P957,objects
+OCLC work ID,P5331,objects
+Goodreads work ID,P8383,objects
+instrument,P1303,people
+iTunes artist ID (American version),P2850,people
+Last.fm ID,P3192,people
+number of children,P1971,people
+Myspace ID,P3265,people
+Allcinema person ID,P7214,people
+Television Academy Foundation interviewee ID,P5773,people
+conflict,P607,people
+US Congress Bio ID,P1157,people
+Muck Rack journalist ID,P6005,people
+Baseball Almanac ID,P4409,people
+Canadian Baseball Hall of Fame inductee ID,P4462,people
+South Dakota Sports Hall of Fame ID,P4605,people
+ESPN.com MLB player ID,P3571,people
 SABR person ID,P2482,people
 LittleSis people ID,P3388,people
 Trading Card Database person ID,P5421,people
-participant in,P1344,subjects
 California Sports Hall of Fame athlete ID,P4507,people
-Instagram username,P2003,people
-mass,P2067,people
+Instagram username,P2003,series
 Rugby League Project player ID,P4464,people
-child,P40,subjects
 CageMatch worker ID,P2728,people
 Online World of Wrestling ID,P2830,people
 WWE.com superstar ID,P2857,people
 military branch,P241,people
-Quora topic ID,P3417,subjects
 commemorative plaque image,P1801,people
-BNB person ID,P5361,people
-employer,P108,people
-Open Library ID,P648,people
-NUKAT ID,P1207,people
-GTAA ID,P1741,subjects
-Libraries Australia ID,P409,subjects
-CONOR ID,P1280,people
-SELIBR ID,P906,subjects
-SHARE Catalogue author ID,P3987,people
-National Library of Korea ID,P5034,people
-Libris-URI,P5587,people
-writing language,P6886,people
-Europeana entity,P7704,people
-Deutsche Biographie ID,P7902,people
-family,P53,people
-height,P2048,people
-CoBiS author ID,P7865,people
-VcBA ID,P8034,people
 Frankfurter Personenlexikon ID,P8044,people
 GeneaStar person ID,P8094,people
 Sejm-Wielki.pl profile ID,P8172,people
 Canadiana NCF ID,P8179,people
 National Library of Israel J9U ID,P8189,people
 ASUT ID,P8219,people
-LiederNet author ID,P8234,people
 BHF author ID,P8547,people
 TracesOfWar person ID,P8578,people
-mother,P25,people
-Filmportal ID,P2639,people
-BVMC person ID,P2799,people
-CiNii author ID (books),P271,subjects
-FamilySearch person ID,P2889,people
-Great Russian Encyclopedia Online ID,P2924,subjects
-father,P22,people
-ISzDb person ID,P3114,people
-Runeberg author ID,P3154,people
-Goodreads author ID,P2963,people
-UK National Archives ID,P3029,people
-Kindred Britain ID,P3051,people
 RERO ID,P3065,subjects
-archives at,P485,people
-member of,P463,subjects
-military rank,P410,people
-BAnQ author ID,P3280,people
 KINENOTE person ID,P3305,people
 Kvikmyndir person ID,P3341,people
-National Library of Greece ID,P3348,subjects
-Nobel Prize People Nomination ID,P3360,people
-Ciné-Ressources person ID,P3204,people
-Encyclopædia Universalis ID,P3219,subjects
-New York Times topic ID,P3221,subjects
 unmarried partner,P451,people
-BiblioNet author ID,P2188,people
 Encyclopædia Britannica contributor ID,P2450,people
 commander of (DEPRECATED),P598,people
 handedness,P552,people
-coat of arms image,P94,subjects
 candidacy in election,P3602,people
 native language,P103,people
 RKDartists ID,P650,people
-signature,P109,people
-Artnet artist ID,P3782,people
-DBC author ID,P3846,people
-Cinema.de ID,P3933,people
-significant event,P793,subjects
 killed by,P157,people
-religion,P140,people
 Pontificia Università della Santa Croce ID,P5739,people
-Larousse ID,P6058,subjects
 ELNET ID,P6394,people
-Treccani's Dizionario di Storia ID,P6404,subjects
 DIZIE ID,P6414,people
-BIBSYS ID,P1015,subjects
-Store norske leksikon ID,P4342,subjects
-gravsted.dk ID,P4359,people
-BFI Films; TV and people ID,P4438,people
-Prisma ID,P4515,people
-National Library of Brazil ID,P4619,people
-Giant Bomb ID,P5247,subjects
-FilmTv.it person ID,P5254,people
-Douban movie celebrity ID,P5284,people
-Online Books Page author ID,P4629,people
-The Peerage person ID,P4638,people
-CineMagia person ID,P4666,people
-MYmovies actor ID,P4779,people
-Movieplayer person ID,P4782,people
-TMDb person ID,P4985,people
-Brockhaus Enzyklopädie online ID,P5019,subjects
-WeRelate person ID,P4159,people
-PM20 folder ID,P4293,people
-BFI Filmography person ID,P4326,people
-Deutsche Synchronkartei actor ID,P4332,people
 Lebanese National Library ID,P7026,people
-National Library of Russia ID,P7029,people
-National Library of Iceland ID,P7039,subjects
 PLWABN ID,P7293,people
 MUBI person ID,P7300,people
 Aozora Bunko author ID,P7311,people
-Perlentaucher ID,P866,people
 Dharma Drum Buddhist College person ID,P1187,people
 Union List of Artist Names ID,P245,people
 American Film Institute person ID,P5340,people
 Angelicum ID,P5731,people
-Portuguese National Library ID,P1005,people
 BHCL ID,P6656,people
 TV Tropes identifier,P6839,subjects
-abART person ID,P6844,people
-English Vikidia ID,P7829,subjects
-Gran Enciclopèdia Catalana ID,P1296,subjects
-EGAXA ID,P1309,people
-LNB ID,P1368,people
 National Library of Chile ID,P7369,subjects
-LibraryThing author ID,P7400,people
 National Library of Lithuania ID,P7699,subjects
-French Vikidia ID,P7818,subjects
-Italian Vikidia ID,P7822,subjects
-Spanish Vikidia ID,P7827,subjects
-NLA Trove ID,P1315,subjects
-CANTIC ID,P1273,subjects
-Munzinger person ID,P1284,people
-owner of,P1830,subjects
-National Portrait Gallery (London) person ID,P1816,people
-genealogics.org person ID,P1819,people
-University of Barcelona authority ID,P1580,people
-British Museum person or institution ID,P1711,subjects
 blood type,P1853,people
 LibriVox author ID,P1899,people
-Les Archives du Spectacle Person ID,P1977,people
-Metacritic ID,P1712,people
-short name,P1813,subjects
-Project Gutenberg author ID,P1938,people
-OpenPlaques subject ID,P1430,people
-Rotten Tomatoes ID,P1258,people
 image of grave,P1442,people
-nickname,P1449,subjects
 Commons Creator page,P1472,people
-The Encyclopedia of Science Fiction ID,P5357,subjects
-different from,P1889,subjects
-National Library of Israel ID,P949,subjects
-Jewish Encyclopedia ID (Russian),P1438,subjects
-YouTube video ID,P1651,people
-exact match,P2888,subjects
 Nobel prize ID,P3188,people
-Treccani ID,P3365,subjects
-Treccani's Enciclopedia Italiana ID,P4223,people
 Nobel Laureate API ID,P8024,people
-De Agostini ID,P6706,subjects
-Babelio author ID,P3630,people
-NYRB contributor ID,P5419,people
 US Federal Election Commission ID,P1839,people
-Ballotpedia ID,P2390,people
 YouTube channel ID,P2397,people
 OpenSecrets people ID,P2686,people
 Google+ ID,P2847,people
 Vote Smart ID,P3344,people
-notable work,P800,people
-Oxford Dictionary of National Biography ID,P1415,people
 Art UK artist ID,P1367,people
 Musée d'Orsay artist ID,P2268,people
 Tate artist ID,P2741,people
 Benezit ID,P2843,people
 movement,P135,people
-Le Delarge ID,P1988,people
 MSBI person ID,P2914,people
 Te Papa agent ID,P3544,people
 MutualArt artist ID,P6578,people
@@ -296,7 +840,6 @@ Invaluable.com person ID,P4927,people
 Dictionary of Scottish Architects ID,P5308,people
 artist-info artist ID,P5489,people
 Artcyclopedia artist ID,P5597,people
-has works in the collection,P6379,people
 Art Renewal Center artist ID,P3791,people
 Bridgeman artist ID,P3965,people
 YCBA agent ID,P4169,people
@@ -304,40 +847,19 @@ Christie's creator ID,P4200,people
 RA Collections ID,P4553,people
 Frick Art Reference Library Artist File ID,P7848,people
 Olympedia athlete ID,P8286,people
-Grove Art Online ID,P8406,subjects
-convicted of,P1399,people
 defender,P1593,people
-on focus list of Wikimedia project,P5008,subjects
-FemBio ID,P6722,people
-BlackPast.org ID,P6723,people
 ArtBrokerage artist ID,P6903,people
 depicted by,P1299,subjects
 Handbook of Texas ID,P6015,subjects
-Unz Review author ID,P2734,people
 Internet Book Database of Fiction writer ID,P5365,people
-Fantastic Fiction author ID,P5408,people
 Bibliopoche author ID,P5695,people
-Hoopla artist ID,P6868,people
 Fandango performer ID,P8125,people
-The Numbers person ID,P4657,people
-Amazon author ID,P4862,people
 New Georgia Encyclopedia ID,P4903,people
-Wolfram Language entity code,P4839,subjects
-Google News topics ID,P5337,people
-BabelNet ID,P2581,subjects
-TCM Movie Database person ID,P3056,people
-Danish National Filmography person ID,P2626,people
 Genius artist numeric ID,P6351,people
-related category,P7084,people
 AMPAS collections person ID,P7119,people
 Writers Guild of America writer ID,P7286,people
-MovieMeter director ID,P1969,people
-Disney A to Z ID,P6181,people
 Box Office Mojo person ID,P2688,people
 Genius artist ID,P2373,people
-Songkick artist ID,P3478,people
-Billboard artist ID,P4208,people
-Letterboxd actor ID,P6119,people
 competition class,P2094,people
 Basketball-Reference.com NBA player ID,P2685,people
 Eurobasket.com player ID,P3527,people
@@ -351,55 +873,31 @@ RealGM basketball player ID,P3957,people
 Proballers ID,P8548,people
 Sports-Reference.com Olympic athlete ID,P1447,people
 described at URL,P973,subjects
-spoken text audio,P989,subjects
 National Library of Romania ID,P1003,people
-cinematografo.it name or company ID,P4768,people
 ADK member ID,P4114,people
-Muziekweb performer ID,P5882,people
-NicoNicoPedia ID,P6900,subjects
 Flemish Public Libraries ID,P7024,people
-SBN author ID,P396,people
-RISM ID,P5504,people
 Google Doodle,P4431,people
-DAHR artist ID,P4457,people
 Isidore scholar ID,P4491,people
 list of works,P1455,people
-NSK ID,P1375,people
 TheatreOnline ID,P6403,people
-Klexikon article ID,P6573,subjects
 ex-libris,P8195,people
 filmography,P1283,people
-Basque Vikidia ID,P7832,subjects
-Canadiana Authorities ID,P1670,subjects
-HDS ID,P902,subjects
 CCAB ID,P1890,subjects
 Spotify artist ID,P1902,people
 NLP ID (unique),P1695,people
 National Discography of Italian Song artist/group ID,P2510,people
 IPI name number,P1828,people
-Museum of Modern Art artist ID,P2174,people
 Catholic Hierarchy person ID,P1047,people
 consecrator,P1598,people
 affiliation,P1416,people
 Pro-Football-Reference.com player ID,P3561,people
-part of,P361,subjects
 Scopus author ID,P1153,people
 time period,P2348,people
 César Award person ID,P5319,people
 National Medal of Arts winner ID,P5719,people
-Academy Awards Database nominee ID,P6150,people
-IDU person ID,P8385,people
-record label,P264,people
 All About Jazz musician ID,P5121,people
-Guardian topic ID,P3106,subjects
-Zhihu topic ID,P3553,subjects
-WhoSampled artist ID,P6517,people
 preferred pronoun,P6553,people
-Alexander Turnbull Library ID,P6683,people
 Roglo person ID,P7929,people
-RationalWiki ID,P7775,subjects
-BNMM authority ID,P3788,people
-TV Guide person ID,P3845,people
 allegiance,P945,people
 present in work,P1441,subjects
 represented by,P1875,people
@@ -408,29 +906,21 @@ represents,P1268,people
 lifestyle,P1576,people
 Leopoldina member ID,P3413,people
 Reddit username,P4265,people
-Collective Biographies of Women ID,P4539,people
-Who's Who UK ID,P4789,people
 ResearchGate contributions ID,P6023,people
 Enciclopedia delle donne ID,P6488,people
 DUC ID,P7578,people
 academic degree,P512,people
-influenced by,P737,people
 doctoral advisor,P184,people
 audio recording of the subject's spoken voice,P990,people
-student of,P1066,people
 zbMATH author ID,P1556,people
 TED speaker ID,P2611,people
 Academic Tree ID,P2381,people
 Emmys person ID,P8381,people
 World Golf Hall of Fame player ID,P4461,people
-Vatican Library ID,P1017,people
-BBC Things ID,P1617,subjects
-hair color,P1884,people
 video,P10,subjects
 Google Scholar author ID,P1960,people
 interested in,P2650,people
 Dimensions author ID,P6178,people
-Microsoft Academic ID,P6366,subjects
 ScienceOpen author ID,P7709,people
 National Academy of Sciences member ID,P5380,people
 RANM member ID,P3945,people
@@ -443,16 +933,11 @@ Hansard (1803–2005) ID,P2015,people
 Women's Basketball Hall of Fame ID,P4410,people
 Iowa Sports Hall of Fame ID,P4631,people
 voice type,P412,people
-Montreux Jazz Festival person ID,P8301,people
 Slovak National Library ID,P7700,people
-RIA Novosti reference,P6081,subjects
-Hrvatska enciklopedija ID,P7982,subjects
 LiederNet composer ID,P8235,people
 Persée author ID,P2732,people
 Mathematics Genealogy Project ID,P549,people
 Parlement & Politiek ID,P1749,people
-Dagens Nyheter topic ID,P3509,subjects
-UK Parliament thesaurus ID,P4527,people
 relative,P1038,people
 net worth,P2218,people
 Soccerbase player ID,P2193,people
@@ -462,45 +947,26 @@ DACS ID,P4663,people
 WikiArt ID,P6002,people
 copyright representative,P6275,people
 Artsy artist ID,P2042,people
-Kritisches Lexikon zur fremdsprachigen Gegenwartsliteratur ID,P1289,people
 generational suffix,P8017,people
 PACE member ID,P1331,people
 Dictionary of Sydney ID,P3794,people
-catalog code,P528,people
-pronunciation audio,P443,subjects
-IPA transcription,P898,subjects
-Flanders Arts Institute person ID,P5068,people
 BIU Santé person ID,P5375,people
-ArhivX LOD,P5821,people
 Adelphi author ID,P5859,people
 Projekt Gutenberg-DE ID,P7753,people
 BeWeb person ID,P7796,people
-Gran Enciclopèdia de la Música ID,P6412,subjects
-Archivio Storico Ricordi person ID,P8290,people
-Archive Site Trinity College Cambridge ID,P8496,people
-Digitale Bibliotheek voor de Nederlandse Letteren author ID,P723,people
-CERL Thesaurus ID,P1871,people
-Vegetti Catalog of Fantastic Literature NILF ID,P2191,people
 WomenWriters ID,P2533,people
-Cultureel Woordenboek ID,P3569,subjects
 AKL Online artist ID,P4432,people
 BMLO ID,P865,people
 honorific suffix,P1035,people
 Library of Parliament of Canada person ID,P6616,people
-Encyclopedia of the Great Plains ID,P7686,subjects
 Webb-site person ID,P5298,people
-official name,P1448,subjects
-The First Amendment Encyclopedia ID,P7952,people
 Cambridge Alumni Database ID,P1599,people
-Six Degrees of Francis Bacon ID,P2401,people
-LBT person ID,P2977,people
 Clergy of the Church of England database ID,P3410,people
 Hungarian National Namespace person ID,P6988,people
 PIM authority ID,P3973,people
 Hungarian National Assembly identifier,P4966,people
 Guggenheim fellows ID,P6594,people
 ADAGP artist ID,P3901,people
-said to be the same as,P460,subjects
 National Humanities Medal winner ID,P5657,people
 College Football Data Warehouse ID,P3560,people
 Munzinger Pop ID,P1286,people
@@ -513,19 +979,13 @@ Encyclopedia of Australian Science ID,P4228,people
 name in kana,P1814,people
 US Bureau of Prisons Inmate Register Number,P8007,people
 EMLO person ID,P1802,people
-National Library of Wales Authority ID,P2966,people
 Watercolour World artist ID,P6735,people
 Gazetteer for Scotland person ID,P7349,people
 Science Museum people ID,P4389,people
 Virtual Laboratory person ID,P5516,people
-Biographical Directory of Federal Judges ID,P2736,people
-Theatricalia person ID,P2469,people
-Poets.org poet ID,P5343,people
-The Paris Review interviewee ID,P5414,people
 CALS Encyclopedia of Arkansas ID,P7685,subjects
 Hymnary author ID,P6300,people
 Nelson-Atkins Museum of Art person ID,P5273,people
-Poetry Foundation ID,P5341,people
 Dictionary of Welsh Biography ID,P1648,people
 Treccani's Dizionario di Filosofia ID,P7993,subjects
 McClintock and Strong Biblical Cyclopedia ID,P8636,people
@@ -537,24 +997,17 @@ Uppsala University Alvin ID,P6821,subjects
 The Washington Post contributor ID,P7943,people
 has written for,P6872,people
 KMDb person ID,P1649,people
-Cooper-Hewitt Person ID,P2011,people
 HKMDB person ID,P3346,people
 elCinema person ID,P3136,people
 EDb person ID,P3142,people
 elFilm person ID,P3144,people
 Wall Street Journal topic ID,P3183,people
-Unifrance person ID,P3980,people
 Decine21 person ID,P7803,people
 Canal-U person ID,P5243,people
 SSRN author ID,P3747,people
 Polish scientist ID,P3124,people
-audio,P51,subjects
-has list,P2354,subjects
 Internetowy Polski Słownik Biograficzny ID,P8130,people
 PhilPapers author ID,P3232,people
-LRB contributor ID,P5502,people
-RSL author ID,P5643,people
-Dialnet author ID,P1607,people
 AE member ID,P5463,people
 Who's Who in France biography ID,P4124,people
 RSL ID (person),P947,people
@@ -569,14 +1022,10 @@ member of the crew of,P5096,people
 Saint Louis Art Museum person ID,P5271,people
 time in space,P2873,people
 National Aviation Hall of Fame ID,P7898,people
-Fandom article ID,P6262,subjects
 SVT Open archive,P6817,people
 FAI ID,P4556,people
-Swedish Anbytarforum,P6303,people
-amateur radio callsign,P5143,people
 catchphrase,P6251,people
 Bashkir encyclopedia (Bashkir version) ID,P4210,subjects
-Bashkir encyclopedia (Russian version) ID,P4211,subjects
 Latvian National Encyclopedia Online ID,P6870,subjects
 COURAGE ID,P7037,people
 Rodovid ID,P1185,people
@@ -597,16 +1046,12 @@ Archives Directory for the History of Collecting in America ID,P7128,people
 Kansaspedia ID,P7687,people
 International Olympic Committee athlete ID,P3171,people
 Radio Radicale person ID,P4521,people
-Songfacts artist ID,P5287,people
 member of military unit,P7779,people
 Krugosvet article,P6385,people
-DR topic ID,P6849,subjects
 NLC authorities,P1213,people
 eye color,P1340,people
 Internet Archive ID,P724,people
-topic's main template,P1424,subjects
 pseudonym,P742,people
-DMOZ ID,P998,subjects
 Ishim ID,P3906,people
 honorific prefix,P511,people
 FMD photographer ID,P2485,people
@@ -648,7 +1093,6 @@ drafted by,P647,people
 MobyGames developer ID,P3913,people
 Musixmatch artist ID,P6874,people
 Taratata artist ID,P5291,people
-logo image,P154,people
 Journalisted ID,P1714,people
 parliament.uk biography pages,P1996,people
 PublicWhip ID,P2169,people
@@ -658,14 +1102,12 @@ Parliamentary record identifier,P2172,people
 BBC News Democracy Live ID,P2173,people
 UK Parliament identifier,P6213,people
 Democracy Club candidate ID,P6465,people
-Iconclass notation,P1256,subjects
 startrek.com Database ID,P7512,people
 New Mexico Sports Hall of Fame ID,P4374,people
 racing-reference.info driver ID,P3048,people
 Ricorso author ID,P4928,people
 Literature Ireland ID,P5542,people
 Northern Ireland Assembly ID,P5870,people
-LOA ID,P5618,people
 Biografisch Portaal van Nederland ID,P651,people
 Harvard Index of Botanists ID,P6264,people
 Find NZ Artists ID,P6792,people
@@ -674,15 +1116,12 @@ botanist author abbreviation,P428,people
 IPNI author ID,P586,people
 Stuttgart Database of Scientific Illustrators ID,P2349,people
 Dictionary of New Zealand Biography ID,P2745,people
-FantLab author ID,P7433,people
 Jeugdliteratuur ID,P7504,people
-NooSFere author ID,P5570,people
 number of matches played/races/starts,P1350,people
 Transfermarkt manager ID,P2447,people
 coach of sports team,P6087,people
 total goals in career,P6509,people
 Soccerbase manager ID,P2195,people
-ComiXology creator ID,P5951,people
 DC Comics talent ID,P7951,people
 MLS player ID,P2398,people
 Turkish Football Federation player ID,P2448,people
@@ -714,13 +1153,11 @@ College Football HoF ID,P3044,people
 Pro Football Hall of Fame ID (old),P3581,people
 Oklahoma Sports Hall of Fame ID,P4376,people
 Pro Football Hall of Fame ID,P6930,people
-The Encyclopedia of Oklahoma History and Culture ID,P7723,subjects
 MR Author ID,P4955,people
 BDFutbol player ID,P3655,people
 AnimeCons.com guest ID,P3790,people
 Wrestlingdata person ID,P2764,people
 Internet Wrestling Database ID,P2829,people
-Los Angeles Review of Books author ID,P5705,people
 WBIS ID,P8081,people
 quotation or excerpt,P7081,people
 LezWatch.TV actor ID,P7105,people
@@ -736,8 +1173,6 @@ databaseOlympics.com athlete ID,P3520,people
 Poetry In Voice poet ID,P5506,people
 BoxRec boxer ID,P1967,people
 International Boxing Hall of Fame boxer ID,P4474,people
-The Top Tens ID,P7157,subjects
-Goodreads character ID,P6327,people
 NKAA ID,P8156,people
 head coach,P286,people
 LiveJournal ID,P3258,people
@@ -745,16 +1180,13 @@ Rate Your Music artist ID,P5404,people
 Lambiek Comiclopedia artist ID,P5035,people
 Alabama Sports Hall of Fame athlete ID,P4362,people
 Encyclopedia of Alabama ID,P6010,people
-Legal Entity Identifier,P1278,people
 The Oregon Encyclopedia ID,P7691,people
 place of detention,P2632,people
 Minnesota legislator ID,P3160,people
 AustralianFootball.com ID,P3546,people
 AFL Tables player ID,P3547,people
-penalty,P1596,people
 Tumblr username,P3943,people
 The Atlantic author ID,P6791,people
-BHL creator ID,P4081,people
 LesBiographies.com ID,P4434,people
 DBLP ID,P2456,people
 Justia Patents inventor ID,P3874,people
@@ -777,20 +1209,15 @@ Australian Athletics Historical Results athlete ID,P3915,people
 Australian Women's Register ID,P4186,people
 Australian Olympic Committee athlete ID,P3682,people
 warheroes.ru ID,P2943,people
-Encyclopedia of Modern Ukraine ID,P4613,subjects
-Pinterest username,P3836,people
-permanent duplicated item,P2959,subjects
 danskfilmogtv person ID,P4112,people
 Metro topic ID,P6922,people
 YesAsia author ID,P7193,people
 MovieGe person ID,P7653,people
 Movie Walker person ID,P7745,people
 Georgia Sports Hall of Fame ID,P4364,people
-TDV İslam Ansiklopedisi ID,P7314,subjects
 Swedish Open Cultural Heritage URI,P1260,people
 National Collegiate Basketball Hall of Fame ID,P4560,people
 SoundCloud ID,P3040,people
-Proleksis enciklopedija ID,P8349,people
 CQ Ranking male cyclist ID,P1541,people
 ProCyclingStats cyclist ID,P1663,people
 Cycling Database ID,P1664,people
@@ -798,7 +1225,6 @@ Rock and Roll Hall of Fame ID,P3162,people
 Danskefilm person ID,P3786,people
 ESPNFC.com player ID,P3681,people
 NZ On Screen person ID,P6548,people
-Encyclopedia Virginia ID,P5981,people
 ranking,P1352,people
 sports discipline competed in,P2416,people
 Google Knowledge Graph ID,P2671,people
@@ -807,12 +1233,9 @@ penalty minutes in career,P6546,people
 HHOF.com NHL player ID,P3567,people
 Hockey-Reference.com player ID,P3598,people
 total points in career,P6544,people
-subreddit,P3984,subjects
 Mormon Literature and Creative Arts Database artist ID,P5469,people
-BD Gest' author ID,P5491,people
 Bitraga author ID,P6173,people
 Share-VDE author ID,P6329,people
-Regensburg Classification,P1150,people
 BookBrainz author ID,P2607,people
 Broadway Photographs person ID,P7467,people
 Ratingraph actor ID,P7602,people
@@ -825,7 +1248,6 @@ NHL.com player ID,P3522,people
 total shots in career,P6543,people
 career plus-minus rating,P6547,people
 NMVW id,P7831,people
-noble title,P97,people
 Fellow of the Royal Society ID,P2070,people
 The Vogue List ID,P3404,people
 Poetry Archive poet ID,P5392,people
@@ -840,15 +1262,9 @@ Wimbledon player ID,P4503,people
 databaseFootball.com ID,P3532,people
 MYmovies director ID,P4781,people
 Behind The Voice Actors person ID,P5007,people
-Eldoblaje original actor ID,P4682,people
-Cineuropa person ID,P6083,people
-Crew United person ID,P6521,people
-Eiga.com person ID,P7215,people
-Canadian Encyclopedia article ID,P5395,subjects
 TheTVDB person ID,P7920,people
 BRAHMS artist ID,P5226,people
 Playbill person ID,P6132,people
-Sratim ID,P3145,people
 LongTake person ID,P8305,people
 Sinemalar person ID,P7553,people
 Mtime people ID,P6464,people
@@ -857,18 +1273,14 @@ Den Store Danske ID,P8313,people
 Noovie person ID,P8314,people
 VGMdb artist ID,P3435,people
 Gateway to Research person ID,P8446,people
-country,P17,subjects
 headquarters location,P159,people
 chief executive officer,P169,people
 stock exchange,P414,people
-inception,P571,subjects
-location of formation,P740,people
 ISIN,P946,people
 product or material produced,P1056,people
 legal form,P1454,people
 BoardGameGeek game publisher ID,P6160,people
 OSM Name Suggestion Index identifier,P8253,people
-Dewey Decimal Classification,P1036,subjects
 doctoral thesis,P1026,people
 Ontario MPP ID,P3054,people
 French Academy of Sciences member ID,P6282,people
@@ -883,19 +1295,13 @@ Munk's Roll ID,P2941,people
 professorship,P803,people
 FFF author ID,P5619,people
 NSDAP membership number (1925–1945),P2298,people
-creator,P170,people
 Japan Golf Tour player ID,P3535,people
 Official World Golf Ranking player ID,P3568,people
-Mississippi Encyclopedia ID,P7688,people
-Omni topic ID,P3479,people
 Bollywood Hungama person alphabetic ID,P7923,people
-The Independent topic ID,P7284,people
 godparent,P1290,people
-sexual orientation,P91,people
 Bollywood Hungama person numeric ID,P3910,people
 LUMIERE director ID,P4283,people
 MYmovies name ID,P4785,people
-IMSLP ID,P839,people
 Magdeburger Biographisches Lexikon,P2277,people
 Ben Yehuda author ID,P7507,people
 military casualty classification,P1347,people
@@ -919,10 +1325,8 @@ Dictionary of Swedish National Biography ID,P3217,people
 Philadelphia Museum of Art entity ID,P8317,people
 Athenaeum person ID,P4145,people
 Rotterdam City Archives actor ID,P7425,people
-country of origin,P495,subjects
 Giphy username,P4013,people
 YouTube playlist ID,P4300,people
-Who's on First ID,P6766,subjects
 BoF person ID,P3814,people
 FBref.com player ID,P5750,people
 England Football Online player profile,P6331,people
@@ -943,7 +1347,6 @@ title of chess person,P2962,people
 chesstempo ID,P3315,people
 OlimpBase Chess Olympiad player ID,P3940,people
 MNBAQ artist ID,P8336,people
-Smithsonian American Art Museum person/institution ID,P1795,people
 France Musique person ID,P5654,people
 Irish Rugby Football Union men's player ID,P3848,people
 Pro14 player ID,P4429,people
@@ -952,10 +1355,7 @@ EPCR player ID,P3666,people
 It's Rugby player ID,P3769,people
 Dictionary of Art Historians ID,P2332,people
 RePEc Short-ID,P2428,people
-Library of Congress JukeBox ID,P2089,people
-significant person,P3342,people
 Enciclopèdia de l'Esport Català ID,P5513,people
-performer,P175,subjects
 derivative work,P4969,people
 Maine: An Encyclopedia ID,P7697,people
 BDFA player ID,P6188,people
@@ -968,7 +1368,6 @@ exonerated of,P7781,people
 National Registry of Exonerations Case ID,P8479,people
 World Series of Poker ID,P3554,people
 The Hendon Mob ID,P6146,people
-Stack Exchange tag,P1482,people
 Bloomberg person ID,P3052,people
 Internet Game Database person ID,P5796,people
 autores.uy ID,P2558,people
@@ -982,11 +1381,8 @@ MacTutor biography ID,P1563,people
 Shakeosphere person ID,P2886,people
 PhilPapers topic,P3235,subjects
 Stanford Encyclopedia of Philosophy ID,P3123,subjects
-Itaú Cultural ID,P4399,people
 Science Fiction Awards Database author ID,P8504,people
 CWGC person ID,P1908,people
-located in the administrative territorial entity,P131,subjects
-coordinate location,P625,subjects
 last words,P3909,people
 PolSys ID,P1980,people
 Storting person ID,P3072,people
@@ -996,9 +1392,7 @@ vehicle normally used,P3438,people
 CPDOC ID,P4660,people
 Brazilian federal deputy ID,P7480,people
 Poetry International Web poet ID,P5430,people
-Swedish Royal Theater Archive,P7574,people
 Bookogs credit ID,P8230,people
-start time,P580,people
 has pet,P1429,people
 Tebeosfera character ID,P5569,people
 media franchise,P8345,people
@@ -1006,33 +1400,17 @@ SecondHandSongs artist ID,P2909,people
 Snapchat username,P2984,people
 IPI base code,P3453,people
 TikTok username,P7085,people
-director,P57,people
-screenwriter,P58,people
-composer,P86,people
 EDb film ID,P3141,people
-elFilm film ID,P3143,people
 Ciné-Ressources film ID,P3203,people
-producer,P162,people
-LdiF ID,P3107,people
-cine.gr film ID,P3129,people
 elCinema film ID,P3135,people
-OFDb ID,P3138,people
-AFI Catalog of Feature Films ID,P3593,people
 TV Guide show ID,P3804,people
 The Numbers movie ID,P3808,people
-based on,P144,subjects
-cast member,P161,people
 production company,P272,people
-FilmAffinity ID,P480,people
-Deutsche Synchronkartei film ID,P3844,people
 Filmweb.pl ID,P3995,people
 Cinémathèque québécoise work identifier,P4276,people
-publication date,P577,people
 ISAN,P3212,people
 Moviepilot.de film ID,P5786,people
 Medierådet rating,P5970,people
-Letterboxd film ID,P6127,people
-Academy Awards Database film ID,P6145,people
 Google Play Movies & TV ID,P6562,people
 Scripts.com script ID,P6584,people
 Filmfront film ID,P7975,people
@@ -1041,45 +1419,25 @@ Douban film ID,P4529,people
 Bechdel Test Movie List ID,P4632,people
 Open Media Database film ID,P3302,people
 ICAA rating,P3306,people
-director of photography,P344,people
 CineMagia film ID,P4665,people
 TMDb movie ID,P4947,people
 Il mondo dei doppiatori ID,P5099,people
-color,P462,subjects
-original language of film or TV show,P364,people
-Movie Review Query Engine ID,P8033,people
 film editor,P1040,people
 BBC programme ID,P827,people
-narrative location,P840,people
-Box Office Mojo film ID,P1237,people
-distributed by,P750,people
-has quality,P1552,subjects
-title,P1476,people
 DNF film ID,P1804,people
-MovieMeter film ID,P1970,people
 FSK film rating,P1981,people
-AllMovie movie ID,P1562,people
-PORT film ID,P905,people
-Netflix ID,P1874,people
 after a work by,P1877,people
 box office,P2142,people
-Swedish Film Database film ID,P2334,people
 Elonet movie ID,P2346,people
-AlloCiné film ID,P1265,people
-duration,P2047,people
 Allcinema film ID,P2465,people
 KINENOTE film ID,P2508,people
 Movie Walker film ID,P2509,people
 filming location,P915,people
-ČSFD film ID,P2529,people
-Kinopoisk film ID,P2603,people
-TCM Movie Database film ID,P2631,people
 costume designer,P2515,people
 Scope.dk film ID,P2518,people
 executive producer,P1431,people
 EIRIN film rating,P2756,people
 Cineplex film ID,P3077,people
-aspect ratio,P2061,people
 cost,P2130,people
 BFI National Archive work ID,P2703,people
 EIDR identifier,P2704,people
@@ -1127,8 +1485,6 @@ eWRC-results.com racer ID,P3927,people
 Rallye-info.com driver or co-driver ID,P3930,people
 Juwra.com ID,P3949,people
 New York Times contributor ID,P8297,people
-length,P2043,people
-topic's main Wikimedia portal,P1151,subjects
 Know Your Meme ID,P6760,subjects
 victory,P2522,people
 Chinese Olympic Committee athlete ID,P4068,people
@@ -1138,12 +1494,10 @@ HAL author ID,P4450,people
 DAAO ID,P1707,people
 BWF.tournamentsoftware.com player ID,P2729,people
 BWFbadminton.com player ID,P3620,people
-language of work or name,P407,people
-original broadcaster,P449,people
-end time,P582,people
+original broadcaster,P449,series
 number of episodes,P1113,people
-Television Academy Foundation show ID,P5829,people
-number of seasons,P2437,people
+Television Academy Foundation show ID,P5829,series
+number of seasons,P2437,series
 TMDb TV series ID,P4983,people
 World Curling Federation ID,P3557,people
 Sports-Reference.com college basketball coach ID,P4751,people
@@ -1153,28 +1507,14 @@ Quora username,P4411,people
 WBPLN author ID,P4343,people
 second family name in Spanish name,P1950,people
 World Sailing member ID,P2804,people
-OpenStreetMap relation ID,P402,subjects
-category for people born here,P1464,subjects
-GeoNames ID,P1566,subjects
-category of associated people,P1792,subjects
-capital of,P1376,people
-elevation above sea level,P2044,subjects
-area,P2046,subjects
 Kansas Sports Hall of Fame ID,P4366,people
 Squash Info player ID,P3286,people
 PSA World Tour player ID,P3476,people
 NAQ elected person ID,P3055,people
 Companies House officer ID,P5297,people
-family name identical to this given name,P1533,people
 given name version for other gender,P1560,people
-writing system,P282,people
-native label,P1705,subjects
 Dictionary of Medieval Names from European Sources entry,P1888,people
-Soundex,P3878,people
-Cologne phonetics,P3879,people
-Caverphone,P3880,people
 Nominis given name ID,P4284,people
-attested in,P5323,people
 Loop ID,P2798,people
 contributed to creative work,P3919,people
 Soccerdonna player ID,P4381,people
@@ -1186,13 +1526,10 @@ Declarator.org ID,P1883,people
 LIGA profile,P6210,people
 North Carolina Sports Hall of Fame ID,P4375,people
 Cairn author ID,P4369,people
-date of burial or cremation,P4602,people
 Elysee.fr president ID,P5440,people
 Conseil constitutionnel ID,P5457,people
 Courrier international topic ID,P5551,people
-Le Monde ID,P5558,people
 Vie publique person ID,P7676,people
-Le Figaro tag ID,P6621,people
 OpenEdition Books author ID,P6677,people
 Sycomore ID,P1045,people
 Whitney Museum of American Art artist ID,P6714,people
@@ -1219,14 +1556,12 @@ Jaxsta profile ID,P7052,people
 MNCARS artist ID,P4439,people
 partner in business or sport,P1327,people
 MyAnimeList people ID,P4084,people
-Österreichisches Musiklexikon Online ID,P8432,subjects
 ASMP member ID,P5362,people
 Australian Dictionary of Biography ID,P1907,people
 founded by,P112,people
 NFL.com ID,P3539,people
 ESPN.com NFL player ID,P3686,people
 Sport Australia Hall of Fame inductee ID,P4415,people
-Australian National Maritime Museum person ID,P7769,people
 Information Center for Israeli Art artist ID,P1736,people
 PSS-archi architect ID,P2194,people
 Pacific Coast Architecture Database person ID,P5745,people
@@ -1240,7 +1575,6 @@ All-Russian Mathematical Portal ID,P4252,people
 History of Parliament ID,P1614,people
 CircleID writer ID,P3455,people
 Wikimedia username,P4174,people
-named after,P138,subjects
 Ultimate Guitar artist ID,P5927,people
 Douban musician ID,P6446,people
 KKBox artist ID,P5154,people
@@ -1266,7 +1600,6 @@ U.S. Ski and Snowboard Hall of Fame athlete ID,P4422,people
 Louisiana Sports Hall of Fame ID,P4367,people
 World Rugby Hall of Fame ID,P4604,people
 Vienna History Wiki ID,P7842,people
-hashtag,P2572,subjects
 LPGA Tour golf player ID,P2810,people
 Rock's Backpages author ID,P6462,people
 Twitter user numeric ID,P6552,people
@@ -1283,7 +1616,6 @@ The Cardinals of the Holy Roman Church ID,P7619,people
 Museum of Modern Art work ID,P2014,people
 diocese,P708,people
 Quais du polar writer ID,P5666,people
-British Council writer ID,P5364,people
 Debrett's People of Today ID,P2255,people
 record held,P1000,people
 Swimrankings.net swimmer ID,P2640,people
@@ -1291,7 +1623,6 @@ Encyclopedia of Surfing ID,P3338,people
 Nova Scotia Sport Hall of Fame ID,P4406,people
 Architectuurgids architect ID,P3058,people
 SFMOMA artist ID,P4936,people
-Japan Search name ID,P6698,people
 Opera Vivra singer ID,P4407,people
 Peakbagger climber ID,P7278,people
 industry,P452,people
@@ -1319,7 +1650,6 @@ Laut.de artist ID,P5356,people
 Canada's Sports Hall of Fame athlete ID,P4398,people
 Canadian Olympic Committee athlete ID,P4054,people
 Liber Liber author ID,P7208,people
-Catholic Encyclopedia ID,P3241,subjects
 Spanish Biographical Dictionary ID,P4459,people
 National Gallery of Canada artist ID,P5368,people
 National Film Board of Canada director identifier,P6891,people
@@ -1334,14 +1664,12 @@ Virginia Sports Hall of Fame ID,P4386,people
 World Rowing ID,P2091,people
 National Inventors Hall of Fame ID,P3468,people
 SoundHound artist ID,P7201,people
-MetroLyrics ID,P2624,people
 NSZL (VIAF) ID,P951,people
 NSZL name authority ID,P3133,people
 canonization status,P411,people
 Nominis saint ID,P4286,people
 GCatholic person ID,P8366,people
 Women's Sports Foundation ID,P4377,people
-maintained by WikiProject,P6104,subjects
 compArt person ID,P4772,people
 Sandbox-External identifier,P2536,people
 URL,P2699,people
@@ -1360,7 +1688,6 @@ McCune-Reischauer romanization,P1942,people
 Revised Romanization,P2001,people
 Encyclopaedia Metallum band ID,P1952,people
 Encyclopaedia Metallum artist ID,P1989,people
-name,P2561,people
 Swedish Literature Bank AuthorID,P5101,people
 Classiques des sciences sociales ID,P5390,people
 Médias 19 ID,P7918,people
@@ -1394,17 +1721,12 @@ Library of Congress of Chile person ID,P5442,people
 National Academy of Medicine (France) Member ID,P3956,people
 Collège de France professor ID,P5443,people
 BDEL ID,P6231,people
-author,P50,people
-main subject,P921,people
 published in,P1433,people
-Roud Folk Song Index number,P1829,people
-copyright status,P6216,people
 IAFD male performer ID,P4505,people
 Track and Field Statistics female athlete ID,P3924,people
 Poetry Society of America poet ID,P5503,people
 enemy of,P7047,people
 GCD series ID,P3589,people
-replaces,P1365,subjects
 owned by,P127,people
 Social Security number,P8002,people
 Sunshine Tour golf player ID,P3582,people
@@ -1417,7 +1739,6 @@ patronym or matronym for this person,P5056,people
 PPN ID,P6721,people
 Politika topic,P6328,subjects
 IEEE Xplore author ID,P6479,people
-has part,P527,subjects
 Centre Pompidou ID,P6323,people
 askArt person ID,P7545,people
 Städel Museum artist ID,P4581,people
@@ -1446,17 +1767,13 @@ National Portrait Gallery (United States) object ID,P6152,people
 FOIH person ID,P4206,people
 COAM architect ID,P4488,people
 FootballFacts.ru player ID,P3660,people
-e-archiv.li ID,P860,people
 PARES ID,P4813,people
 IMFDB ID,P6992,people
 Ricochet author ID,P5413,people
-Douban author ID,P6441,people
 Women of Scotland subject ID,P8050,people
-Penguin India author ID,P7031,people
 SANU member ID,P3475,people
 ARMB member ID,P5329,people
 Historia de la Medicina person ID,P5468,people
-Nomisma ID,P2950,people
 Riksdagen person-ID,P1214,people
 Riksdagen person guid,P8388,people
 DOLF ID,P5605,people
@@ -1478,7 +1795,6 @@ Telegram username,P3789,people
 Odnoklassniki ID,P5163,people
 first appearance,P4584,people
 Behind The Voice Actors character ID,P5107,people
-Fandom wiki ID,P4073,subjects
 Encyclopaedia Herder author ID,P5441,people
 Rupa Publications author ID,P6984,people
 The-Sports.org athlete ID,P4391,people
@@ -1499,7 +1815,6 @@ Swedish Olympic Committee athlete ID,P2323,people
 Worlds Without End author ID,P8287,people
 La Vie des idées ID,P5550,people
 Cinema of Israel ID,P3445,people
-Library of Congress Classification,P1149,people
 Austrian Biographical Encylopedia ID,P6194,people
 has edition or translation,P747,people
 Musopen composer ID,P2338,people
@@ -1560,7 +1875,6 @@ At the Circulating Library ID,P1564,people
 ITF player ID 2020,P8618,people
 Scoresway tennis person ID,P6308,people
 AustLit ID,P8295,people
-catalog,P972,people
 iHeartRadio podcast ID,P7324,people
 JewAge person ID,P4116,people
 Techopedia ID,P6009,people
@@ -1578,21 +1892,15 @@ BioLexSOE ID,P7928,people
 Académie française member ID,P4717,people
 Canal Académie ID,P5631,people
 TWAS Fellow ID,P6174,people
-Unicode character,P487,subjects
-page banner,P948,subjects
-OmegaWiki Defined Meaning,P1245,subjects
 Getty Iconography Authority ID,P5986,subjects
 total revenue,P2139,people
 Vermont Sports Hall of Fame athlete ID,P4523,people
-seal image,P158,subjects
 Présence Compositrices composer ID,P8523,people
 Yahoo! Japan Talent Database ID,P3284,people
 Nederlands Fotomuseum photographer ID,P7837,people
 Curran Index contributor ID,P8085,people
 item operated,P121,people
 Auckland Museum ID,P7298,people
-subclass of,P279,subjects
-conferred by,P1027,people
 next lower rank,P3729,people
 award rationale,P6208,people
 service ribbon image,P2425,people
@@ -1605,26 +1913,19 @@ CWA writer ID,P5747,people
 World Snooker athlete ID,P4498,people
 Cinenacional.com person ID,P3857,people
 Bandcamp ID,P3283,people
-place name sign,P1766,people
 DSMHOF athlete ID,P4363,people
 MLL player ID,P3948,people
-facet of,P1269,subjects
 female form of label,P2521,people
 SwimSwam ID,P4315,people
 autores.ar ID,P4158,people
 Ontario Sports Hall of Fame athlete ID,P4412,people
 destination point,P1444,people
 start point,P1427,people
-LittleSis organization ID,P3393,subjects
-South Carolina Encyclopedia ID,P7690,people
 Archaeology Data Service person ID,P6734,people
 CRIStin ID,P2287,people
 World Archery Federation ID,P3010,people
 monogram,P1543,people
 mount,P3091,people
-flag image,P41,subjects
-anthem,P85,subjects
-flag,P163,subjects
 Twitter topics ID,P8672,people
 Beach Volleyball Database ID,P2800,people
 SinemaTürk person ID,P6255,people
@@ -1640,9 +1941,7 @@ Heidelberg Academy for Sciences and Humanities member ID,P2273,people
 KVAB member ID,P3887,people
 Oberwolfach mathematician ID,P8418,people
 Base de datos de premiados person ID,P5498,people
-commemorates,P547,subjects
 Luding designer ID,P3506,people
-country of registry,P8047,people
 ACM Classification Code (2012),P2179,people
 Boijmans artist ID,P3888,people
 Dansk kvindebiografisk leksikon ID,P7939,people
@@ -1656,7 +1955,6 @@ Armenian National Academy of Sciences ID,P5212,people
 Cullum number,P4026,people
 Lotsawa House Tibetan author ID,P4348,people
 architect,P84,people
-operator,P137,people
 architectural style,P149,people
 MusicBrainz place ID,P1004,people
 street address,P6375,people
@@ -1668,19 +1966,10 @@ footedness,P8006,people
 SPoT skater ID,P8634,people
 test taken,P5021,people
 Semion author ID,P7671,people
-postal code,P281,people
-local dialing code,P473,people
-OS grid reference,P613,people
-GSS code (2011),P836,subjects
-TOID,P3120,subjects
-Vision of Britain place ID,P3616,subjects
-historic county,P7959,people
 Fogis.se player ID,P5038,people
 AFL player ID,P8277,people
 PremiershipRugby.com ID,P861,people
-World Encyclopedia of Puppetry Arts ID,P7012,subjects
 CPDL ID,P2000,subjects
-continent,P30,subjects
 SCAR Composite Gazetteer place ID,P3230,people
 GNIS Antarctica ID,P804,people
 Online Cenotaph ID,P7474,people
@@ -1706,7 +1995,6 @@ YouPorn ID,P5267,people
 Irish playography person ID,P7934,people
 Aosdána ID,P5614,people
 SPLC Individual ID,P8534,people
-WordLift URL,P6363,subjects
 superhuman feature or ability,P2563,people
 Tilastopaja female athlete ID,P3882,people
 ruchess ID,P4994,people
@@ -1731,17 +2019,14 @@ USHMM Holocaust Encyclopedia ID,P3724,people
 IAT weightlifter ID,P2779,people
 Poincaré Papers person ID,P7142,people
 Gedbas genealogy person ID,P4108,people
-Wikimedia outline,P5125,subjects
 Arnet Miner author ID,P5776,people
 Swiss National Sound Archives ID,P6770,people
 Biographie nationale de Belgique ID,P6234,people
 Brilliant Wiki ID,P6564,people
 KNAW past member ID,P2454,people
-Great Aragonese Encyclopedia ID,P1807,subjects
 Singapore Infopedia ID,P8350,people
 officeholder,P1308,people
 incarnation of,P3701,people
-Orthodox Encyclopedia ID,P5002,people
 Nasjonalbiblioteket photographer ID,P1847,people
 Lokalhistoriewiki.no ID,P6520,subjects
 Basketball-Reference.com NBL player ID,P4796,people
@@ -1778,7 +2063,6 @@ Philadelphia Museum of Art work ID,P4643,people
 French Academy in Rome resident ID,P5466,people
 British Museum bioID,P6077,people
 Personendatenbank Germania Sacra ID,P8440,people
-Joconde author ID,P7711,people
 WeChangEd ID,P7947,people
 BVPH authority ID,P6492,people
 Great Encyclopedia of Navarre ID,P7388,subjects
@@ -1787,59 +2071,25 @@ Sächsische Biografie ID,P1710,people
 Images d'Art artwork ID,P4761,people
 CESAR person ID,P2340,people
 BIA PSY person ID,P5450,people
-RegiowikiAT ID,P6228,people
 Edvard Munch's correspondance person ID,P7466,people
 Norwegian historical register of persons ID,P4574,people
 maintained by,P126,people
-heritage designation,P1435,people
 Site of Special Scientific Interest (England) ID,P2621,people
 parent peak,P3137,people
 HanCinema person ID,P3045,people
 Cyworld ID,P4226,people
 BDCYL authority ID,P3964,people
-RKD thesaurus ID,P8519,subjects
-twinned administrative body,P190,subjects
-locator map image,P242,subjects
-ISO 3166-2 code,P300,subjects
-licence plate code,P395,subjects
-located in time zone,P421,subjects
-MusicBrainz area ID,P982,subjects
-category for people who died here,P1465,subjects
-archINFORM location ID,P5573,subjects
-Gynopedia ID,P5843,subjects
-UN/LOCODE,P1937,people
-Encyclopedia of Cleveland History ID,P7644,people
 WAFL FootyFacts ID,P4615,people
-day in year for periodic occurrence,P837,subjects
+Hulu series ID,P6467,series
 foods traditionally associated,P868,subjects
-follows,P155,subjects
-followed by,P156,subjects
-Art & Architecture Thesaurus ID,P1014,subjects
-BNCF Thesaurus ID,P508,subjects
-PSH ID,P1051,subjects
-YSO ID,P2347,subjects
-JSTOR topic ID,P3827,subjects
 Banglapedia (Bengali version) ID,P4254,subjects
-IPTC NewsCode,P5429,subjects
-Arabic Ontology ID,P6771,subjects
-Australian Educational Vocabulary ID,P7033,subjects
 Banglapedia (English version) ID,P4255,subjects
-ASC Leiden Thesaurus ID,P5198,subjects
-UNESCO Thesaurus ID,P3916,subjects
-EuroVoc ID,P5437,subjects
 EU Research participant ID,P5785,subjects
 has cause,P828,subjects
-MeSH tree code,P672,subjects
-WikiSkripta ID,P3471,subjects
-Cambridge Encyclopedia of Anthropology ID,P7889,subjects
 Encyclopedie berbere ID,P8472,subjects
-TED topic ID,P2612,subjects
 Patientplus ID,P1461,subjects
 has immediate cause,P1478,subjects
-opposite of,P461,subjects
 NCI Thesaurus ID,P1748,subjects
-MeSH descriptor ID,P486,subjects
-Global Anabaptist Mennonite Encyclopedia Online ID,P1842,subjects
 properties for this type,P1963,subjects
 ICD-10,P494,subjects
 ICD-9,P493,subjects
@@ -1849,10 +2099,8 @@ ICPC 2 ID,P667,subjects
 symptoms,P780,subjects
 health specialty,P1995,subjects
 UMLS CUI,P2892,subjects
-icon,P2910,subjects
 Human Phenotype Ontology ID,P3841,subjects
 GARD rare disease ID,P4317,subjects
-Elhuyar ZTH ID,P4746,subjects
 Store medisinske leksikon ID,P5082,subjects
 OMIM ID,P492,subjects
 Disease Ontology ID,P699,subjects
@@ -1860,176 +2108,43 @@ genetic association,P2293,subjects
 Orphanet ID,P1550,subjects
 ICD-9-CM,P1692,subjects
 ICD-10-CM,P4229,subjects
-material used,P186,subjects
 Terminologia Anatomica 98 ID,P1323,subjects
 Foundational Model of Anatomy ID,P1402,subjects
 UBERON ID,P1554,subjects
 Terminologia Histologica,P1694,subjects
-NALT ID,P2004,subjects
 Thesaurus For Graphic Materials ID,P5160,subjects
 Europeana Fashion Vocabulary ID,P3832,subjects
 TA98 Latin term,P3982,subjects
 TA2 ID,P7173,subjects
-head of government,P6,subjects
-diplomatic relation,P530,subjects
-GNIS ID,P590,subjects
-highest point,P610,subjects
-official language,P37,subjects
-located on terrain feature,P706,subjects
-FIPS 10-4 (countries and regions),P901,subjects
-capital,P36,subjects
-population,P1082,subjects
-contains administrative territorial entity,P150,subjects
-coordinates of southernmost point,P1333,subjects
-motto text,P1451,subjects
-motto,P1546,subjects
-demonym,P1549,subjects
-located in or next to body of water,P206,subjects
-highest judicial authority,P209,subjects
-office held by head of government,P1313,subjects
-category for films shot at this location,P1740,subjects
-executive body,P208,subjects
-official symbol,P2238,subjects
-category of people buried here,P1791,subjects
-geography of topic,P2633,subjects
-water as percent of area,P2927,subjects
-lowest point,P1589,subjects
-geoshape,P3896,subjects
-language used,P2936,subjects
-FIPS 5-2 alpha code (US states),P5086,subjects
-FIPS 5-2 numeric code (US states),P5087,subjects
-coordinates of geographic center,P5140,subjects
-legislative body,P194,subjects
-seal description,P418,subjects
-foundational text,P457,subjects
-GACS ID,P4427,subjects
-C-SPAN organization ID,P4725,subjects
-Getty Thesaurus of Geographic Names ID,P1667,subjects
-maximum temperature record,P6591,subjects
-Marine Regions Geographic IDentifier (MRGID),P7322,subjects
-minimum temperature record,P7422,subjects
-TripAdvisor ID,P3134,subjects
 exclave of,P500,subjects
-category for maps,P7867,subjects
 EH.Net Encyclopedia of Economic and Business History ID,P7996,subjects
-HASC,P8119,subjects
-Open Data portal,P8402,subjects
-history of topic,P2184,subjects
-PM20 geo code,P8483,subjects
-LoC and MARC vocabularies ID,P4801,subjects
-INSEE countries and foreign territories code,P3422,subjects
-Ringgold ID,P3500,subjects
 eMedicine ID,P673,subjects
 drug used for treatment,P2176,subjects
 MonDO ID,P5270,subjects
-IAB code,P5250,subjects
 Wikidata property,P1687,subjects
-equivalent class,P1709,subjects
-PACTOLS thesaurus ID,P4212,subjects
-practiced by,P3095,subjects
 model item,P5869,subjects
-Library of Congress Genre/Form Terms ID,P4953,subjects
 Encyclopedia of Chicago ID,P7901,subjects
 EAGLE id,P1900,subjects
 instrumentation,P870,subjects
-MusicBrainz genre ID,P8052,subjects
-top-level Internet domain,P78,subjects
-main regulatory text,P92,subjects
-head of state,P35,subjects
-basic form of government,P122,subjects
-country calling code,P474,subjects
-coat of arms,P237,subjects
-ISO 3166-1 alpha-2 code,P297,subjects
-ISO 3166-1 numeric code,P299,subjects
-shares border with,P47,subjects
-currency,P38,subjects
-ISO 3166-1 alpha-3 code,P298,subjects
 separated from,P807,subjects
-public holiday,P832,subjects
-IOC country code,P984,subjects
-inflation rate,P1279,subjects
-Human Development Index,P1081,subjects
-central bank,P1304,subjects
-coordinates of northernmost point,P1332,subjects
 list of monuments,P1456,subjects
-coordinates of easternmost point,P1334,subjects
-coordinates of westernmost point,P1335,subjects
-office held by head of state,P1906,subjects
-emergency phone number,P2852,subjects
-driving side,P1622,subjects
-electrical plug type,P2853,subjects
-VAT-rate,P2855,subjects
-mains voltage,P2884,subjects
-nominal GDP,P2131,subjects
-nominal GDP per capita,P2132,subjects
-BTI Governance Index,P8476,subjects
-BTI Status Index,P8477,subjects
-Gregorian calendar start date,P7295,subjects
-Analysis & Policy Observatory term ID,P7870,subjects
-total fertility rate,P4841,subjects
-real gross domestic product growth rate,P2219,subjects
-life expectancy,P2250,subjects
-mobile country code,P2258,subjects
-total reserves,P2134,subjects
 total exports,P2135,subjects
-PPP GDP per capita,P2299,subjects
-studied by,P2579,subjects
-culture,P2596,subjects
-maritime identification digits,P2979,subjects
-marriageable age,P3000,subjects
-age of consent,P2999,subjects
-UIC alphabetical country code,P2981,subjects
-UIC numerical country code,P2982,subjects
 GOST 7.67 cyrillic,P2988,subjects
-age of majority,P2997,subjects
-Iranica ID,P3021,subjects
-ITU letter code,P3024,subjects
-GS1 country code,P3067,subjects
-Statoids ID,P3175,subjects
-trunk prefix,P3238,subjects
-WIPO ST.3,P3068,subjects
 official religion,P3075,subjects
 speed limit,P3086,subjects
-compulsory education (minimum age),P3270,subjects
-compulsory education (maximum age),P3271,subjects
-Le Monde diplomatique subject ID,P3612,subjects
-ITU/ISO/IEC object identifier,P3743,subjects
-railway traffic side,P5658,subjects
-STW Thesaurus for Economics ID,P3911,subjects
-CIVICUS Monitor country entry,P5180,subjects
-GeoNLP ID,P5400,subjects
-GDP (PPP),P4010,subjects
-patron saint,P417,subjects
-NUTS code,P605,subjects
-EMLO location ID,P4672,subjects
 GENUKI ID,P7352,subjects
-iNaturalist place ID,P7471,subjects
 Pleiades category identifier,P2938,subjects
-month of the year,P2922,subjects
 label in sign language,P2919,subjects
 ISBN identifier group,P3097,subjects
 coextensive with,P3403,subjects
-median income,P3529,subjects
-number of out-of-school children,P2573,subjects
 TORA ID,P4820,subjects
 individual tax rate,P2834,subjects
-Invasive Species Compendium Datasheet ID,P5698,subjects
-Australian War Memorial ID,P6713,subjects
-AGROVOC ID,P8061,subjects
-time of earliest written record,P1249,subjects
-unemployment rate,P1198,subjects
 Hornbostel-Sachs classification,P1762,subjects
-e-WV: The West Virginia Encyclopedia ID,P7695,subjects
-Colon Classification,P8248,subjects
 retirement age,P3001,subjects
 CAB ID,P8072,subjects
 Thesaurus Sozialwissenschaften ID,P8365,subjects
 UNBIS Thesaurus ID,P8370,subjects
 Criminological Thesaurus ID,P8374,subjects
-M.49 code,P2082,subjects
 partially coincident with,P1382,subjects
-location map,P1943,subjects
 visitor centre,P2872,subjects
-Marine Regions Geographic ID,P3006,subjects
-Basisklassifikation,P5748,subjects
 anatomical location,P927,subjects

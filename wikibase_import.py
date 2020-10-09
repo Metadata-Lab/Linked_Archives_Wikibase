@@ -8,6 +8,7 @@ last updated: 10-04-2020
 from wikidataintegrator import wdi_core, wdi_login
 import os, pprint, json
 import config as cfg
+from get_wiki_data import get_local_q
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/w/api.php"
 login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
@@ -15,9 +16,6 @@ login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_a
 def json_to_dict(file):
     data = json.load(file)
     return data
-
-def get_local_q(label):
-    return None
 
 def wiki_prop_statements(wiki_dict):
     statements = []
@@ -67,8 +65,6 @@ def import_items(dict):
         # write the changes to wikibase with login credentials
         wbPage.write(login_creds)
 
-def import_people():
-    pass
 
 def import_all():
 

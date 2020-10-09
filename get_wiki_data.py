@@ -90,3 +90,7 @@ def get_statements(q_string):
     except Exception as e:
         print(e)
         return None
+
+
+def get_local_q(label):
+    return None
