@@ -41,10 +41,11 @@ def get_new_props_single(infile):
                     name_csv_safe = prop_name.replace(',', ';')
                     pnum = wiki_dict[prop_name][0]
                     if name_csv_safe in props.keys():
+                        props[name_csv_safe][2] += 1
                         if label not in props.get(name_csv_safe):
                             props.get(name_csv_safe).append(label)
                     else:
-                        props[name_csv_safe] = [pnum, label]
+                        props[name_csv_safe] = [pnum, label, 1]
     return props
 
 
@@ -57,6 +58,6 @@ def get_new_props(infiles):
     for prop in props.keys():
         output = prop
         for info in props.get(prop):
-            output += ',' + info
+            output += ',' + str(info)
         out.write(output + '\n')
     out.close()
