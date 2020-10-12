@@ -28,8 +28,8 @@ def get_local_q(label):
     qs = json_to_dict("q_ids.json")
     return qs.get(label)
 
-def get_item_statements(i_dict):
-    statements = []
+def get_item_statements(i_dict, type):
+    statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
     for prop in i_dict.keys():
         pid = cfg.property_ids.get(prop)
         object = cfg.property_keys.index(prop) in cfg.multi_val_prop
@@ -48,11 +48,11 @@ def get_item_statements(i_dict):
 
     return statements
 
-def import_items(dict, q_out):
+def import_items(dict, q_out, type):
 
     for item in dict.keys():
         # turn the item dictionary into statements
-        item_statements = get_item_statements(dict.get(item))
+        item_statements = get_item_statements(dict.get(item), type)
 
         # create the item
         wbPage = wdi_core.WDItemEngine(data=item_statements, mediawiki_api_url=mw_api_url)
@@ -88,6 +88,9 @@ def import_all():
     dicts = [subjects, countries, events, names, bib_series, collections,
              series, objects, belfer, becker, koppel, people]
 
+    types = ["subject", "country", "event", "name", "bib_series", "collection",
+             "series", "object", "item", "item", "item", "person"]
+
     with open("q_ids.json", "w") as q_out:
-        for dict in dicts:
-            import_items(dict, q_out)
+        for idx, dict in enumerate(dicts):
+            import_items(dict, q_out, types[idx])
