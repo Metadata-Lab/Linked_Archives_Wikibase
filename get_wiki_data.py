@@ -8,7 +8,7 @@ find the wikidata q identifier if a page with the label exists
 @param label: the label of the page to search for
 @returns label string if page exists, None if it doesn't
 '''
-# def search_for_q(label):
+def search_for_q(label):
 #     site = pywikibot.Site("en", "wikipedia")
 #
 #     try:
@@ -25,7 +25,7 @@ find the wikidata q identifier if a page with the label exists
 #         return magic["Q"]
 #
 #     except:
-#         return None
+        return None
 
 '''
 get all of the statements for an entity in wikidata
