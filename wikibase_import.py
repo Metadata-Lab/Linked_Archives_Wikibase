@@ -60,7 +60,7 @@ def import_items(dict, q_out, type):
         wbPage.set_description(dict.get(item).get("description"), lang="en")
 
         q_dict = {item: wbPage.wd_item_id}
-        q_out.write(q_dict)
+        json.dump(q_dict, q_out)
 
         # print results as a sanity check
         pprint.pprint(wbPage.get_wd_json_representation())
