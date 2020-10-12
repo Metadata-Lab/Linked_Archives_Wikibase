@@ -24,7 +24,7 @@ def search_for_q(label):
         magic["Q"] = q[11:-2]
         return magic["Q"]
 
-    except Exception as e:
+    except:
         return None
 
 '''
@@ -89,11 +89,6 @@ def get_statements(q_string):
 
     except Exception as e:
         print(e)
+        return None
 
 
-def main():
-    #test
-    get_statements("Q40949")
-
-if __name__ == '__main__':
-    main()

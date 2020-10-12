@@ -1,7 +1,7 @@
 '''
 ontology_to_json.py
 Author: Kate Polley
-Last Modified: 09/25/2020
+Last Modified: 10-04-2020
 
 take data exported from Protege and convert to JSON
 each JSON object will correspond to one entity to import to Wikibase
@@ -16,7 +16,7 @@ import ontology export, sort each line into appropriate category
 category identifiers based on config.py
 '''
 def import_data():
-    data = open("all_owl.txt", "r")
+    data = open("data/all_owl.txt", "r")
 
     # sort entries in file using configuration settings
     for line in data:
@@ -35,6 +35,7 @@ def import_data():
         for key in cfg.iri_keys:
             if key in entity:
                 cfg.iri_keys[key].append(entry)
+                break
 
 '''
 strip extra quotation marks around strings
@@ -83,11 +84,13 @@ def get_label(dict):
 
     #keep the orginal label for non-person entities
     else:
-        label = dict["label"]
+        if "label" in dict.keys():
+            label = dict["label"][0]
+        else:
+            iri = dict.get("IRI")[0]
+            label = iri[ iri.rfind('/')+1: ]
 
     return label
-
-
 
 '''
 parse each entity into a python dictionary to save as json
@@ -111,6 +114,7 @@ def parse_entities(dict, list):
                 i_dict[cfg.property_keys[idx]] = [strip_quotes(val)]
 
         label = get_label(i_dict)
+        print(label)
 
         #SEARCH WIKIDATA, ADD Q NUM TO DICT IF EXISTS
         q = search_for_q(label)
@@ -132,20 +136,30 @@ def parse_entities(dict, list):
                         for val in dict[label][prop]:
                             i_dict[prop].append(val)
 
+        print(i_dict)
+
         #add new entry to dictionary
         dict[label] = i_dict
 
     return dict
 
-def parse_people():
-    people_dict = {}
-    people_dict = parse_entities(people_dict, cfg.people)
-    with open('people_expanded.json', 'w') as outfile:
-        json.dump(people_dict, outfile)
+def parse_category(config_var, outfile):
+    dict = {}
+    dict = parse_entities(dict, config_var)
+    with open(outfile, 'w') as outfile:
+        json.dump(dict, outfile)
 
-def main():
+def parse_all():
     import_data()
-    parse_people()
-
-if __name__ == '__main__':
-    main()
+    parse_category(cfg.people, 'data/entities/people.json')
+    parse_category(cfg.subjects, 'data/entities/subjects.json')
+    parse_category(cfg.names, 'data/entities/names.json')
+    parse_category(cfg.countries, 'data/entities/countries.json')
+    parse_category(cfg.events, 'data/entities/events.json')
+    parse_category(cfg.series, 'data/entities/series.json')
+    parse_category(cfg.objects, 'data/entities/objects.json')
+    parse_category(cfg.collections, 'data/entities/collections.json')
+    parse_category(cfg.bib_series, 'data/entities/bib_series.json')
+    parse_category(cfg.belfer, 'data/entities/belfer.json')
+    parse_category(cfg.becker, 'data/entities/becker.json')
+    parse_category(cfg.koppel, 'data/entities/koppel.json')
