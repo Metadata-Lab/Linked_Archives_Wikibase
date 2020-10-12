@@ -12,6 +12,8 @@ import config as cfg
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
 login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
+local_q = {}
+
 def json_to_dict(file):
     with open(file) as json_file:
         data = json.load(json_file)
@@ -25,8 +27,7 @@ def wiki_prop_statements(wiki_dict):
     return statements
 
 def get_local_q(label):
-    qs = json_to_dict("q_ids.json")
-    return qs.get(label)
+    return local_q.get(label)
 
 def get_item_statements(i_dict, type):
     statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
@@ -59,8 +60,7 @@ def import_items(dict, q_out, type):
         wbPage.set_label(item, lang="en")
         wbPage.set_description(dict.get(item).get("description"), lang="en")
 
-        q_dict = {item: wbPage.wd_item_id}
-        json.dump(q_dict, q_out)
+        local_q[item] = wbPage.wd_item_id
 
         # print results as a sanity check
         pprint.pprint(wbPage.get_wd_json_representation())
@@ -92,3 +92,4 @@ def import_all():
     with open("q_ids.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             import_items(dict, q_out, types[idx])
+        json.dump(local_q, q_out)
