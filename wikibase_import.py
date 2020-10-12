@@ -31,13 +31,10 @@ def get_local_q(label):
 def get_item_statements(i_dict, type):
     statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
     for prop in i_dict.keys():
-        print(prop)
         pid = cfg.property_ids.get(prop)
         object = cfg.property_keys.index(prop) in cfg.multi_val_prop
-        if prop == "Q":
+        if prop in ["Q", "wiki", "label"]:
             continue
-        elif prop == "wiki":
-            continue #NOT ADDING WIKI PROPS YET
         else:
             for value in i_dict.get(prop):
                 if object:
