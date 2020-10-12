@@ -73,15 +73,15 @@ def import_items(dict, q_out):
 
 def import_all():
     subjects = json_to_dict("data/entities/subjects.json")
-    countries = json_to_dict("data/entries/countries.json")
+    countries = json_to_dict("data/entities/countries.json")
     events = json_to_dict("data/entities/events.json")
     names = json_to_dict("data/entities/names.json")
     bib_series = json_to_dict("data/entities/bib_series.json")
     collections = json_to_dict("data/entities/collections.json")
-    series = json_to_dict("data/entries/countries.json")
+    series = json_to_dict("data/entities/countries.json")
     objects = json_to_dict("data/entities/objects.json")
     belfer = json_to_dict("data/entities/belfer.json")
-    becker = json_to_dict("data/entries/becker.json")
+    becker = json_to_dict("data/entities/becker.json")
     koppel = json_to_dict("data/entities/koppel.json")
     people = json_to_dict("data/entities/people.json")
 
