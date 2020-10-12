@@ -92,5 +92,3 @@ def get_statements(q_string):
         return None
 
 
-def get_local_q(label):
-    return None

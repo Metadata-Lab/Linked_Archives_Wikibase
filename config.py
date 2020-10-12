@@ -92,3 +92,7 @@ multi_val_prop = [
 property_ids = {
 
 }
+
+wiki_props_used = [
+    'P569', 'P27', 'P19', 'P1412', 'P570', 'P20', 'P1559', 'P1477', 'P742'
+]

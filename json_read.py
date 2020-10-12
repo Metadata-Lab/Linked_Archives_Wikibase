@@ -61,3 +61,4 @@ def get_new_props(infiles):
             output += ',' + str(info)
         out.write(output + '\n')
     out.close()
+
