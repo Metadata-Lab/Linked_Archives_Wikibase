@@ -13,8 +13,9 @@ mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/w/api.php"
 login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 def json_to_dict(file):
-    data = json.load(file)
-    return data
+    with open(file) as json_file:
+        data = json.load(json_file)
+        return data
 
 def wiki_prop_statements(wiki_dict):
     statements = []
@@ -90,5 +91,3 @@ def import_all():
     with open("q_ids.json", "w") as q_out:
         for dict in dicts:
             import_items(dict, q_out)
-
-
