@@ -31,11 +31,11 @@ def get_local_q(label):
 def get_item_statements(i_dict, type):
     statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
     for prop in i_dict.keys():
-        pid = cfg.property_ids.get(prop)
-        object = cfg.property_keys.index(prop) in cfg.multi_val_prop
         if prop in ["Q", "wiki", "label"]:
             continue
         else:
+            pid = cfg.property_ids.get(prop)
+            object = cfg.property_keys.index(prop) in cfg.multi_val_prop
             for value in i_dict.get(prop):
                 if object:
                     qid = get_local_q(value)
@@ -66,7 +66,7 @@ def import_items(dict, q_out, type):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        wbPage.write(login_creds)
+        # wbPage.write(login_creds)
 
 
 def import_all():
