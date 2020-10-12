@@ -10,7 +10,7 @@ import os, pprint, json
 import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
-login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url="http://linkeddata.ischool.syr.edu/mediawiki/api.php")
+login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 def json_to_dict(file):
     with open(file) as json_file:
@@ -53,7 +53,7 @@ def import_items(dict, q_out, type):
         item_statements = get_item_statements(dict.get(item), type)
 
         # create the item
-        wbPage = wdi_core.WDItemEngine(data=item_statements, mediawiki_api_url="http://linkeddata.ischool.syr.edu/mediawiki/api.php")
+        wbPage = wdi_core.WDItemEngine(data=item_statements, mediawiki_api_url=mw_api_url)
 
         # set the label and description (empty descriptions for subjects)
         wbPage.set_label(item, lang="en")
