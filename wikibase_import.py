@@ -65,7 +65,7 @@ def import_items(dict, type, curr_q):
         # set the label and description (empty descriptions for subjects)
         wbPage.set_label(item, lang="en")
         wbPage.set_description(dict.get(item).get("description"), lang="en")
-        
+
         local_q[item] = q
         q += 1
 
@@ -106,4 +106,7 @@ def import_all():
 
     with open("to_add.txt", "w") as add:
         for statement in not_added:
-            add.write(statement + "\n")
+            str = ""
+            for value in statement:
+                str += value + ","
+            add.write(str + "\n")
