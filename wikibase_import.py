@@ -42,7 +42,7 @@ def get_item_statements(i_dict, type):
                 if object:
                     qid = get_local_q(value)
                     if qid is None:
-                        not_added.append([i_dict.get("label"), pid, value])
+                        not_added.append([i_dict.get("label")[0], pid, value])
                         continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
