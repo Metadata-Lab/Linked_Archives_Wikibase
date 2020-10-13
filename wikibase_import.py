@@ -13,6 +13,7 @@ mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
 login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 local_q = {}
+not_added = []
 
 def json_to_dict(file):
     with open(file) as json_file:
@@ -40,6 +41,9 @@ def get_item_statements(i_dict, type):
             for value in i_dict.get(prop):
                 if object:
                     qid = get_local_q(value)
+                    if qid is None:
+                        not_added.append([i_dict.get("label"), pid, value])
+                        continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
                     state = wdi_core.WDString(value, prop_nr=pid)
@@ -61,10 +65,7 @@ def import_items(dict, type, curr_q):
         # set the label and description (empty descriptions for subjects)
         wbPage.set_label(item, lang="en")
         wbPage.set_description(dict.get(item).get("description"), lang="en")
-
-        '''
-        NEED TO FIGURE OUT HOW TO GET/TRACK Q IDS - wd_item_id DOES NOT WORK
-        '''
+        
         local_q[item] = q
         q += 1
 
@@ -102,3 +103,7 @@ def import_all():
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)
         json.dump(local_q, q_out)
+
+    with open("to_add.txt", "w") as add:
+        for statement in not_added:
+            add.write(statement + "\n")
