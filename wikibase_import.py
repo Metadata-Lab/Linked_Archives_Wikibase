@@ -47,7 +47,9 @@ def get_item_statements(i_dict, type):
 
     return statements
 
-def import_items(dict, q_out, type):
+def import_items(dict, type, curr_q):
+
+    q = curr_q
 
     for item in dict.keys():
         # turn the item dictionary into statements
@@ -60,13 +62,19 @@ def import_items(dict, q_out, type):
         wbPage.set_label(item, lang="en")
         wbPage.set_description(dict.get(item).get("description"), lang="en")
 
-        local_q[item] = wbPage.wd_item_id
+        '''
+        NEED TO FIGURE OUT HOW TO GET/TRACK Q IDS - wd_item_id DOES NOT WORK
+        '''
+        local_q[item] = q
+        q += 1
 
         # print results as a sanity check
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
         # wbPage.write(login_creds)
+
+    return q
 
 
 def import_all():
@@ -89,7 +97,8 @@ def import_all():
     types = ["subject", "country", "event", "name", "bib_series", "collection",
              "series", "object", "item", "item", "item", "person"]
 
+    curr_q = 11
     with open("q_ids.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
-            import_items(dict, q_out, types[idx])
+            curr_q = import_items(dict, types[idx], curr_q)
         json.dump(local_q, q_out)
