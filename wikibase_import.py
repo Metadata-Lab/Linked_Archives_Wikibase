@@ -73,7 +73,7 @@ def import_items(dict, type, curr_q):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        # wbPage.write(login_creds)
+        wbPage.write(login_creds)
 
     return q
 
@@ -99,12 +99,12 @@ def import_all():
              "series", "object", "item", "item", "item", "person"]
 
     curr_q = 11
-    with open("q_ids.json", "w") as q_out:
+    with open("data/q_ids.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)
         json.dump(local_q, q_out)
 
-    with open("to_add.txt", "w") as add:
+    with open("data/to_add.txt", "w") as add:
         for statement in not_added:
             str = ""
             for value in statement:
