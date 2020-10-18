@@ -46,7 +46,7 @@ def get_item_statements(i_dict, type):
                         continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
-                    state = wdi_core.WDString(value, prop_nr=pid)
+                    state = wdi_core.WDString(str(value), prop_nr=pid)
                 statements.append(state)
 
     return statements
