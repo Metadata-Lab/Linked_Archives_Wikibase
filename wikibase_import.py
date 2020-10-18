@@ -37,7 +37,7 @@ def get_item_statements(i_dict, type):
             continue
         else:
             pid = cfg.property_ids.get(prop)
-            object = cfg.property_keys.index(prop) in cfg.multi_val_prop
+            object = cfg.property_keys.index(prop) in cfg.object_prop
             for value in i_dict.get(prop):
                 if object:
                     qid = get_local_q(value)
@@ -84,11 +84,11 @@ def import_items(dict, type, curr_q):
 
 
 def import_all():
-    subjects = json_to_dict("data/entities/subjects.json")
-    countries = json_to_dict("data/entities/countries.json")
-    events = json_to_dict("data/entities/events.json")
-    names = json_to_dict("data/entities/names.json")
-    bib_series = json_to_dict("data/entities/bib_series.json")
+    #subjects = json_to_dict("data/entities/subjects.json")
+    #countries = json_to_dict("data/entities/countries.json")
+    #events = json_to_dict("data/entities/events.json")
+    #names = json_to_dict("data/entities/names.json")
+    #bib_series = json_to_dict("data/entities/bib_series.json")
     collections = json_to_dict("data/entities/collections.json")
     series = json_to_dict("data/entities/countries.json")
     objects = json_to_dict("data/entities/objects.json")
@@ -97,13 +97,17 @@ def import_all():
     koppel = json_to_dict("data/entities/koppel.json")
     people = json_to_dict("data/entities/people.json")
 
-    dicts = [subjects, countries, events, names, bib_series, collections,
-             series, objects, belfer, becker, koppel, people]
+    #dicts = [subjects, countries, events, names, bib_series, collections,
+    #         series, objects, belfer, becker, koppel, people]
 
-    types = ["subject", "country", "event", "name", "bib_series", "collection",
-             "series", "object", "item", "item", "item", "person"]
+    dicts = [collections, series, objects, belfer, becker, koppel, people]
 
-    curr_q = 17
+    #types = ["subject", "country", "event", "name", "bib_series", "collection",
+    #         "series", "object", "item", "item", "item", "person"]
+
+    types = ["collection", "series", "object", "item", "item", "item", "person"]
+
+    curr_q = 298
     with open("data/q_ids.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)

@@ -15,6 +15,7 @@ global collection_lists
 global iri_keys
 global property_keys
 global multi_val_prop
+global object_prop
 
 global object_ids
 global property_ids
@@ -51,42 +52,46 @@ iri_keys = {
 }
 
 property_keys = [
-    "IRI",
-    "hasAppearance", #N/A
-    "hasBib_series", #N/A
-    "hasComposer", #N/A
-    "hasHost", #N/A
-    "hasHumanSubject", #N/A
-    "hasInterviewee", #N/A
-    "hasObject", #N/A
-    "hasPerformer", #N/A
-    "hasPhotographer", #N/A
-    "hasReporter", #N/A
-    "hasSubject",
-    "is_part_of",
-    "is_related_to",
-    "is_created_by",
-    "firstname",
-    "lastname",
-    "middleinitial",
-    "role",
-    "coverage",
-    "date",
-    "description",
-    "identifier",
-    "publisher",
-    "rights",
-    "subject",
-    "title",
-    "title_alt",
-    "type",
-    "type/mediaType",
-    "mediaType",
-    "comment",
-    "label"
+    "IRI", #0
+    "hasAppearance", #N/A 1
+    "hasBib_series", #N/A 2
+    "hasComposer", #N/A 3
+    "hasHost", #N/A 4
+    "hasHumanSubject", #N/A 5
+    "hasInterviewee", #N/A 6
+    "hasObject", #N/A 7
+    "hasPerformer", #N/A 8
+    "hasPhotographer", #N/A 9
+    "hasReporter", #N/A 10
+    "hasSubject", #11
+    "is_part_of", #12
+    "is_related_to", #13
+    "is_created_by", #14
+    "firstname", #15
+    "lastname", #16
+    "middleinitial", #17
+    "role", #18
+    "coverage", #19
+    "date", #20
+    "description", #21
+    "identifier", #22
+    "publisher", #23
+    "rights", #24
+    "subject", #25
+    "title", #26
+    "title_alt", #27
+    "type", #28
+    "type/mediaType", #29
+    "mediaType", #30
+    "comment", #31
+    "label" #32
 ]
 
 multi_val_prop = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 25, 28
+]
+
+object_prop = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
 ]
 
