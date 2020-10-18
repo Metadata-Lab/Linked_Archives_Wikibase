@@ -10,7 +10,7 @@ import os, pprint, json
 import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
-login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
+#login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 local_q = {}
 not_added = []
@@ -46,7 +46,7 @@ def get_item_statements(i_dict, type):
                         continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
-                    state = wdi_core.WDString(str(value), prop_nr=pid)
+                    state = wdi_core.WDString(value, prop_nr=pid)
                 statements.append(state)
 
     return statements
@@ -64,7 +64,12 @@ def import_items(dict, type, curr_q):
 
         # set the label and description (empty descriptions for subjects)
         wbPage.set_label(item, lang="en")
-        wbPage.set_description(dict.get(item).get("description"), lang="en")
+
+        desc = dict.get(item).get("description")
+        if desc is not None:
+            wbPage.set_description(desc, lang="en")
+        else:
+            wbPage.set_description("", lang="en")
 
         local_q[item] = q
         q += 1
@@ -73,7 +78,9 @@ def import_items(dict, type, curr_q):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        wbPage.write(login_creds)
+        # wbPage.write(login_creds)
+
+        break
 
     return q
 
@@ -98,7 +105,7 @@ def import_all():
     types = ["subject", "country", "event", "name", "bib_series", "collection",
              "series", "object", "item", "item", "item", "person"]
 
-    curr_q = 11
+    curr_q = 17
     with open("data/q_ids.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)
