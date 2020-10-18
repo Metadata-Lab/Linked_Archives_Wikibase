@@ -10,7 +10,7 @@ import os, pprint, json
 import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
-#login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
+login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 local_q = {}
 not_added = []
@@ -78,9 +78,7 @@ def import_items(dict, type, curr_q):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        # wbPage.write(login_creds)
-
-        break
+        wbPage.write(login_creds)
 
     return q
 
