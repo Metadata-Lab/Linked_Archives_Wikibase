@@ -10,7 +10,7 @@ import os, pprint, json
 import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
-login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
+#login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 local_q = {}
 not_added = []
@@ -67,6 +67,7 @@ def import_items(dict, type, curr_q):
 
         desc = dict.get(item).get("description")
         if desc is not None:
+            if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
             wbPage.set_description(desc, lang="en")
         else:
             wbPage.set_description("", lang="en")
@@ -78,7 +79,7 @@ def import_items(dict, type, curr_q):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        wbPage.write(login_creds)
+        #wbPage.write(login_creds)
 
     return q
 
@@ -95,17 +96,17 @@ def import_all():
     belfer = json_to_dict("data/entities/belfer.json")
     becker = json_to_dict("data/entities/becker.json")
     koppel = json_to_dict("data/entities/koppel.json")
-    people = json_to_dict("data/entities/people.json")
+    #people = json_to_dict("data/entities/people.json")
 
     #dicts = [subjects, countries, events, names, bib_series, collections,
     #         series, objects, belfer, becker, koppel, people]
 
-    dicts = [collections, series, objects, belfer, becker, koppel, people]
+    dicts = [collections, series, objects, belfer, becker, koppel]
 
     #types = ["subject", "country", "event", "name", "bib_series", "collection",
     #         "series", "object", "item", "item", "item", "person"]
 
-    types = ["collection", "series", "object", "item", "item", "item", "person"]
+    types = ["collection", "series", "object", "item", "item", "item"]
 
     curr_q = 298
     with open("data/q_ids.json", "w") as q_out:
