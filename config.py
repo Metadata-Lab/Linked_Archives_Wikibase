@@ -133,17 +133,8 @@ property_ids = {
     "mediaType": "P22",
     "comment": "P23",
     #"label": "NONE"
-    "date of birth": "P24",
-    "place of birth": "P25",
-    "country of citizenship": "P26",
-    "languages spoken, written or signed": "P27",
-    "date of death": "P28",
-    "place of death": "P29",
-    "name in native language": "P30",
-    "birth name": "P31",
-    "pseudonym": "P32"
 }
 
 wiki_props_used = [
-    'P569', 'P27', 'P19', 'P1412', 'P570', 'P20', 'P1559', 'P1477', 'P742'
+
 ]

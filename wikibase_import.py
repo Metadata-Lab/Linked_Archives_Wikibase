@@ -10,22 +10,16 @@ import os, pprint, json
 import config as cfg
 
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
-#login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
+login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
 local_q = {}
 not_added = []
+import_error = []
 
 def json_to_dict(file):
     with open(file) as json_file:
         data = json.load(json_file)
         return data
-
-def wiki_prop_statements(wiki_dict):
-    statements = []
-    for prop in wiki_dict.keys():
-        if wiki_dict.get(prop)[0] in cfg.wiki_props_used:
-            statements.append(prop) #ACTUALLY EXTRACT PROPERTY HERE
-    return statements
 
 def get_local_q(label):
     return local_q.get(label)
@@ -79,37 +73,26 @@ def import_items(dict, type, curr_q):
         pprint.pprint(wbPage.get_wd_json_representation())
 
         # write the changes to wikibase with login credentials
-        #wbPage.write(login_creds)
+        try:
+            wbPage.write(login_creds)
+        except Exception as e:
+            import_error.append(item)
+            print(e)
 
     return q
 
+def import_first_batch():
+    subjects = json_to_dict("data/entities/subjects.json")
+    countries = json_to_dict("data/entities/countries.json")
+    events = json_to_dict("data/entities/events.json")
+    names = json_to_dict("data/entities/names.json")
+    bib_series = json_to_dict("data/entities/bib_series.json")
 
-def import_all():
-    #subjects = json_to_dict("data/entities/subjects.json")
-    #countries = json_to_dict("data/entities/countries.json")
-    #events = json_to_dict("data/entities/events.json")
-    #names = json_to_dict("data/entities/names.json")
-    #bib_series = json_to_dict("data/entities/bib_series.json")
-    collections = json_to_dict("data/entities/collections.json")
-    series = json_to_dict("data/entities/countries.json")
-    objects = json_to_dict("data/entities/objects.json")
-    belfer = json_to_dict("data/entities/belfer.json")
-    becker = json_to_dict("data/entities/becker.json")
-    koppel = json_to_dict("data/entities/koppel.json")
-    #people = json_to_dict("data/entities/people.json")
+    dicts = [subjects, countries, events, names, bib_series]
+    types = ["subject", "country", "event", "name", "bib_series"]
 
-    #dicts = [subjects, countries, events, names, bib_series, collections,
-    #         series, objects, belfer, becker, koppel, people]
-
-    dicts = [collections, series, objects, belfer, becker, koppel]
-
-    #types = ["subject", "country", "event", "name", "bib_series", "collection",
-    #         "series", "object", "item", "item", "item", "person"]
-
-    types = ["collection", "series", "object", "item", "item", "item"]
-
-    curr_q = 298
-    with open("data/q_ids.json", "w") as q_out:
+    curr_q = 11
+    with open("data/q_batch_one.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)
         json.dump(local_q, q_out)
@@ -120,3 +103,20 @@ def import_all():
             for value in statement:
                 str += value + ","
             add.write(str + "\n")
+
+    with open("data/error_items.json", "w") as error_out:
+        for item in import_error:
+            error_out.write(item + "\n")
+
+def import_second_batch():
+    collections = json_to_dict("data/entities/collections.json")
+    series = json_to_dict("data/entities/countries.json")
+    objects = json_to_dict("data/entities/objects.json")
+    belfer = json_to_dict("data/entities/belfer.json")
+    becker = json_to_dict("data/entities/becker.json")
+    koppel = json_to_dict("data/entities/koppel.json")
+    people = json_to_dict("data/entities/people.json")
+
+    dicts = [collections, series, objects, belfer, becker, koppel, people]
+    types = ["collection", "series", "object", "item", "item", "item", "person"]
+
