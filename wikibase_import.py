@@ -129,18 +129,18 @@ def import_second_batch():
     types = ["collection", "series", "object", "item", "item", "item", "person"]
 
     curr_q = 289
-    with open("data/q_batch_one.json", "w") as q_out:
+    with open("data/q_batch_two.json", "w") as q_out:
         for idx, dict in enumerate(dicts):
             curr_q = import_items(dict, types[idx], curr_q)
         json.dump(local_q, q_out)
 
-    with open("data/to_add.txt", "w") as add:
+    with open("data/to_add_2.txt", "w") as add:
         for statement in not_added:
             str = ""
             for value in statement:
                 str += value + ","
             add.write(str + "\n")
 
-    with open("data/error_items.json", "w") as error_out:
+    with open("data/error_items_2.json", "w") as error_out:
         for item in import_error:
             error_out.write(item + "\n")
