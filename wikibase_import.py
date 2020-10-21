@@ -24,7 +24,7 @@ def json_to_dict(file):
 def import_local_q():
     with open("data/q_batch_one.json") as json_file:
         data = json.load(json_file)
-        globals().local_q = data
+        local_q = data
 
 
 def get_local_q(label):
