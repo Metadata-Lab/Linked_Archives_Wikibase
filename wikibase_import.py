@@ -21,6 +21,12 @@ def json_to_dict(file):
         data = json.load(json_file)
         return data
 
+def import_local_q():
+    with open("data/q_batch_one.json") as json_file:
+        data = json.load(json_file)
+        globals().local_q = data
+
+
 def get_local_q(label):
     return local_q.get(label)
 
@@ -109,6 +115,8 @@ def import_first_batch():
             error_out.write(item + "\n")
 
 def import_second_batch():
+    import_local_q()
+
     collections = json_to_dict("data/entities/collections.json")
     series = json_to_dict("data/entities/countries.json")
     objects = json_to_dict("data/entities/objects.json")
@@ -120,3 +128,19 @@ def import_second_batch():
     dicts = [collections, series, objects, belfer, becker, koppel, people]
     types = ["collection", "series", "object", "item", "item", "item", "person"]
 
+    curr_q = 289
+    with open("data/q_batch_one.json", "w") as q_out:
+        for idx, dict in enumerate(dicts):
+            curr_q = import_items(dict, types[idx], curr_q)
+        json.dump(local_q, q_out)
+
+    with open("data/to_add.txt", "w") as add:
+        for statement in not_added:
+            str = ""
+            for value in statement:
+                str += value + ","
+            add.write(str + "\n")
+
+    with open("data/error_items.json", "w") as error_out:
+        for item in import_error:
+            error_out.write(item + "\n")
