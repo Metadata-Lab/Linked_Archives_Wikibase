@@ -126,7 +126,7 @@ def import_first_batch():
     types = ["subject", "country", "event", "name", "bib_series"]
 
     curr_q = 11
-    import_batch(dicts, types, curr_q, "data/q_batch_one.json", "data/to_add.txt", "data/error_items.json")
+    import_batch(dicts, types, curr_q, "data/q_batch_one.json", "data/to_add.txt", "data/error_items.txt")
 
 
 def import_second_batch():
@@ -141,7 +141,7 @@ def import_second_batch():
     types = ["series", "object"]
 
     curr_q = 289
-    import_batch(dicts, types, curr_q, "data/q_batch_two.json", "data/to_add_2.txt", "data/error_items_2.json")
+    import_batch(dicts, types, curr_q, "data/q_batch_two.json", "data/to_add_2.txt", "data/error_items_2.txt")
 
 
 def import_third_batch():
@@ -156,4 +156,4 @@ def import_third_batch():
     types = ["item", "item", "item", "person"]
 
     curr_q = 289
-    import_batch(dicts, types, curr_q, "data/q_batch_three.json", "data/to_add_3.txt", "data/error_items_3.json")
+    import_batch(dicts, types, curr_q, "data/q_batch_three.json", "data/to_add_3.txt", "data/error_items_3.txt")
