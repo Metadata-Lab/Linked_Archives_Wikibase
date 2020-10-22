@@ -21,11 +21,21 @@ def json_to_dict(file):
         data = json.load(json_file)
         return data
 
-def import_local_q():
-    with open("data/q_batch_one.json") as json_file:
-        data = json.load(json_file)
-        local_q = data
+def import_local_q(batch):
+    collections = {
+        "Ronald G. Becker collection of Charles Eisenmann photographs": 296,
+        "Ted Koppel Collection": 297,
+        "Belfer Cylinders Collection": 298
+    }
+    local_q.update(collections)
+    with open("data/q_batch_one.json") as b1:
+        data = json.load(b1)
+        local_q.update(data)
 
+    if batch > 2:
+        with open("data/q_batch_two.json") as b2:
+            data = json.load(b2)
+            local_q.update(data)
 
 def get_local_q(label):
     return local_q.get(label)
@@ -87,6 +97,24 @@ def import_items(dict, type, curr_q):
 
     return q
 
+def import_batch(dicts, types, start_q, batch_file, missed_statements_file, missed_objects_file):
+    with open(batch_file, "w") as q_out:
+        for idx, dict in enumerate(dicts):
+            start_q = import_items(dict, types[idx], start_q)
+        json.dump(local_q, q_out)
+
+    with open(missed_statements_file, "w") as add:
+        for statement in not_added:
+            str = ""
+            for value in statement:
+                str += value + ","
+            add.write(str + "\n")
+
+    with open(missed_objects_file, "w") as error_out:
+        for item in import_error:
+            error_out.write(item + "\n")
+
+
 def import_first_batch():
     subjects = json_to_dict("data/entities/subjects.json")
     countries = json_to_dict("data/entities/countries.json")
@@ -98,49 +126,34 @@ def import_first_batch():
     types = ["subject", "country", "event", "name", "bib_series"]
 
     curr_q = 11
-    with open("data/q_batch_one.json", "w") as q_out:
-        for idx, dict in enumerate(dicts):
-            curr_q = import_items(dict, types[idx], curr_q)
-        json.dump(local_q, q_out)
+    import_batch(dicts, types, curr_q, "data/q_batch_one.json", "data/to_add.txt", "data/error_items.json")
 
-    with open("data/to_add.txt", "w") as add:
-        for statement in not_added:
-            str = ""
-            for value in statement:
-                str += value + ","
-            add.write(str + "\n")
-
-    with open("data/error_items.json", "w") as error_out:
-        for item in import_error:
-            error_out.write(item + "\n")
 
 def import_second_batch():
-    import_local_q()
+    import_local_q(2)
 
-    collections = json_to_dict("data/entities/collections.json")
-    series = json_to_dict("data/entities/countries.json")
+    #collections = json_to_dict("data/entities/collections.json") -- ADD MANUALLY
+    series = json_to_dict("data/entities/series.json")
     objects = json_to_dict("data/entities/objects.json")
+
+
+    dicts = [series, objects]
+    types = ["series", "object"]
+
+    curr_q = 289
+    import_batch(dicts, types, curr_q, "data/q_batch_two.json", "data/to_add_2.txt", "data/error_items_2.json")
+
+
+def import_third_batch():
+    import_local_q(3)
+
     belfer = json_to_dict("data/entities/belfer.json")
     becker = json_to_dict("data/entities/becker.json")
     koppel = json_to_dict("data/entities/koppel.json")
     people = json_to_dict("data/entities/people.json")
 
-    dicts = [collections, series, objects, belfer, becker, koppel, people]
-    types = ["collection", "series", "object", "item", "item", "item", "person"]
+    dicts = [belfer, becker, koppel, people]
+    types = ["item", "item", "item", "person"]
 
     curr_q = 289
-    with open("data/q_batch_two.json", "w") as q_out:
-        for idx, dict in enumerate(dicts):
-            curr_q = import_items(dict, types[idx], curr_q)
-        json.dump(local_q, q_out)
-
-    with open("data/to_add_2.txt", "w") as add:
-        for statement in not_added:
-            str = ""
-            for value in statement:
-                str += value + ","
-            add.write(str + "\n")
-
-    with open("data/error_items_2.json", "w") as error_out:
-        for item in import_error:
-            error_out.write(item + "\n")
+    import_batch(dicts, types, curr_q, "data/q_batch_three.json", "data/to_add_3.txt", "data/error_items_3.json")
