@@ -21,15 +21,15 @@ def json_to_dict(file):
         data = json.load(json_file)
         return data
 
-def import_local_q():
+def import_local_q(batch_file):
     collections = {
         "Ronald G. Becker collection of Charles Eisenmann photographs": 296,
         "Ted Koppel Collection": 297,
         "Belfer Cylinders Collection": 298
     }
     local_q.update(collections)
-    with open("data/q_batch_one.json") as b1:
-        data = json.load(b1)
+    with open(batch_file) as batch:
+        data = json.load(batch)
         local_q.update(data)
 
 
@@ -126,20 +126,38 @@ def import_first_batch():
 
 
 def import_second_batch():
-    import_local_q()
+    import_local_q("data/q_batch_one.json")
 
     #collections = json_to_dict("data/entities/collections.json") -- ADD MANUALLY
     series = json_to_dict("data/entities/series.json")
-    #objects = json_to_dict("data/entities/objects.json") -- Overlap with collections may cause problems
+    objects = json_to_dict("data/entities/objects.json")
+
+
+    dicts = [series, objects]
+    types = ["series", "object"]
+
+    curr_q = 299
+    import_batch(dicts, types, curr_q, "data/q_batch_two.json", "data/to_add_2.txt", "data/error_items_2.txt")
+
+
+def import_third_batch():
+    import_local_q("data/q_batch_two.json")
+
     belfer = json_to_dict("data/entities/belfer.json")
     becker = json_to_dict("data/entities/becker.json")
     koppel = json_to_dict("data/entities/koppel.json")
     people = json_to_dict("data/entities/people.json")
 
+    dicts = [belfer, becker, koppel, people]
+    types = ["item", "item", "item", "person"]
 
-    dicts = [series, belfer, becker, koppel, people]
-    types = ["series", "item", "item", "item", "person"]
+    curr_q = 289
+    import_batch(dicts, types, curr_q, "data/q_batch_three.json", "data/to_add_3.txt", "data/error_items_3.txt")
 
-    curr_q = 299
-    import_batch(dicts, types, curr_q, "data/q_batch_two.json", "data/to_add_2.txt", "data/error_items_2.txt")
 
+def import_people():
+    people = json_to_dict("data/entities/people.json")
+    dicts = [people]
+    types = ["person"]
+    curr_q = 10110
+    import_batch(dicts, types, curr_q, "data/q_batch_people.json", "data/to_add_p.txt", "data/error_items_p.txt")
