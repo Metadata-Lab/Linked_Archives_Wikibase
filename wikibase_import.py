@@ -156,6 +156,7 @@ def import_third_batch():
 
 
 def import_people():
+    import_local_q("data/q_batch_two.json")
     people = json_to_dict("data/entities/people.json")
     dicts = [people]
     types = ["person"]
