@@ -12,3 +12,5 @@ To learn more about the files in this database and the processes involved, pleas
 ### [How to Install MediaWiki](documentation/mediawiki_install.md)
 
 ### [How to Install Wikibase](documentation/wikibase_install.md)
+
+### [MediaWiki Database Workflow and Backups](documentation/db_backups.md)
