@@ -1,8 +1,14 @@
 # Wikibase Database Backups
 
-Located in the `backups` folder within the `mediawiki` directory on the server. 
+To create a backup, enter the directory where you want to store the dump file and use the command `sudo mysqldump database > file.sql`. 
+To restore a backup, use `sudo mysql database < file.sql`. 
+
+
+The current SQL dump files are located in the directory `/var/www/html/mediawiki/backups` on the Ubuntu server. 
 The list below is in order of how the different database versions were generated.
 Each version builds upon the last.
+
+## Versions
 
 `initialdb.sql` - The initial database created during MediaWiki setup with the Wikibase tables.
 
