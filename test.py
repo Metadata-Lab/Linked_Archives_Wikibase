@@ -5,15 +5,11 @@ def main():
     mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
     login_creds = wdi_login.WDLogin(user='Admin', pwd="metadata!master", mediawiki_api_url=mw_api_url)
 
-    item_statements = [wdi_core.WDItemID("Q6", prop_nr="P1"), wdi_core.WDString("Test", prop_nr="P20"), wdi_core.WDString("Test Again", prop_nr="P20")]
+    item_statements = [wdi_core.WDString("Test", prop_nr="P2")]
 
     # create the item
-    wbPage = wdi_core.WDItemEngine(data=item_statements, mediawiki_api_url=mw_api_url)
-
-    # set the label and description (empty descriptions for subjects)
-    wbPage.set_label('Test', lang="en")
-    wbPage.set_description("Description Test", lang="en")
-
+    wbPage = wdi_core.WDItemEngine(wd_item_id="Q1", data=item_statements, mediawiki_api_url=mw_api_url)
+   
     # print results as a sanity check
     pprint.pprint(wbPage.get_wd_json_representation())
 
