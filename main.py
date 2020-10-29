@@ -11,8 +11,8 @@ def main():
 
     #import_first_batch()
     #import_second_batch()
-    #import_people()
-    import_wikidata_props()
+    import_people()
+    #import_wikidata_props()
 
 if __name__ == '__main__':
     main()

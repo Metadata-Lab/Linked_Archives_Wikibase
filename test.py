@@ -9,7 +9,7 @@ def main():
 
     # create the item
     wbPage = wdi_core.WDItemEngine(wd_item_id="Q1", data=item_statements, mediawiki_api_url=mw_api_url)
-   
+
     # print results as a sanity check
     pprint.pprint(wbPage.get_wd_json_representation())
 

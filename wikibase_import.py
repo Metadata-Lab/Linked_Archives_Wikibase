@@ -39,26 +39,26 @@ def import_local_q(batch_file):
         "Ted Koppel Collection": 297,
         "Belfer Cylinders Collection": 298
     }
-    people = {
-        "Irving Berlin": 42625,
-        "William Bonner": 42626,
-        "Edward Miller": 42627,
-        "John Roberts": 42628,
-        "John Ryan": 42629,
-        "William White": 42630,
-        "Betty Williams": 42631,
-        "John Young": 42632,
-        "Jack Davis": 42633,
-        "Richard Howard": 42634,
-        "Patrick Hughes": 42635,
-        "Reese Jones": 42636,
-        "Herman Kahn": 42637,
-        "Tom Kennedy": 42638,
-        "George McFadden": 42639,
-        "Jack Thompson ": 42640,
-    }
+    # people = {
+    #     "Irving Berlin": 42625,
+    #     "William Bonner": 42626,
+    #     "Edward Miller": 42627,
+    #     "John Roberts": 42628,
+    #     "John Ryan": 42629,
+    #     "William White": 42630,
+    #     "Betty Williams": 42631,
+    #     "John Young": 42632,
+    #     "Jack Davis": 42633,
+    #     "Richard Howard": 42634,
+    #     "Patrick Hughes": 42635,
+    #     "Reese Jones": 42636,
+    #     "Herman Kahn": 42637,
+    #     "Tom Kennedy": 42638,
+    #     "George McFadden": 42639,
+    #     "Jack Thompson ": 42640,
+    # }
     local_q.update(collections)
-    local_q.update(people)
+    #ocal_q.update(people)
     with open(batch_file) as batch:
         data = json.load(batch)
         local_q.update(data)
@@ -225,8 +225,22 @@ def import_people():
     import_batch(dicts, types, curr_q, "data/q_batch_people.json",
                  "data/results/error_props_p.txt", "data/results/error_items_p.txt")
 
+
+def extract_wiki_statements(wiki_dict):
+    
+
+    return None
+
 '''
 add props from wikidata into the wikibase
 '''
 def import_wikidata_props():
-    pass
+    import_local_q("data/q_batch_people.json")
+    people = json_to_dict("data/entities/people.json")
+
+    for person in people.keys():
+        if "wiki" in people.get(person).keys():
+            item_statements = extract_wiki_statements(people.get(person).get("wiki"))
+            wbPage = wdi_core.WDItemEngine(wd_item_id=get_local_q(person), data=item_statements, mediawiki_api_url=mw_api_url)
+            pprint.pprint(wbPage.get_wd_json_representation())
+            wbPage.write(login_creds)
