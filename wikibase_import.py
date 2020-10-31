@@ -227,9 +227,13 @@ def import_people():
 
 
 def extract_wiki_statements(wiki_dict):
-    
-
-    return None
+    statements = []
+    for prop in wiki_dict.keys():
+        if prop in cfg.property_ids.keys():
+            for value in wiki_dict.get(prop)[1].keys():
+                state = wdi_core.WDString(value, prop_nr=cfg.property_ids.get(prop))
+                statements.append(state)
+    return statements
 
 '''
 add props from wikidata into the wikibase
