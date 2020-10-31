@@ -232,4 +232,8 @@ def import_wikidata_props():
             q = "Q" + str(get_local_q(person))
             wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=item_statements, mediawiki_api_url=mw_api_url)
             pprint.pprint(wbPage.get_wd_json_representation())
-            wbPage.write(login_creds)
+            try:
+                wbPage.write(login_creds)
+            except:
+                with open("wiki_props_error.txt", "w") as error_out:
+                    error_out.write(person + "\n")
