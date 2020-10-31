@@ -212,6 +212,7 @@ def extract_wiki_statements(wiki_dict):
     for prop in wiki_dict.keys():
         if prop in cfg.property_ids.keys():
             for value in wiki_dict.get(prop)[1].keys():
+                print(prop + ": " + value)
                 state = wdi_core.WDString(value, prop_nr=cfg.property_ids.get(prop))
                 statements.append(state)
     return statements
@@ -226,10 +227,8 @@ def import_wikidata_props():
     for person in people.keys():
         print(person)
         if "wiki" in people.get(person).keys():
-            print(people.get(person))
             item_statements = extract_wiki_statements(people.get(person).get("wiki"))
             print(get_local_q(person))
-            print(item_statements)
             wbPage = wdi_core.WDItemEngine(wd_item_id=get_local_q(person), data=item_statements, mediawiki_api_url=mw_api_url)
             pprint.pprint(wbPage.get_wd_json_representation())
             wbPage.write(login_creds)
