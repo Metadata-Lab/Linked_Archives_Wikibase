@@ -212,6 +212,9 @@ def extract_wiki_statements(wiki_dict):
     for prop in wiki_dict.keys():
         if prop in cfg.property_ids.keys():
             for value in wiki_dict.get(prop)[1].keys():
+                if prop in cfg.wiki_date_props:
+                    end = value.find("T")-1
+                    value = value[:end]
                 state = wdi_core.WDString(value, prop_nr=cfg.property_ids.get(prop))
                 statements.append(state)
     return statements
@@ -224,7 +227,6 @@ def import_wikidata_props():
     people = json_to_dict("data/entities/people.json")
 
     for person in people.keys():
-        print(person)
         if "wiki" in people.get(person).keys():
             item_statements = extract_wiki_statements(people.get(person).get("wiki"))
             q = "Q" + str(get_local_q(person))

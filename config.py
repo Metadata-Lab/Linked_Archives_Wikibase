@@ -19,7 +19,7 @@ global object_prop
 
 global object_ids
 global property_ids
-global wiki_props_used
+global wiki_date_props
 
 subjects = []
 people = []
@@ -212,6 +212,4 @@ property_ids = {
     "list of works": "P100"
 }
 
-wiki_props_used = [
-
-]
+wiki_date_props = ["date of birth", "date of death"]
