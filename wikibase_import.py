@@ -237,5 +237,5 @@ def import_wikidata_props():
             try:
                 wbPage.write(login_creds)
             except:
-                with open("wiki_props_error.txt", "w") as error_out:
+                with open("data/results/wiki_props_error_2.txt", "w") as error_out:
                     error_out.write(person + "\n")
