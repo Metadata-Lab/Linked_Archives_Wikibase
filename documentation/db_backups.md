@@ -25,3 +25,5 @@ Each version builds upon the last.
 `people_base.sql` - People imported using Python script. Property errors manually fixed.
 
 `wiki_props.sql` - Manually created property pages for Wikidata properties, up to P100.
+
+`wiki_props_2.sql` - Manually created property pages for Wikidata properties, up to P185. Also includes statement imports for first batch of properties.
