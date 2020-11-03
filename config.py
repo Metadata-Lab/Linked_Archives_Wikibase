@@ -19,6 +19,8 @@ global object_prop
 
 global object_ids
 global property_ids
+global wiki_props_1
+global wiki_props_2
 global wiki_date_props
 
 subjects = []
@@ -133,6 +135,9 @@ property_ids = {
     "mediaType": "P22",
     "comment": "P23",
     #"label": "NONE"
+}
+
+wiki_props_1 = {
     "date of birth": "P24",
     "country of citizenship": "P25",
     "place of birth": "P26",
@@ -212,4 +217,93 @@ property_ids = {
     "list of works": "P100"
 }
 
-wiki_date_props = ["date of birth", "date of death"]
+wiki_props_2 = {
+    "number of matches played/races/starts": "P101",
+    "total goals in career": "P102",
+    "shooting handedness": "P103",
+    "blood type": "P104",
+    "affiliation": "P105",
+    "total assists in career": "P106",
+    "penalty minutes in career": "P107",
+    "total points in career": "P108",
+    "doubles record": "P109",
+    "singles record": "P110",
+    "sport number": "P111",
+    "playing hand": "P112",
+    "lifestyle": "P113",
+    "noble title": "P114",
+    "consecrator": "P115",
+    "total shots in career": "P116",
+    "career plus-minus rating": "P117",
+    "religious order": "P118",
+    "represented by": "P119",
+    "victory": "P120",
+    "partner in business or sport": "P121",
+    "killed by": "P122",
+    "honorific suffix": "P123",
+    "professorship": "P124",
+    "second family name in Spanish name": "P125",
+    "generational suffix": "P126",
+    "head coach": "P127",
+    "ranking": "P128",
+    "coach of sports team": "P129",
+    "amateur radio callsign": "P130",
+    "significant person": "P131",
+    "preferred pronoun": "P132",
+    "doctoral thesis": "P133",
+    "married name": "P134",
+    "ancestral home": "P135",
+    "wears": "P136",
+    "title of chess person": "P137",
+    "has pet": "P138",
+    "penalty": "P139",
+    "catchphrase": "P140",
+    "stepparent": "P141",
+    "interested in": "P142",
+    "military casualty classification": "P143",
+    "contributed to creative work": "P144",
+    "date of burial or cremation": "P145",
+    "last words": "P146",
+    "supported sports team": "P147",
+    "vehicle normally used": "P148",
+    "member of the crew of": "P149",
+    "diocese": "P150",
+    "date of baptism in early childhood": "P151",
+    "sponsor": "P152",
+    "permanent resident of": "P153",
+    "canonization status": "P154",
+    "Revised Romanization": "P155",
+    "member of military unit": "P156",
+    "godparent": "P157",
+    "bowling style": "P158",
+    "enemy of": "P159",
+    "highest break": "P160",
+    "represents": "P161",
+    "product or material produced": "P162",
+    "exonerated of": "P163",
+    "industry": "P164",
+    "official residence": "P165",
+    "patronym or matronym for this person": "P166",
+    "birthday": "P167",
+    "date of disappearance": "P168",
+    "social classification": "P169",
+    "mount": "P170",
+    "academic major": "P171",
+    "charge": "P172",
+    "attested in": "P173",
+    "record held": "P174",
+    "character role": "P175",
+    "parliamentary term": "P176",
+    "first appearance": "P177",
+    "religious name": "P178",
+    "next lower rank": "P179",
+    "next higher rank": "P180",
+    "number of injured": "P181",
+    "number of victims of killer": "P182",
+    "footedness": "P183",
+    "patient of": "P184",
+    "political alignment": "P185"
+}
+
+wiki_date_props = ["date of birth", "date of death", "date of burial or cremation",
+                   "date of baptism in early childhood", "birthday", "date of disappearance"]
