@@ -210,8 +210,7 @@ def import_people():
 def extract_wiki_statements(wiki_dict):
     statements = []
     for prop in wiki_dict.keys():
-        #prop_ids = cfg.wiki_props_1
-        prop_ids = cfg.wiki_props_2
+        prop_ids = cfg.wiki_props
         if prop in prop_ids.keys():
             for value in wiki_dict.get(prop)[1].keys():
                 if prop in cfg.wiki_date_props:
@@ -226,7 +225,7 @@ add props from wikidata into the wikibase
 '''
 def import_wikidata_props():
     import_local_q("data/q_batch_people.json")
-    people = json_to_dict("data/entities/people.json")
+    people = json_to_dict("data/entities/people_edited.json")
 
     for person in people.keys():
         if "wiki" in people.get(person).keys():
@@ -237,5 +236,5 @@ def import_wikidata_props():
             try:
                 wbPage.write(login_creds)
             except:
-                with open("data/results/wiki_props_error_2.txt", "w") as error_out:
+                with open("data/results/wiki_props_error.txt", "w") as error_out:
                     error_out.write(person + "\n")

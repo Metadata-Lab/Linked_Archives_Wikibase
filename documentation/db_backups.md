@@ -27,3 +27,5 @@ Each version builds upon the last.
 `wiki_props.sql` - Manually created property pages for Wikidata properties, up to P100.
 
 `wiki_props_2.sql` - Manually created property pages for Wikidata properties, up to P185. Also includes statement imports for first batch of properties.
+
+`people_wiki_props.sql` - Completed import for Wikidata property statements describing people. One error.
