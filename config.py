@@ -242,7 +242,65 @@ wiki_props = {
     'generational suffix':'P126',
     'amateur radio callsign':'P127',
     'preferred pronoun':'P128',
-    'ancestral home':'P129'
+    'ancestral home':'P129',
+
+    'instance of': 'P130',
+    'subclass of': 'P131',
+    'described by source': 'P132',
+    'inception': 'P133',
+    'practiced by': 'P134',
+    'anthem': 'P135',
+    'area': 'P136',
+    'capital': 'P137',
+    'continent': 'P138',
+    'country': 'P139',
+    'currency': 'P140',
+    'executive body': 'P141',
+    'head of government': 'P142',
+    'health specialty': 'P143',
+    'language used': 'P144',
+    'legislative body': 'P145',
+    'located in time zone': 'P146',
+    'native label': 'P147',
+    'nominal GDP per capita': 'P148',
+    'office held by head of government': 'P149',
+    'official language': 'P150',
+    'population': 'P151',
+    'short name': 'P152',
+    'country of origin': 'P153',
+    'head of state': 'P154',
+    'highest judicial authority': 'P155',
+    'office held by head of state': 'P156',
+    'official name': 'P157',
+    'shares border with': 'P158',
+    'basic form of government': 'P159',
+    'culture': 'P160',
+    'diplomatic relation': 'P161',
+    'Human Development Index': 'P162',
+    'located on terrain feature': 'P163',
+    'motto text': 'P164',
+    'patron saint': 'P165',
+    'replaces': 'P166'
 }
 
-wiki_date_props = ["date of birth", "date of death"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wiki_date_props = ["date of birth", "date of death", "inception"]

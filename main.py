@@ -1,22 +1,40 @@
-#from ontology_to_json import parse_all
+from ontology_to_json import parse_all
 from json_read import get_new_props
-from get_wiki_data import refine_people_wiki_data
-#from wikibase_import import import_first_batch, import_second_batch, import_people, import_wikidata_props
+from get_wiki_data import refine_wiki_data
+from wikibase_import import import_first_batch, import_second_batch, import_people, \
+    import_wikidata_props_people, import_wikidata_props_batch
+
+def new_props():
+    outfiles = ['bib_series', 'collections', 'countries', 'events', 'names', 'series', 'subjects']
+    for idx, val in enumerate(outfiles): outfiles[idx] = 'data/entities/' + val + '_edited.json'
+    get_new_props(outfiles)
+
+def people_props():
+    refine_wiki_data("data/entities/people_edited.json")
+    get_new_props(["data/entities/people_edited.json"])
+
+def refine_wiki_props():
+    infiles = ['bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
+    outfiles = ['bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
+    for idx, val in enumerate(infiles): infiles[idx] = 'data/entities/' + val + '.json'
+    for idx, val in enumerate(outfiles): outfiles[idx] = 'data/entities/' + val + '_edited.json'
+
+    for idx, val in enumerate(infiles): refine_wiki_data(val, outfiles[idx])
+
 
 def main():
     #parse_all()
-
-    # outfiles = ['becker', 'belfer', 'bib_series', 'collections', 'countries', 'events', 'koppel', 'names', 'objects', 'people', 'series', 'subjects']
-    # for idx, val in enumerate(outfiles): outfiles[idx] = 'data/entities/' + val + '.json'
-    # get_new_props(outfiles)
-
+    #new_props()
     #import_first_batch()
     #import_second_batch()
     #import_people()
-    import_wikidata_props()
+    #people_props
+    #refine_wiki_props()
+    #new_props()
 
-    #refine_people_wiki_data()
-    #get_new_props(["data/entities/people_edited.json"])
+    import_wikidata_props_batch()
+
+
 
 
 if __name__ == '__main__':

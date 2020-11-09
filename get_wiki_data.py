@@ -92,29 +92,29 @@ def get_statements(q_string):
         return None
 
 
-def refine_people_wiki_data():
+def refine_wiki_data(infile, outfile):
     edited_dict = {}
-    with open("data/entities/people_edited.json") as json_file:
+    with open(infile) as json_file:
         data = json.load(json_file)
         for item in data.keys():
             if "wiki" in data.get(item).keys():
                 wiki_dict = data.get(item).get("wiki")
                 new_wiki_dict = {}
                 if "different from" in wiki_dict.keys():
-                    person = data.get(item)
-                    person["wiki"] = {}
-                    edited_dict[item] = person
+                    entity = data.get(item)
+                    entity["wiki"] = {}
+                    edited_dict[item] = entity
                 else:
                     for prop in wiki_dict.keys():
                         if "ID" not in prop and "username" not in prop and "image" not in prop:
                             new_wiki_dict[prop] = wiki_dict.get(prop)
-                    person = data.get(item)
-                    person["wiki"] = new_wiki_dict
-                    edited_dict[item] = person
+                    entity = data.get(item)
+                    entity["wiki"] = new_wiki_dict
+                    edited_dict[item] = entity
             else:
                 edited_dict[item] = data.get(item)
     json_file.close()
-    with open("data/entities/people_edited.json", "w") as json_out:
+    with open(outfile, "w") as json_out:
         json.dump(edited_dict, json_out)
 
 

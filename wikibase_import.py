@@ -223,7 +223,7 @@ def extract_wiki_statements(wiki_dict):
 '''
 add props from wikidata into the wikibase
 '''
-def import_wikidata_props():
+def import_wikidata_props_people():
     import_local_q("data/q_batch_people.json")
     people = json_to_dict("data/entities/people_edited.json")
 
@@ -236,5 +236,25 @@ def import_wikidata_props():
             try:
                 wbPage.write(login_creds)
             except:
-                with open("data/results/wiki_props_error.txt", "w") as error_out:
+                with open("data/results/wiki_props_error_p.txt", "w") as error_out:
                     error_out.write(person + "\n")
+
+def import_wikidata_props_batch():
+    import_local_q("data/q_batch_people.json")
+
+    batch = ['bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
+    for idx, val in enumerate(batch): batch[idx] = 'data/entities/' + val + '_edited.json'
+
+    for file in batch:
+        items = json_to_dict(file)
+        for i in items.keys():
+            if "wiki" in items.get(i).keys():
+                item_statements = extract_wiki_statements(items.get(i).get("wiki"))
+                q = "Q" + str(get_local_q(i))
+                wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=item_statements, mediawiki_api_url=mw_api_url)
+                pprint.pprint(wbPage.get_wd_json_representation())
+                try:
+                    wbPage.write(login_creds)
+                except:
+                    with open("data/results/wiki_props_error_2.txt", "w") as error_out:
+                        error_out.write(i + "\n")
