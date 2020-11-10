@@ -265,15 +265,29 @@ def import_wikidata_props_batch():
 def collection_items_import():
     files = ['becker', 'belfer', 'koppel']
     for idx, val in enumerate(files): files[idx] = 'data/entities/' + val + '.json'
+    import_local_q("data/q_batch_people.json")
+
+    next_q = 42625
 
     for file in files:
         collection = json_to_dict(file)
 
         for item in collection.keys():
             states = get_item_statements(collection.get(item), None)
-            q = "Q" + str(get_local_q(item))
 
-            wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
+            print(item)
+
+            id = get_local_q(item)
+            q = "Q" + str(id)
+
+            print(q)
+
+            if q is None:
+                wbPage = wdi_core.WDItemEngine(data=states, mediawiki_api_url=mw_api_url)
+                local_q[item] = next_q
+                next_q += 1
+            else:
+                wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
 
             desc = collection.get(item).get("description")
             if desc is not None:
@@ -286,6 +300,10 @@ def collection_items_import():
 
             try:
                 wbPage.write(login_creds)
-            except:
+            except Exception as e:
+                print(e)
                 with open("data/results/item_import_errors", "w") as error_out:
                     error_out.write(item + "\n")
+
+    json.dump(local_q, "data/q_batch_collections.json")
+
