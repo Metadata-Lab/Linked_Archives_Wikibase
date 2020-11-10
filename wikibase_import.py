@@ -273,6 +273,8 @@ def collection_items_import():
             states = get_item_statements(collection.get(item), None)
             q = "Q" + str(get_local_q(item))
 
+            wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
+
             desc = collection.get(item).get("description")
             if desc is not None:
                 if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
@@ -280,7 +282,6 @@ def collection_items_import():
             else:
                 wbPage.set_description("", lang="en")
 
-            wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
             pprint.pprint(wbPage.get_wd_json_representation())
 
             try:

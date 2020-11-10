@@ -2,7 +2,7 @@ from ontology_to_json import parse_all
 from json_read import get_new_props
 from get_wiki_data import refine_wiki_data
 from wikibase_import import import_first_batch, import_second_batch, import_people, \
-    import_wikidata_props_people, import_wikidata_props_batch
+    import_wikidata_props_people, import_wikidata_props_batch, collection_items_import
 
 def new_props():
     outfiles = ['bib_series', 'collections', 'countries', 'events', 'names', 'series', 'subjects']
@@ -31,9 +31,9 @@ def main():
     #people_props
     #refine_wiki_props()
     #new_props()
-    import_wikidata_props_batch()
+    #import_wikidata_props_batch()
 
-
+    collection_items_import()
 
 
 if __name__ == '__main__':
