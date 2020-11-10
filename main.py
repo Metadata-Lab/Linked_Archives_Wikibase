@@ -31,7 +31,6 @@ def main():
     #people_props
     #refine_wiki_props()
     #new_props()
-
     import_wikidata_props_batch()
 
 

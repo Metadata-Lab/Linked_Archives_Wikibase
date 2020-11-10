@@ -58,7 +58,9 @@ extract statements from item dictionary, formatted for wikibase import
 @param type the type of item being imported (for instance of prop)
 '''
 def get_item_statements(i_dict, type):
-    statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
+    if type is not None: statements = [wdi_core.WDItemID(cfg.object_ids.get(type), prop_nr="P1")]
+    else: statements = []
+
     for prop in i_dict.keys():
         #ignore the wikidata q value and label
         #wikidata property statements will be imported later
@@ -258,3 +260,31 @@ def import_wikidata_props_batch():
                 except:
                     with open("data/results/wiki_props_error_2.txt", "w") as error_out:
                         error_out.write(i + "\n")
+
+
+def collection_items_import():
+    files = ['becker', 'belfer', 'koppel']
+    for idx, val in enumerate(files): files[idx] = 'data/entities/' + val + '.json'
+
+    for file in files:
+        collection = json_to_dict(file)
+
+        for item in collection.keys():
+            states = get_item_statements(collection.get(item), None)
+            q = "Q" + str(get_local_q(item))
+
+            desc = collection.get(item).get("description")
+            if desc is not None:
+                if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
+                wbPage.set_description(desc, lang="en")
+            else:
+                wbPage.set_description("", lang="en")
+
+            wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
+            pprint.pprint(wbPage.get_wd_json_representation())
+
+            try:
+                wbPage.write(login_creds)
+            except:
+                with open("data/results/item_import_errors", "w") as error_out:
+                    error_out.write(item + "\n")
