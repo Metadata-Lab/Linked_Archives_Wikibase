@@ -216,7 +216,7 @@ def extract_wiki_statements(wiki_dict):
         if prop in prop_ids.keys():
             for value in wiki_dict.get(prop)[1].keys():
                 if prop in cfg.wiki_date_props:
-                    end = value.find("T")-1
+                    end = value.find("T")
                     value = value[:end]
                 state = wdi_core.WDString(value, prop_nr=prop_ids.get(prop))
                 statements.append(state)
@@ -282,10 +282,11 @@ def collection_items_import():
 
             print(q)
 
-            if q is None:
+            if id is None:
                 wbPage = wdi_core.WDItemEngine(data=states, mediawiki_api_url=mw_api_url)
                 local_q[item] = next_q
                 next_q += 1
+                wbPage.set_label(item, lang="en")
             else:
                 wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
 
@@ -304,6 +305,6 @@ def collection_items_import():
                 print(e)
                 with open("data/results/item_import_errors", "w") as error_out:
                     error_out.write(item + "\n")
-
-    json.dump(local_q, "data/q_batch_collections.json")
+    with open ("data/q_batch_collections.json", "w") as outfile:
+        json.dump(local_q, outfile)
 
