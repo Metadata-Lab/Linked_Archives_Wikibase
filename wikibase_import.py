@@ -290,7 +290,7 @@ def collection_items_import():
             else:
                 wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
 
-            desc = collection.get(item).get("description")
+            desc = collection.get(item).get("description")[0]
             if desc is not None:
                 if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
                 wbPage.set_description(desc, lang="en")
