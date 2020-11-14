@@ -106,7 +106,7 @@ def import_items(dict, type, curr_q):
         wbPage.set_label(item, lang="en")
 
         #description needs to be less than 250 characters
-        desc = dict.get(item).get("description")
+        desc = dict.get(item).get("description")[0]
         if desc is not None:
             if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
             wbPage.set_description(desc, lang="en")
@@ -293,7 +293,7 @@ def collection_items_import():
             desc = collection.get(item).get("description")[0]
             if desc is not None:
                 if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
-                wbPage.set_description(desc, lang="en")
+                else: wbPage.set_description(desc, lang="en")
             else:
                 wbPage.set_description("", lang="en")
 
