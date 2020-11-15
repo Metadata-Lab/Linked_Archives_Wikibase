@@ -1,11 +1,9 @@
 from selenium import webdriver
 
-
-
 def main():
-    driver_location = '/home/klpolley/geckodriver'
+    driver_location = "H:/"
     driver = webdriver.Firefox(driver_location)
-    driver.get('linkeddata.ischool.syr.edu/mediawiki/index.php/Special:NewProperty')
+    driver.get('http://linkeddata.ischool.syr.edu/mediawiki/index.php/Special:NewProperty')
 
     label = '//*[@id="ooui-php-3"]'
     desc = '//*[@id="ooui-php-4"]'
@@ -21,6 +19,7 @@ def main():
     driver.find_element_by_xpath(label).send_keys(prop_label)
     driver.find_element_by_xpath(desc).send_keys(description)
 
+    driver.find_element_by_xpath(type).click()
     driver.find_element_by_xpath(string).click()
 
     driver.find_element_by_xpath(submit).click()
