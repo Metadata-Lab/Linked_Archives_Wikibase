@@ -4,7 +4,7 @@ import all of the items (without wikidata properties) into wikibase
 this will include matching up objects and items
 '''
 
-from scripts.wikibase_import import import_all, import_collections
+from lib.wikibase_import import import_all, import_collections
 
 def main():
     q = import_all()

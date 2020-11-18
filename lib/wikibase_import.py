@@ -2,7 +2,7 @@ from wikidataintegrator import wdi_core, wdi_login
 import os, pprint, json
 import config as cfg
 
-from scripts.json_read import json_to_dict
+from lib.json_read import json_to_dict
 
 #prep for wikibase connection
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"

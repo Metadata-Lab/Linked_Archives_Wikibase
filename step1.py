@@ -11,8 +11,8 @@ once this has been done, move on to step 2
 edit entity files for discrepancies - 8-horse team, roses bloom for lovers, newest drug war had issues
 '''
 
-from scripts.ontology_to_json import parse_all
-from scripts.json_read import new_props_people, new_props_general
+from lib.ontology_to_json import parse_all
+from lib.json_read import new_props_people, new_props_general
 
 def main():
     parse_all()

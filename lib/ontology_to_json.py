@@ -1,6 +1,6 @@
 import json
 import config as cfg
-from scripts.get_wiki_data import search_for_q, get_statements
+from lib.get_wiki_data import search_for_q, get_statements
 
 '''
 import ontology export, sort each line into appropriate category
