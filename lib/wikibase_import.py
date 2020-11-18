@@ -144,15 +144,15 @@ def import_batch(dicts, types, start_q, batch_file, missed_statements_file, miss
     return q
 
 def import_all():
-    subjects = json_to_dict("data/entities/subjects.json")
-    countries = json_to_dict("data/entities/countries.json")
-    events = json_to_dict("data/entities/events.json")
-    names = json_to_dict("data/entities/names.json")
-    bib_series = json_to_dict("data/entities/bib_series.json")
-    collections = json_to_dict("data/entities/collections.json")
-    series = json_to_dict("data/entities/series.json")
-    objects = json_to_dict("data/entities/objects.json")
-    people = json_to_dict("data/entities/people.json")
+    subjects = json_to_dict("data/entities/subjects_edited.json")
+    countries = json_to_dict("data/entities/countries_edited.json")
+    events = json_to_dict("data/entities/events_edited.json")
+    names = json_to_dict("data/entities/names_edited.json")
+    bib_series = json_to_dict("data/entities/bib_series_edited.json")
+    collections = json_to_dict("data/entities/collections_edited.json")
+    series = json_to_dict("data/entities/series_edited.json")
+    objects = json_to_dict("data/entities/objects_edited.json")
+    people = json_to_dict("data/entities/people_edited.json")
 
     dicts = [subjects, countries, events, names, bib_series, collections, series, objects, people]
     types = ["subject", "country", "event", "name", "bib_series", "collection", "series", "object", "person"]
