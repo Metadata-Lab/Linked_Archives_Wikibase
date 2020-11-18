@@ -1,0 +1,142 @@
+﻿sex or gender,sex or gender identity of human
+occupation,occupation of a person
+date of birth,date on which the subject was born
+country of citizenship,the object is a country that recognizes the subject as its citizen
+place of birth,"most specific known (e.g. city instead of country, or hospital instead of city) birth location of a person"
+educated at,educational institution attended by subject
+languages spoken; written or signed,"language(s) that a person speaks, writes or signs, including the native language(s)"
+date of death,date on which the subject died
+award received,award or recognition received by a person
+place of death,most specific known death location of a person
+political party,the political party of which this politician is or has been a member or otherwise affiliated
+employer,person or organization for which the subject works or worked
+name in native language,name of a person in their native language
+position held,subject currently or formerly holds the object position or public office
+cause of death,underlying or immediate cause of death
+sport,sport that the subject participates or participated in or is associated with
+spouse,the subject has the object as their spouse
+religion,religion of a person
+manner of death,general circumstances of a person's death
+member of,"organization, musical group, or club to which the subject belongs"
+work location,location where persons were active
+child,subject has object as child. Do not use for stepchildren
+member of sports team,sports teams or clubs that the subject currently represents or formerly represented
+birth name,"full name of a person at birth, if different from their current, generally used name"
+ethnic group,subject's ethnicity
+place of burial,"location of grave, resting place, place of ash-scattering, etc. for a person"
+residence,"the place where the person is or has been, resident"
+military branch,branch to which this person belongs
+instrument,musical instrument that a person plays
+position played on team / speciality,position or specialism of a player on a team
+father,male parent of the subject
+genre,creative work's genre or an artist's field of work
+conflict,"battles, wars or other military engagements in which the person or item participated"
+number of children,number of children of the person
+country for sport,country a person or a team represents when playing a sport
+field of work,specialization of a person or organization
+sibling,the subject has the object as their sibling
+nominated for,award nomination received by a person
+height,vertical length of an entity
+mother,competition or event won by the subject
+writing language,language in which the writer has written their work
+mass,mass (in colloquial usage also known as weight) of the item
+participant in,event in which a person or organization was/is a participant
+record label,brand and trademark associated with the marketing of subject music recordings and music videos
+military rank,military rank achieved by a person
+notable work,"notable scientific, artistic or literary work, or other work of significance among subject's works"
+native language,language or languages a person has learned from early childhood
+candidacy in election,election where the subject is a candidate
+medical condition,"any state relevant to the health of an organism, including diseases and positive conditions"
+copyright status as a creator,states if the body of work published during the lifetime of this creator is still copyrighted or in the public domain
+academic degree,academic degree that the person holds
+significant event,significant or notable events associated with the subject
+pseudonym,alias used by someone
+voice type,person's voice type for singing
+student of,person who has taught this person
+league,league in which team or player plays or has played in
+convicted of,crime a person was convicted of
+has works in the collection,collection that have works of this person
+unmarried partner,someone with whom the person is in a relationship without being married
+copyright representative,person or organisation who represents the copyright for this person or work of art
+relative,family member
+movement,"literary, artistic, scientific or philosophical movement or scene associated with this person"
+influenced by,"this person, idea, etc. is informed by that other person, idea, etc."
+nickname,informal name
+doctoral advisor,person who supervised the doctorate or PhD thesis of the subject
+owner of,entities owned by the subject
+drafted by,which team the player was drafted by
+student,notable student(s) of the subject individual
+honorific prefix,"word or expression used before a name, in addressing or referring to a person"
+allegiance,country (or other power) that the person or organization serves
+handedness,handedness of the person
+place of detention,place where this person is or was detained
+doctoral student,doctoral student(s) of a professor
+has written for,this person contributed to this publication
+eye color,color of the irises of a person's eyes
+sports discipline competed in,discipline an athlete competed in within a sport
+name in kana,the reading of a Japanese name in kana
+hair color,person's hair color
+net worth,totality of wealth possessed by a person
+time in space,time in space by an astronaut or cosmonaut
+astronaut mission,space mission that the subject is or has been a member of
+floruit,"date when the person was known to be active or alive, when birth or death not documented"
+political ideology,political ideology of this organization or person
+sexual orientation,the sexual orientation of the person
+affiliation,organization that a person or organization is affiliated with
+blood type,blood type of the human
+consecrator,bishop who presided as consecrator or co-consecrator of this bishop
+noble title,titles held by the person
+lifestyle,"typical way of life of an individual, group, or culture"
+sport number,"number worn on a player's (competitor's) uniform, equipment, etc"
+victory,competition or event won by the subject
+religious order,order of monks or nuns to which an individual or religious house belongs
+partner in business or sport,professional collaborator
+represented by,person or agency that represents or manages the subject
+killed by,person who killed the subject
+second family name in Spanish name,second (generally maternal) family name in Spanish names
+honorific suffix,"word or expression with connotations conveying esteem or respect when used, after a name, in addressing or referring to a person"
+professorship,professorship position held by this academic person
+named after,"entity or event that inspired the subject's name, or namesake"
+coach of sports team,sports club for which this person is on-field manager or coach
+head coach,on-field manager or head coach of a sports club or person
+significant person,person linked to the item in any possible way
+generational suffix,suffix used in name
+amateur radio callsign,callsign assigned to licensed Amateur Radio operator
+preferred pronoun,personal pronoun(s) this person uses
+ancestral home,place of origin for ancestors of subject
+subclass of,next higher class or type; all instances of these items are instances of those items; this item is a class (subset) of that item
+described by source,reference work where this item is described
+inception,date or point in time when the subject came into existence as defined
+practiced by,type of agents that study this subject or work in this profession
+anthem,subject's official anthem
+area,area occupied by an object
+capital,"primary city of a country, province, state or other type of administrative territorial entity"
+continent,continent of which the subject is a part
+country,sovereign state of this item (not to be used for human beings)
+currency,currency used by item
+executive body,branch of government for the daily administration of the state
+head of government,political office that is fulfilled by the head of the government of this item
+health specialty,"main specialty that diagnoses, prevent human illness, injury and other physical and mental impairments"
+language used,language widely used (spoken or written) in this place or at this event
+legislative body,legislative body governing this entity; political institution with elected representatives
+located in time zone,time zone for this item
+native label,label for item in its official or original language
+nominal GDP per capita,country's total GDP divided by the population
+office held by head of government,political office that is fulfilled by the head of the government of this item
+official language,language designated as official by this item
+population,number of people inhabiting the place; number of people of subject
+short name,"short name of a place, organisation, person, etc."
+country of origin,country of origin of this item
+head of state,official with the highest formal authority in a country/state
+highest judicial authority,"supreme judicial body within a country, administrative division, or other organization"
+office held by head of state,political office that is fulfilled by the head of state of this item
+official name,official name of the subject in its official language(s)
+shares border with,"countries or administrative subdivisions, of equal level, that this item borders, either by land or water. A single common point is enough."
+basic form of government,subject's government
+culture,human culture or people (or several cultures) associated with this item
+diplomatic relation,diplomatic relations of the country
+Human Development Index,HDI value of a country
+located on terrain feature,located on the specified landform
+motto text,short motivation sentence associated to item
+patron saint,patron saint adopted by the subject
+replaces,person or item replaced

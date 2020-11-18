@@ -1,0 +1,411 @@
+sex or gender,P21,people_edited,9070
+place of birth,P19,people_edited,7057
+country of citizenship,P27,people_edited,8082
+instance of,P31,people_edited,11530
+place of death,P20,people_edited,2551
+place of burial,P119,people_edited,782
+occupation,P106,people_edited,8718
+Commons category,P373,people_edited,3854
+date of birth,P569,people_edited,8572
+field of work,P101,people_edited,488
+family name,P734,people_edited,6405
+given name,P735,people_edited,8570
+date of death,P570,people_edited,3352
+U.S. National Archives Identifier,P1225,people_edited,854
+birth name,P1477,people_edited,826
+genre,P136,people_edited,630
+work period (end),P2032,people_edited,228
+ethnic group,P172,people_edited,821
+award received,P166,people_edited,2871
+instrument,P1303,people_edited,700
+described by source,P1343,people_edited,1619
+ISNI,P213,people_edited,5355
+number of children,P1971,people_edited,498
+work period (start),P2031,people_edited,1456
+nominated for,P1411,people_edited,452
+languages spoken; written or signed,P1412,people_edited,3442
+official website,P856,people_edited,1332
+conflict,P607,people_edited,537
+topic's main category,P910,people_edited,827
+Commons gallery,P935,people_edited,622
+cause of death,P509,people_edited,1418
+position held,P39,people_edited,1892
+educated at,P69,people_edited,6048
+work location,P937,people_edited,1010
+name in native language,P1559,people_edited,1928
+political party,P102,people_edited,2173
+manner of death,P1196,people_edited,1120
+residence,P551,people_edited,736
+spouse,P26,people_edited,1301
+sibling,P3373,people_edited,486
+member of sports team,P54,people_edited,827
+sport,P641,people_edited,1306
+position played on team / speciality,P413,people_edited,689
+medical condition,P1050,people_edited,218
+country for sport,P1532,people_edited,494
+participant in,P1344,people_edited,359
+mass,P2067,people_edited,371
+child,P40,people_edited,865
+military branch,P241,people_edited,721
+employer,P108,people_edited,1985
+Libris-URI,P5587,people_edited,679
+writing language,P6886,people_edited,419
+Europeana entity,P7704,people_edited,1264
+family,P53,people_edited,35
+height,P2048,people_edited,451
+mother,P25,people_edited,423
+father,P22,people_edited,676
+archives at,P485,people_edited,180
+member of,P463,people_edited,1058
+military rank,P410,people_edited,343
+unmarried partner,P451,people_edited,113
+commander of (DEPRECATED),P598,people_edited,23
+handedness,P552,people_edited,61
+candidacy in election,P3602,people_edited,219
+native language,P103,people_edited,292
+signature,P109,people_edited,494
+significant event,P793,people_edited,150
+killed by,P157,people_edited,17
+religion,P140,people_edited,1152
+TV Tropes identifier,P6839,people_edited,75
+owner of,P1830,people_edited,79
+blood type,P1853,people_edited,26
+short name,P1813,people_edited,6
+nickname,P1449,people_edited,89
+Commons Creator page,P1472,people_edited,155
+exact match,P2888,people_edited,44
+notable work,P800,people_edited,327
+movement,P135,people_edited,92
+copyright status as a creator,P7763,people_edited,212
+Royal Academy new identifier,P4808,people_edited,18
+has works in the collection,P6379,people_edited,119
+convicted of,P1399,people_edited,122
+defender,P1593,people_edited,1
+on focus list of Wikimedia project,P5008,people_edited,288
+depicted by,P1299,people_edited,10
+Wolfram Language entity code,P4839,people_edited,86
+competition class,P2094,people_edited,142
+league,P118,people_edited,126
+described at URL,P973,people_edited,171
+spoken text audio,P989,people_edited,29
+related category,P7084,people_edited,212
+Google Doodle,P4431,people_edited,29
+list of works,P1455,people_edited,26
+ex-libris,P8195,people_edited,1
+filmography,P1283,people_edited,92
+IPI name number,P1828,people_edited,153
+consecrator,P1598,people_edited,23
+affiliation,P1416,people_edited,28
+part of,P361,people_edited,116
+time period,P2348,people_edited,34
+record label,P264,people_edited,352
+preferred pronoun,P6553,people_edited,10
+allegiance,P945,people_edited,63
+present in work,P1441,people_edited,40
+represented by,P1875,people_edited,18
+represents,P1268,people_edited,2
+lifestyle,P1576,people_edited,21
+hair color,P1884,people_edited,43
+video,P10,people_edited,3
+interested in,P2650,people_edited,6
+voice type,P412,people_edited,140
+RIA Novosti reference,P6081,people_edited,33
+relative,P1038,people_edited,105
+net worth,P2218,people_edited,39
+copyright representative,P6275,people_edited,107
+academic degree,P512,people_edited,202
+generational suffix,P8017,people_edited,12
+catalog code,P528,people_edited,8
+pronunciation audio,P443,people_edited,49
+IPA transcription,P898,people_edited,12
+ArhivX LOD,P5821,people_edited,22
+influenced by,P737,people_edited,90
+honorific suffix,P1035,people_edited,15
+official name,P1448,people_edited,5
+Hungarian National Assembly identifier,P4966,people_edited,1
+audio recording of the subject's spoken voice,P990,people_edited,31
+author citation (zoology),P835,people_edited,4
+name in kana,P1814,people_edited,49
+US Bureau of Prisons Inmate Register Number,P8007,people_edited,5
+political ideology,P1142,people_edited,33
+has written for,P6872,people_edited,53
+audio,P51,people_edited,11
+has list,P2354,people_edited,20
+astronaut mission,P450,people_edited,36
+ancestral home,P66,people_edited,10
+wears,P3828,people_edited,7
+member of the crew of,P5096,people_edited,4
+time in space,P2873,people_edited,37
+SVT Open archive,P6817,people_edited,17
+amateur radio callsign,P5143,people_edited,12
+catchphrase,P6251,people_edited,7
+floruit,P1317,people_edited,36
+sport number,P1618,people_edited,20
+religious order,P611,people_edited,19
+member of military unit,P7779,people_edited,3
+Krugosvet article,P6385,people_edited,11
+NLC authorities,P1213,people_edited,7
+eye color,P1340,people_edited,51
+topic's main template,P1424,people_edited,34
+pseudonym,P742,people_edited,144
+honorific prefix,P511,people_edited,64
+official blog,P1581,people_edited,5
+student of,P1066,people_edited,127
+student,P802,people_edited,68
+discography,P358,people_edited,123
+married name,P2562,people_edited,7
+uses,P2283,people_edited,4
+drafted by,P647,people_edited,78
+parliament.uk biography pages,P1996,people_edited,39
+Parliamentary record identifier,P2172,people_edited,3
+UK Parliament identifier,P6213,people_edited,39
+Iconclass notation,P1256,people_edited,1
+botanist author abbreviation,P428,people_edited,8
+number of matches played/races/starts,P1350,people_edited,31
+coach of sports team,P6087,people_edited,14
+total goals in career,P6509,people_edited,31
+doubles record,P555,people_edited,26
+singles record,P564,people_edited,26
+playing hand,P741,people_edited,25
+Munzinger Sport number,P1285,people_edited,50
+prize money,P2121,people_edited,16
+doctoral advisor,P184,people_edited,87
+said to be the same as,P460,people_edited,11
+quotation or excerpt,P7081,people_edited,1
+phone number,P1329,people_edited,23
+shooting handedness,P423,people_edited,31
+head coach,P286,people_edited,14
+place of detention,P2632,people_edited,56
+penalty,P1596,people_edited,6
+permanent duplicated item,P2959,people_edited,10
+Swedish Open Cultural Heritage URI,P1260,people_edited,4
+ranking,P1352,people_edited,15
+sports discipline competed in,P2416,people_edited,50
+total assists in career,P6545,people_edited,26
+penalty minutes in career,P6546,people_edited,26
+total points in career,P6544,people_edited,26
+subreddit,P3984,people_edited,6
+Regensburg Classification,P1150,people_edited,19
+doctoral student,P185,people_edited,55
+total shots in career,P6543,people_edited,22
+career plus-minus rating,P6547,people_edited,22
+NMVW id,P7831,people_edited,4
+noble title,P97,people_edited,22
+Dewey Decimal Classification,P1036,people_edited,1
+doctoral thesis,P1026,people_edited,11
+Erdős number,P2021,people_edited,34
+professorship,P803,people_edited,15
+NSDAP membership number (1925–1945),P2298,people_edited,4
+creator,P170,people_edited,16
+godparent,P1290,people_edited,2
+sexual orientation,P91,people_edited,33
+Magdeburger Biographisches Lexikon,P2277,people_edited,2
+military casualty classification,P1347,people_edited,6
+Fach,P1731,people_edited,5
+from narrative universe,P1080,people_edited,5
+country of origin,P495,people_edited,9
+England Football Online player profile,P6331,people_edited,1
+website account on,P553,people_edited,6
+Elo rating,P1087,people_edited,8
+title of chess person,P2962,people_edited,8
+significant person,P3342,people_edited,13
+performer,P175,people_edited,11
+derivative work,P4969,people_edited,2
+exonerated of,P7781,people_edited,2
+Stack Exchange tag,P1482,people_edited,2
+PhilPapers topic,P3235,people_edited,3
+country,P17,people_edited,13
+located in the administrative territorial entity,P131,people_edited,10
+coordinate location,P625,people_edited,11
+last words,P3909,people_edited,5
+supported sports team,P6758,people_edited,5
+vehicle normally used,P3438,people_edited,5
+Swedish Royal Theater Archive,P7574,people_edited,12
+start time,P580,people_edited,5
+has pet,P1429,people_edited,8
+media franchise,P8345,people_edited,2
+IPI base code,P3453,people_edited,5
+director,P57,people_edited,3
+screenwriter,P58,people_edited,1
+composer,P86,people_edited,2
+producer,P162,people_edited,2
+based on,P144,people_edited,1
+cast member,P161,people_edited,3
+production company,P272,people_edited,1
+Cinémathèque québécoise work identifier,P4276,people_edited,1
+publication date,P577,people_edited,3
+ISAN,P3212,people_edited,1
+Medierådet rating,P5970,people_edited,1
+ICAA rating,P3306,people_edited,1
+director of photography,P344,people_edited,1
+color,P462,people_edited,2
+original language of film or TV show,P364,people_edited,3
+film editor,P1040,people_edited,1
+narrative location,P840,people_edited,1
+distributed by,P750,people_edited,2
+has quality,P1552,people_edited,2
+title,P1476,people_edited,1
+FSK film rating,P1981,people_edited,1
+after a work by,P1877,people_edited,1
+box office,P2142,people_edited,1
+duration,P2047,people_edited,1
+filming location,P915,people_edited,1
+costume designer,P2515,people_edited,1
+executive producer,P1431,people_edited,1
+EIRIN film rating,P2756,people_edited,1
+aspect ratio,P2061,people_edited,1
+cost,P2130,people_edited,1
+Filmiroda rating,P2747,people_edited,1
+co-driver,P2095,people_edited,1
+length,P2043,people_edited,1
+topic's main Wikimedia portal,P1151,people_edited,5
+victory,P2522,people_edited,20
+language of work or name,P407,people_edited,5
+original broadcaster,P449,people_edited,3
+end time,P582,people_edited,3
+number of episodes,P1113,people_edited,3
+number of seasons,P2437,people_edited,2
+location of formation,P740,people_edited,6
+second family name in Spanish name,P1950,people_edited,16
+category for people born here,P1464,people_edited,2
+category of associated people,P1792,people_edited,2
+capital of,P1376,people_edited,1
+elevation above sea level,P2044,people_edited,4
+area,P2046,people_edited,2
+contributed to creative work,P3919,people_edited,7
+permanent resident of,P5389,people_edited,4
+patronym or matronym for this name,P2976,people_edited,1
+LIGA profile,P6210,people_edited,1
+date of burial or cremation,P4602,people_edited,6
+PhilPeople profile,P3233,people_edited,14
+Academia.edu profile URL,P5715,people_edited,3
+bowling style,P2545,people_edited,3
+NosDéputés.fr identifiant,P7040,people_edited,2
+founded by,P112,people_edited,7
+hashtag,P2572,people_edited,4
+named after,P138,people_edited,15
+parent organization,P749,people_edited,2
+partner in business or sport,P1327,people_edited,19
+diocese,P708,people_edited,5
+record held,P1000,people_edited,1
+headquarters location,P159,people_edited,3
+industry,P452,people_edited,2
+inception,P571,people_edited,8
+OSM Name Suggestion Index identifier,P8253,people_edited,1
+inspired by,P941,people_edited,5
+FIG gymnast licence number,P2696,people_edited,4
+National Film Board of Canada director identifier,P6891,people_edited,1
+Artists in Canada record number,P5239,people_edited,9
+canonization status,P411,people_edited,4
+maintained by WikiProject,P6104,people_edited,3
+Sandbox-External identifier,P2536,people_edited,10
+URL,P2699,people_edited,1
+stepparent,P3448,people_edited,7
+Catalogus Professorum Academiae Groninganae id,P2016,people_edited,1
+name,P2561,people_edited,3
+Québec cultural heritage directory people identifier,P2592,people_edited,2
+SUDOC editions,P1025,people_edited,1
+character role,P453,people_edited,1
+author,P50,people_edited,1
+main subject,P921,people_edited,1
+published in,P1433,people_edited,1
+Roud Folk Song Index number,P1829,people_edited,1
+copyright status,P6216,people_edited,1
+enemy of,P7047,people_edited,3
+replaces,P1365,people_edited,4
+Social Security number,P8002,people_edited,1
+writing system,P282,people_edited,3
+has part,P527,people_edited,1
+native label,P1705,people_edited,4
+Soundex,P3878,people_edited,2
+Cologne phonetics,P3879,people_edited,2
+Caverphone,P3880,people_edited,2
+parliamentary term,P2937,people_edited,1
+FIG gymnast (no licence) identifier,P7440,people_edited,1
+century breaks,P4912,people_edited,4
+highest break,P6590,people_edited,3
+birthday,P3150,people_edited,1
+date of disappearance,P746,people_edited,2
+Riksdagen person guid,P8388,people_edited,3
+base salary,P3618,people_edited,1
+streaming media URL,P963,people_edited,1
+KDG Komponisten der Gegenwart,P1287,people_edited,2
+archival creator authority record at the Archives nationales,P3599,people_edited,2
+first appearance,P4584,people_edited,1
+social classification,P3716,people_edited,2
+for work,P1686,people_edited,1
+Library of Congress Classification,P1149,people_edited,1
+feast day,P841,people_edited,2
+religious name,P1635,people_edited,1
+place of origin (Switzerland),P1321,people_edited,2
+biography at the Bundestag of Germany URL,P1713,people_edited,2
+catalog,P972,people_edited,1
+web feed URL,P1019,people_edited,3
+TASS reference,P6219,people_edited,2
+quantity,P1114,people_edited,2
+Unicode character,P487,people_edited,1
+page banner,P948,people_edited,2
+OmegaWiki Defined Meaning,P1245,people_edited,2
+total revenue,P2139,people_edited,1
+item operated,P121,people_edited,1
+subclass of,P279,people_edited,1
+conferred by,P1027,people_edited,1
+next lower rank,P3729,people_edited,1
+award rationale,P6208,people_edited,1
+has parts of the class,P2670,people_edited,1
+next higher rank,P3730,people_edited,1
+number of injured,P1339,people_edited,1
+number of victims of killer,P1345,people_edited,1
+place name sign,P1766,people_edited,3
+product or material produced,P1056,people_edited,1
+destination point,P1444,people_edited,1
+start point,P1427,people_edited,1
+monogram,P1543,people_edited,1
+mount,P3091,people_edited,2
+anthem,P85,people_edited,1
+flag,P163,people_edited,1
+commemorates,P547,people_edited,1
+country of registry,P8047,people_edited,1
+ACM Classification Code (2012),P2179,people_edited,2
+has edition or translation,P747,people_edited,1
+fax number,P2900,people_edited,1
+Cullum number,P4026,people_edited,2
+architect,P84,people_edited,1
+owned by,P127,people_edited,1
+operator,P137,people_edited,1
+architectural style,P149,people_edited,1
+street address,P6375,people_edited,1
+maximum capacity,P1083,people_edited,1
+WorldSBK.com racer identifier,P4076,people_edited,1
+postal code,P281,people_edited,2
+local dialing code,P473,people_edited,1
+OS grid reference,P613,people_edited,1
+GSS code (2011),P836,people_edited,2
+historic county,P7959,people_edited,3
+continent,P30,people_edited,2
+patient of,P3205,people_edited,1
+political alignment,P1387,people_edited,1
+academic major,P812,people_edited,2
+WordLift URL,P6363,people_edited,3
+superhuman feature or ability,P2563,people_edited,1
+sponsor,P859,people_edited,3
+patronym or matronym for this person,P5056,people_edited,1
+courtesy name,P1782,people_edited,1
+external data available at,P1325,people_edited,1
+Wikimedia outline,P5125,people_edited,1
+test taken,P5021,people_edited,1
+McCune-Reischauer romanization,P1942,people_edited,2
+Revised Romanization,P2001,people_edited,3
+charge,P1595,people_edited,1
+significant place,P7153,people_edited,1
+date of baptism in early childhood,P1636,people_edited,4
+Image Archive; Herder Institute,P6482,people_edited,2
+maintained by,P126,people_edited,1
+heritage designation,P1435,people_edited,1
+parent peak,P3137,people_edited,1
+twinned administrative body,P190,people_edited,1
+ISO 3166-2 code,P300,people_edited,1
+licence plate code,P395,people_edited,1
+located in time zone,P421,people_edited,1
+category for people who died here,P1465,people_edited,1
+UN/LOCODE,P1937,people_edited,1
