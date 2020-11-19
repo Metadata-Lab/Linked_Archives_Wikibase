@@ -91,7 +91,7 @@ def import_items(dict, type, curr_q):
         if "description" in dict.get(item).keys():
             desc = dict.get(item).get("description")[0]
             if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
-            wbPage.set_description(desc, lang="en")
+            else: wbPage.set_description(desc, lang="en")
         else:
             wbPage.set_description("", lang="en")
 
