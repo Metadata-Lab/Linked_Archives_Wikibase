@@ -62,8 +62,6 @@ def get_item_statements(i_dict, type):
                         continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
-                    if prop is "description":
-                        if len(value) > 400: value = value[:395] + '...'
                     state = wdi_core.WDString(value, prop_nr=pid)
                 #add statement to the list
                 statements.append(state)
@@ -148,14 +146,23 @@ def import_batch(dicts, types, start_q, batch_file, missed_statements_file, miss
     return q
 
 def import_all():
+    print("subjects")
     subjects = json_to_dict("data/entities/subjects_edited.json")
+    print("countries")
     countries = json_to_dict("data/entities/countries_edited.json")
+    print("events")
     events = json_to_dict("data/entities/events_edited.json")
+    print("names")
     names = json_to_dict("data/entities/names_edited.json")
+    print("bib series")
     bib_series = json_to_dict("data/entities/bib_series_edited.json")
+    print("collections")
     collections = json_to_dict("data/entities/collections_edited.json")
+    print("series")
     series = json_to_dict("data/entities/series_edited.json")
+    print("objects")
     objects = json_to_dict("data/entities/objects_edited.json")
+    print("people")
     people = json_to_dict("data/entities/people_edited.json")
 
     dicts = [subjects, countries, events, names, bib_series, collections, series, objects, people]
