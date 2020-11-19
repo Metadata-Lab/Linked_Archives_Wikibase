@@ -63,8 +63,7 @@ def get_item_statements(i_dict, type):
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
                     if prop is "description":
-                        desc = i_dict.get(prop)
-                        if len(desc) > 400: value = desc[:395] + '...'
+                        if len(value) > 400: value = value[:395] + '...'
                     state = wdi_core.WDString(value, prop_nr=pid)
                 #add statement to the list
                 statements.append(state)
