@@ -47,6 +47,7 @@ def get_item_statements(i_dict, type):
             continue
         elif prop is "is_related_to" and i_dict.get("label") is "Ted Koppel":
             continue #this weird case that causes internal server error
+
         else:
             #get the information about the property
             pid = cfg.property_ids.get(prop)
@@ -61,6 +62,10 @@ def get_item_statements(i_dict, type):
                         continue
                     state = wdi_core.WDItemID(qid, prop_nr=pid)
                 else:
+                    if prop is "description":
+                        desc = i_dict.get(prop)
+                        if len(desc) > 400: desc = desc[:395] + '...'
+                        value = desc
                     state = wdi_core.WDString(value, prop_nr=pid)
                 #add statement to the list
                 statements.append(state)
@@ -72,7 +77,7 @@ import all items from a dictionary into wikibase
 @param type type of object being imported
 @param curr_q q value of next import
 @returns next q value to import
-side effect - itmes are written to wikibase
+side effect - items are written to wikibase
 '''
 def import_items(dict, type, curr_q):
     q = curr_q
