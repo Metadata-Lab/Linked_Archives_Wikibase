@@ -6,7 +6,7 @@ matching up objects and items
 from lib.wikibase_import import import_collections
 
 def main():
-    import_collections(100)
+    import_collections(42616)
 
 if __name__ == '__main__':
     main()

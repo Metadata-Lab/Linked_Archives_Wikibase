@@ -6,7 +6,7 @@ import all of the people (without wikidata properties) into wikibase
 from lib.wikibase_import import import_people
 
 def main():
-    q = import_people(100)
+    q = import_people(10101)
     print(q)
 
 if __name__ == '__main__':
