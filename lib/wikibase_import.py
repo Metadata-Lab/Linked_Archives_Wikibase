@@ -97,7 +97,7 @@ def import_items(dict, type, curr_q):
 
         #track q ids
         if local_q.get(item):
-            with open("data/reults/disambiguate.txt", "w") as dis:
+            with open("data/results/disambiguate.txt", "w") as dis:
                 dis.write(item + "\n")
         local_q[item] = q
         q += 1
