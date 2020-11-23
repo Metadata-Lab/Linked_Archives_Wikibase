@@ -47,6 +47,10 @@ def get_item_statements(i_dict, type):
             continue
         elif prop is "is_related_to" and i_dict.get("label")[0] is "Koppel Ted":
             continue #this weird case that causes internal server error
+        elif prop is "description":
+            desc = i_dict.get(prop)[0]
+            if len(desc) > 400: statements.append(wdi_core.WDString(desc[:395]+ "...", prop_nr="P13"))
+            else: statements.append(wdi_core.WDString(desc, prop_nr="P13"))
         else:
             #get the information about the property
             pid = cfg.property_ids.get(prop)
