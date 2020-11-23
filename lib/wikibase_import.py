@@ -200,13 +200,13 @@ def import_collections(next_q):
             else:
                 wbPage.set_description("", lang="en")
 
-            pprint.pprint(wbPage.get_wd_json_representation())
+            #pprint.pprint(wbPage.get_wd_json_representation())
 
             try:
                 wbPage.write(login_creds)
             except Exception as e:
                 print(e)
-                with open("data/results/collection_import_errors", "w") as error_out:
+                with open("data/results/collection_import_errors.txt", "w") as error_out:
                     error_out.write(item + "\n")
     with open ("data/q_ids.json", "w") as outfile:
         json.dump(local_q, outfile)
