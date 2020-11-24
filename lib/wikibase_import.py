@@ -177,6 +177,7 @@ def import_collections(next_q):
     files = ['becker', 'belfer', 'koppel']
     for idx, val in enumerate(files): files[idx] = 'data/entities/' + val + '.json'
     import_local_q("data/q_ids.json")
+    errors = {}
 
     for file in files:
         collection = json_to_dict(file)
@@ -206,9 +207,10 @@ def import_collections(next_q):
             try:
                 wbPage.write(login_creds)
             except Exception as e:
-                print(e)
-                with open("data/results/collection_import_errors.txt", "w") as error_out:
-                    error_out.write(item + "\n")
+                errors[item] = e
+
+    with open("data/results/collection_import_errors.json", "w") as error_out:
+        json.dump(errors, error_out)
     with open ("data/q_ids.json", "w") as outfile:
         json.dump(local_q, outfile)
 
