@@ -14,12 +14,12 @@ def fix_koppel():
     koppel_dict = people.get("Ted Koppel")
     wiki_dict = koppel_dict.get("wiki")
 
-    item_statements = [wdi_core.WDItemID("Q290", prop_nr="P5")]
+    base_statement = wdi_core.WDItemID("Q290", prop_nr="P5")
     wiki_statements = extract_wiki_statements(wiki_dict)
-    item_statements.append(wiki_statements)
+    wiki_statements.append(base_statement)
 
     # create the item
-    wbPage = wdi_core.WDItemEngine(wd_item_id="Q10123", data=item_statements, mediawiki_api_url=mw_api_url)
+    wbPage = wdi_core.WDItemEngine(wd_item_id="Q10123", data=wiki_statements, mediawiki_api_url=mw_api_url)
 
     # write the changes to wikibase with login credentials
     try:
