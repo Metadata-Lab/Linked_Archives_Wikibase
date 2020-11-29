@@ -228,7 +228,7 @@ def extract_wiki_statements(wiki_dict):
     return statements
 
 def add_wikidata_statements():
-    import_local_q("q_ids.json")
+    import_local_q("data/q_ids.json")
 
     batch = ['people', 'bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
     for idx, val in enumerate(batch): batch[idx] = 'data/entities/' + val + '_edited.json'
