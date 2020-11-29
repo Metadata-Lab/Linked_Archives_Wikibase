@@ -45,7 +45,7 @@ def get_item_statements(i_dict, type):
         #wikidata property statements will be imported later
         if prop in ["Q", "wiki", "label"]:
             continue
-        elif prop is "is_related_to" and i_dict.get("label")[0] is "Koppel Ted":
+        elif prop == "is_related_to" and i_dict.get("label")[0] == "Koppel Ted":
             continue #this weird case that causes internal server error
         else:
             #get the information about the property
