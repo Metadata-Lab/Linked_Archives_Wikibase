@@ -187,8 +187,6 @@ def import_collections(next_q):
             id = get_local_q(item)
             q = "Q" + str(id)
 
-            print(item)
-            print(q)
             if id is None:
                 wbPage = wdi_core.WDItemEngine(data=states, mediawiki_api_url=mw_api_url)
                 local_q[item] = next_q
