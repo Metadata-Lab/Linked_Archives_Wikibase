@@ -4,7 +4,7 @@ read in ontology and parse into json files
 refine the wikidata properties gathered for those items
 extract remaining wikidata properties into csv files\
 
-STEP 1-1
+STEP 1-1 - MANUAL, COULD BE DONE PROGRAMMATICALLY
 clean up data problems - description=label (Manea Family... in Koppel)
 make quotations match across people, objects, koppel - Nightline... "Newest Drug War"
 remove extra spaces - 8-Horse... and Roses bloom for lovers

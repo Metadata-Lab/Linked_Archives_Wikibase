@@ -1,5 +1,5 @@
 from wikidataintegrator import wdi_core, wdi_login
-import os, pprint, json
+import json, pprint
 import config as cfg
 
 from lib.json_read import json_to_dict
@@ -149,6 +149,10 @@ def import_batch(dicts, types, start_q, batch_file, missed_statements_file, miss
 
     return q
 
+'''
+import first batch of entities - everything except people and collection items
+@returns the q id to start at with next import 
+'''
 def import_main():
     subjects = json_to_dict("data/entities/subjects_edited.json")
     countries = json_to_dict("data/entities/countries_edited.json")
@@ -167,6 +171,11 @@ def import_main():
     return import_batch(dicts, types, curr_q, "data/q_ids.json",
                  "data/results/prop_import_errors.txt", "data/results/entity_import_errors.txt")
 
+'''
+import people to wikibase
+@param next_q q id where import starts
+@returns q id to start next import
+'''
 def import_people(next_q):
     import_local_q("data/q_ids.json")
     people = json_to_dict("data/entities/people_edited.json")
@@ -174,27 +183,35 @@ def import_people(next_q):
                         "data/results/prop_import_errors_people.txt", "data/results/entity_import_errors_people.txt")
 
 def import_collections(next_q):
+    #generate file paths, import q ids
     files = ['becker', 'belfer', 'koppel']
     for idx, val in enumerate(files): files[idx] = 'data/entities/' + val + '.json'
     import_local_q("data/q_ids.json")
     errors = {}
 
+    #loop through all three collections
     for file in files:
         collection = json_to_dict(file)
 
+        #loop through each item in the collection
         for item in collection.keys():
+            #get item statements
             states = get_item_statements(collection.get(item), None)
+            #get the id of the item if it exists
             id = get_local_q(item)
             q = "Q" + str(id)
 
             if id is None:
+                #if the item was not imported as an object, create a new item to import
                 wbPage = wdi_core.WDItemEngine(data=states, mediawiki_api_url=mw_api_url)
                 local_q[item] = next_q
                 next_q += 1
                 wbPage.set_label(item, lang="en")
             else:
+                #if item exists, retrieve from wikibase
                 wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=states, mediawiki_api_url=mw_api_url)
 
+            #set item description so it is not longer than the 250 character limit
             desc = collection.get(item).get("description")[0]
             if desc is not None:
                 if len(desc) > 250: wbPage.set_description(desc[:245] + '...', lang="en")
@@ -204,22 +221,32 @@ def import_collections(next_q):
 
             #pprint.pprint(wbPage.get_wd_json_representation())
 
+            #write to wiki or record error
             try:
                 wbPage.write(login_creds)
             except Exception as e:
                 errors[item] = e
 
+    #output ids and errors to files
     with open("data/results/collection_import_errors.json", "w") as error_out:
         json.dump(errors, error_out)
     with open ("data/q_ids.json", "w") as outfile:
         json.dump(local_q, outfile)
 
+'''
+get the item statements that came from wikidata
+@param wiki_dict the dictionary of wikidata properties that was part of the item dictionary
+@returns item statements to be written to wikibase
+'''
 def extract_wiki_statements(wiki_dict):
     statements = []
+    #import the property ids
     prop_ids = json_to_dict("data/wiki_props.json")
     for prop in wiki_dict.keys():
-        if prop in prop_ids.keys() or prop is "instance of":
+        # take only the properties that we have decided to import
+        if prop in prop_ids.keys(): # or prop is "instance of": - instance of not handled because of type conflict
             for value in wiki_dict.get(prop)[1].keys():
+                #if the value is a date, get rid of the junk time data at the end
                 if prop in cfg.wiki_date_props:
                     end = value.find("T")
                     value = value[:end]
@@ -227,17 +254,24 @@ def extract_wiki_statements(wiki_dict):
                 statements.append(state)
     return statements
 
+'''
+add statements taken from wikidata to item pages
+'''
 def add_wikidata_statements():
+    #import q ids to add statements to proper itesm
     import_local_q("data/q_ids.json")
 
+    #generate file paths
     batch = ['people', 'bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
     for idx, val in enumerate(batch): batch[idx] = 'data/entities/' + val + '_edited.json'
 
     for file in batch:
         items = json_to_dict(file)
         for i in items.keys():
+            #get the dictionary of wiki properties
             if "wiki" in items.get(i).keys():
                 item_statements = extract_wiki_statements(items.get(i).get("wiki"))
+                #get the q id for import
                 q = "Q" + str(get_local_q(i))
                 wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=item_statements, mediawiki_api_url=mw_api_url)
                 #pprint.pprint(wbPage.get_wd_json_representation())

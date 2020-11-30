@@ -127,19 +127,24 @@ def parse_entities(dict, list):
                         for val in dict[label][prop]:
                             i_dict[prop].append(val)
 
-        print(i_dict)
-
         #add new entry to dictionary
         dict[label] = i_dict
 
     return dict
 
+'''
+parse out ontology data (stored in configuration file) into dictionaries
+output dictionaries into json file
+'''
 def parse_category(config_var, outfile):
     dict = {}
     dict = parse_entities(dict, config_var)
     with open(outfile, 'w') as outfile:
         json.dump(dict, outfile)
 
+'''
+get all ontology data into entity-specific json files
+'''
 def parse_all():
     import_data()
     parse_category(cfg.people, 'data/entities/people.json')
