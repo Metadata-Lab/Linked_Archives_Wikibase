@@ -5,7 +5,7 @@
 ### `step_.py`
 
 The entire ontology-to-wikibase process broken down into steps. Run these files in the order and location specified.
-More about the import process in [this outline](documentation/process.md). `koppel.py` can also be considered as part of this category as Step 4-1.
+More about the import process in [this outline](documentation/process.md). `koppel.py` can also be considered as part of this category as Step 4-2.
 
 
 ### [`config.py`](config.py)

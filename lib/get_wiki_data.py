@@ -3,8 +3,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import os, ssl, json
 
 
-
-
 '''
 find the wikidata q identifier if a page with the label exists
 @param label: the label of the page to search for
