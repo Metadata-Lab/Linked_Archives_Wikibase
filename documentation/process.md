@@ -61,4 +61,18 @@ Requirements:
 - [Geckodriver](https://github.com/mozilla/geckodriver/releases)
 - [Wikidata Integrator](https://github.com/SuLab/WikidataIntegrator)
 
+Location: Desktop with Firefox web browser and access to Wikibase website.
+
+1. Run step3.py to automate the property form. Make sure to put a copy of the geckodriver executable is in a directory in the PATH.
+C:/Anaconda3/Library/bin is an option. 
+
 ## Step 4: Add Wikidata statements to Wikibase entities
+- [Python](https://www.python.org/)
+- [MediaWiki](documentation/mediawiki_install.md) and [Wikibase](documentation/wikibase_install.md)
+- [Wikidata Integrator](https://github.com/SuLab/WikidataIntegrator)
+
+Location: Server where Wikibase is hosted. 
+
+1. Run step4.py to add Wikidata property statements.
+
+2. If Ted Koppel causes an error, run koppel.py to fix it. 
