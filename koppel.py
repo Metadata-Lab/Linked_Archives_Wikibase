@@ -1,6 +1,6 @@
 from wikidataintegrator import wdi_core, wdi_login
 from lib.wikibase_import import extract_wiki_statements
-from lib.json_read import json_to_dict
+from lib.json_read_edit import json_to_dict
 
 #prep for wikibase connection
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"

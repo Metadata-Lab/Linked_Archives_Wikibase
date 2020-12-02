@@ -17,7 +17,7 @@ edit entity files for discrepancies - 8-horse team, roses bloom for lovers, newe
 '''
 
 from lib.ontology_to_json import parse_all
-from lib.json_read import new_props_people, new_props_general
+from lib.json_read_edit import new_props_people, new_props_general
 
 def main():
     parse_all()

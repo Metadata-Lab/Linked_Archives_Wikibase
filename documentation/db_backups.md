@@ -16,16 +16,18 @@ Each version builds upon the last.
 
 `base_props_objects.sql` - Basic ontolology class types, such as "person" or "object."
 
-`batch_one_import.sql` - Batch one import using Python script. Includes subjects, countries, events, names, and bib series. 
+Other database versions correspond to the numbered steps outlined in the python files. 
 
-`collections.sql` - Manually added pages for three collections due to unknown errors with automated input. 
+`step2-1.sql` - Items without people, without Wikidata properties
 
-`batch_two_import.sql` - Batch two import using Python script. Includes series and objects. Collection dictionaries not added yet due to errors. 
+`step2-2.sql` - People, without Wikidata properties
 
-`people_base.sql` - People imported using Python script. Property errors manually fixed.
+`step2-2-1.sql` - Merge "unknown" items 
 
-`wiki_props.sql` - Manually created property pages for Wikidata properties, up to P100.
+`step2-3.sql` - Collection objects with properties
 
-`wiki_props_2.sql` - Manually created property pages for Wikidata properties, up to P185. Also includes statement imports for first batch of properties.
+`step3.sql` - New Wikidata properties
 
-`people_wiki_props.sql` - Completed import for Wikidata property statements describing people. One error.
+`step4_koppel.sql` - Collection item properties with Koppel fix
+
+        

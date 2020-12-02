@@ -10,22 +10,6 @@ def json_to_dict(file):
         data = json.load(json_file)
         return data
 
-def get_q_nums_single(infile, outfile):
-    with open(infile) as json_file:
-        data = json.load(json_file)
-        for item in data.keys():
-            if "Q" in data[item].keys():
-                q = data[item]["Q"]
-                if q is not None:
-                    outfile.write(q + '\n')
-
-def get_q_nums(infiles):
-    with open("data/wiki_q_ids.csv", "w") as qcsv:
-        for file in infiles:
-            get_q_nums_single(file, qcsv)
-    qcsv.close()
-
-
 '''
 find all of the properties used in wikidata to describe the objects
 these will be in the item dictionary with the key "wiki"
@@ -124,14 +108,14 @@ def refine_wiki_props():
 refine person properties and get the releant new properties
 '''
 def new_props_people():
-    #refine_wiki_data("data/entities/people.json", "data/entities/people_edited.json")
+    refine_wiki_data("data/entities/people.json", "data/entities/people_edited.json")
     get_new_props(["data/entities/people_edited.json"], "data/properties_export_people.csv")
 
 '''
 refine wiki properties and get relevant one for all entities other than people
 '''
 def new_props_general():
-    #refine_wiki_props()
+    refine_wiki_props()
     outfiles = ['bib_series', 'collections', 'countries', 'events', 'names', 'series', 'subjects']
     for idx, val in enumerate(outfiles): outfiles[idx] = 'data/entities/' + val + '_edited.json'
     get_new_props(outfiles, "data/properties_export.csv")

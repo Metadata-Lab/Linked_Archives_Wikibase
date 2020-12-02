@@ -5,6 +5,8 @@ Special Collections Research Center as linked data, and importing that data into
 
 To learn more about the files in this database and the processes involved, please see the files linked below.
 
+### [Ontology to Wikibase: Step By Step](documentation/process.md)
+
 ### [About the Code Base](documentation/code_about.md)
 
 ### [About the Data Files](documentation/data_about.md)

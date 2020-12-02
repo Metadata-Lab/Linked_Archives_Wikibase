@@ -3,7 +3,7 @@ STEP 3 - RUN ON SU REMOTE DESKTOP
 add the wikidata properties to the wikibase
 '''
 
-from lib.prop_import import add_new_properties
+from lib.wiki_prop_import import add_new_properties
 
 
 def main():

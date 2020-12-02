@@ -2,7 +2,7 @@ from wikidataintegrator import wdi_core, wdi_login
 import json, pprint
 import config as cfg
 
-from lib.json_read import json_to_dict
+from lib.json_read_edit import json_to_dict
 
 #prep for wikibase connection
 mw_api_url = "http://linkeddata.ischool.syr.edu/mediawiki/api.php"
@@ -18,9 +18,9 @@ imports previously exported q identifiers by label
 @param batch_file name of file with the q ids
 side effect: local_q is updated with q values
 '''
-def import_local_q(batch_file):
-    with open(batch_file) as batch:
-        data = json.load(batch)
+def import_local_q(q_file):
+    with open(q_file) as qids:
+        data = json.load(qids)
         local_q.update(data)
 
 '''
@@ -182,6 +182,10 @@ def import_people(next_q):
     return import_batch([people], ["person"], next_q, "data/q_ids.json",
                         "data/results/prop_import_errors_people.txt", "data/results/entity_import_errors_people.txt")
 
+'''
+import collection items with properties
+@param next_q the q id to start import for any objects that don't already exist
+'''
 def import_collections(next_q):
     #generate file paths, import q ids
     files = ['becker', 'belfer', 'koppel']
@@ -232,55 +236,6 @@ def import_collections(next_q):
         json.dump(errors, error_out)
     with open ("data/q_ids.json", "w") as outfile:
         json.dump(local_q, outfile)
-
-'''
-get the item statements that came from wikidata
-@param wiki_dict the dictionary of wikidata properties that was part of the item dictionary
-@returns item statements to be written to wikibase
-'''
-def extract_wiki_statements(wiki_dict):
-    statements = []
-    #import the property ids
-    prop_ids = json_to_dict("data/wiki_props.json")
-    for prop in wiki_dict.keys():
-        # take only the properties that we have decided to import
-        if prop in prop_ids.keys(): # or prop is "instance of": - instance of not handled because of type conflict
-            for value in wiki_dict.get(prop)[1].keys():
-                #if the value is a date, get rid of the junk time data at the end
-                if prop in cfg.wiki_date_props:
-                    end = value.find("T")
-                    value = value[:end]
-                state = wdi_core.WDString(value, prop_nr=prop_ids.get(prop))
-                statements.append(state)
-    return statements
-
-'''
-add statements taken from wikidata to item pages
-'''
-def add_wikidata_statements():
-    #import q ids to add statements to proper itesm
-    import_local_q("data/q_ids.json")
-
-    #generate file paths
-    batch = ['people', 'bib_series', 'collections', 'countries', 'events', 'names', 'objects', 'series', 'subjects']
-    for idx, val in enumerate(batch): batch[idx] = 'data/entities/' + val + '_edited.json'
-
-    for file in batch:
-        items = json_to_dict(file)
-        for i in items.keys():
-            #get the dictionary of wiki properties
-            if "wiki" in items.get(i).keys():
-                item_statements = extract_wiki_statements(items.get(i).get("wiki"))
-                #get the q id for import
-                q = "Q" + str(get_local_q(i))
-                wbPage = wdi_core.WDItemEngine(wd_item_id=q, data=item_statements, mediawiki_api_url=mw_api_url)
-                #pprint.pprint(wbPage.get_wd_json_representation())
-                try:
-                    wbPage.write(login_creds)
-                except:
-                    with open("data/results/wiki_prop_errors.txt", "w") as error_out:
-                        error_out.write(i + "\n")
-
 
 
 
